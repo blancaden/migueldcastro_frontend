@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.equality-container{
+  padding-inline: 8%;
+  flex-direction: column;
+  color:#5E4B49;
+
+}
+
+.equality-container .equality-h1{
+  position:relative;
+  font-family: 'Ovo';
+  font-size: calc(1.6rem + 0.5vw);
+  /* border-bottom: 20px solid #FBBA7E; */
+  
+}
+
+
+.equality-h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%; /* ajusta el grosor del borde según tus necesidades */
+  background-color: #FBBA7E; /* color del borde */
+  transform: translateY(0%);
+  z-index: -1;
+}
+
+.equality-container b{
+  font-weight: 600;
+}
+
+.equality-container > p{
+  font-family: 'Ovo' !important;
+  font-size: calc(1.6rem + 0.5vw) !important;
+margin-bottom: 40px !important;
+
+}
+
+.equality-container p{
+font-size: calc(0.7rem + 0.2vw);
+font-family: "Poppins", sans-serif;
+line-height: 40px;
+margin-bottom: 65px;
+}
+
+.equality-content-p{
+  width: 60%;
+}
+
+.equality-container .soyunaimagen{
+ width: 400px;
+ height: 400px;
+ border-radius: 100%;
+ background-color: red;
+}
+
+.list-content{
+  list-style-type: none;
+}
+
+.list-content li:before{
+content: ""; /* Agrega contenido vacío antes del elemento li */
+  display: inline-block;
+  width: 16px; /* Ajusta el ancho de la imagen */
+  height: 16px; /* Ajusta la altura de la imagen */
+  background-image: url('../../assets/icon-mariposa.svg'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen */
+  margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
