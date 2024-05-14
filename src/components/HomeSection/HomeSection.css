@@ -1,0 +1,120 @@
+body {
+    background-color: #FFFAF2;
+}
+
+.main-container {
+    color: #5E4B49;
+    margin: 8%;
+}
+
+img[src='/img/ONDAS.svg'] {
+    width: 122%; 
+    margin-left: -11%; 
+  }
+
+.HomeSection-Header h1 {
+    font-family: 'Ovo', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.HomeSection-Header h2 {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 36px;
+    width: 50%;
+
+}
+
+.HomeSection-Header button {
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: white;
+    background-color: #F06D7D;
+    border: none;
+    border-radius: 20px;
+    width: 127px;
+    height: 37px;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+.HomeSection-Services {
+    margin-top: 10%;
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.HomeSection-Services h4{
+    font-size: 24px;
+    font-family: 'Ovo', sans-serif;
+    font-weight: 400;
+    margin-left: 20%;
+}
+
+.HomeSection-Services p{
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    width: 260px;
+}
+
+.HomeSection-Services button{
+    color:#9D7D79;
+    background-color: #FFFAF2;
+    font-family: 'Poppins';
+    font-size: 14px;
+    width: 100px;
+    margin-left: 20%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.Therapy button {
+    border-color: #F4C465;
+}
+
+.Coaching button {
+    border-color: #FBBA7E;
+}
+
+.Workshop button {
+    border-color: #F6927C;
+}
+
+.Equality button {
+    border-color: #F06D7D;
+}
+
+.HomeSection-KnowMe h3 {
+    font-family: 'Ovo', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    width: 70%;
+    letter-spacing: 1px;
+    line-height: 44px;
+    /* margin-top: 10%; */
+}
+
+.HomeSection-KnowMe p {
+    font-size: 16px;
+    width: 60%;
+    line-height: 42px;
+}
+
+.HomeSection-KnowMe button {
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: white;
+    background-color: #F06D7D;
+    border: none;
+    border-radius: 20px;
+    width: 177px;
+    height: 37px;
+    margin-left: 15%;
+    margin-top: 3%;
+}
