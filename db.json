@@ -1,0 +1,68 @@
+{
+    "articulo": [
+        {
+            "ID_Articulo": "1",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "La Verdad",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "25/01/24",
+            "Imagen": "/img/blog-1.png"
+        },
+        {
+            "ID_Articulo": "2",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Cuando la negatividad te invade",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "10/01/24",
+            "Imagen": "/img/blog-2.png"
+        },
+        {
+            "ID_Articulo": "3",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "La negación como mecanismo de defensa",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "11/11/23",
+            "Imagen": "/img/blog-3.png"
+        },
+        {
+            "ID_Articulo": "4",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Coeducación y feminismo",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "24/10/22",
+            "Imagen": "/img/blog-4.jpeg"
+        },
+        {
+            "ID_Articulo": "5",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Esperanza o ilusión",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "02/03/21",
+            "Imagen": "/img/blog-5.jpeg"
+        },
+        {
+            "ID_Articulo": "6",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Aprende a ser sordo",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "02/03/21",
+            "Imagen": "/img/blog-6.jpeg"
+        },
+        {
+            "ID_Articulo": "7",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "¿Evolución o Involución?",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "04/02/21",
+            "Imagen": "/img/blog-7.jpeg"
+        },
+        {
+            "ID_Articulo": "8",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "¿Das o recibes?",
+            "Contenido": "Contenido del blog.",
+            "Fecha": "18/01/21",
+            "Imagen": "/img/blog-8.jpeg"
+        }
+    ]
+}

@@ -1,9 +1,16 @@
 import React from 'react'
+import BlogCard from '../BlogCard/BlogCard'
 
 const BlogCatalogue = () => {
   return (
     <>
-    <h1>BLOGCatalogue</h1>
+    <div className="catalogue-main-container">
+            <div className="catalogue-body">
+                <section>
+                    <BlogCard/>
+                </section>
+            </div>
+        </div>
     </>
   )
 }
