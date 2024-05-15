@@ -1,11 +1,311 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import './CrudWorkshop.css'
 
 const CrudWorkshop = () => {
+  const [workshop, setWorkshop] = useState([]);
+  const [workshopData, setWorkshopData] = useState({
+    ID_Usuario: "",
+    Titulo: "",
+    Fecha: "",
+    Lugar: "",
+    Horario: "",
+    Imagen: "",
+    Descripción: ""
+  });
+
+  const clearForm = () => {
+    setWorkshopData({
+      ID_Usuario: "",
+      Titulo: "",
+      Fecha: "",
+      Lugar: "",
+      Horario: "",
+      Imagen: "",
+      Descripción: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    setWorkshopData({ ...workshopData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmitCreate = async (e) => {
+    e.preventDefault();
+    const workshops = {
+      ID_Usuario: workshopData.ID_Usuario,
+      Titulo: workshopData.Titulo,
+      Fecha: workshopData.Fecha,
+      Lugar: workshopData.Lugar,
+      Horario: workshopData.Horario,
+      Imagen: workshopData.Imagen,
+    };
+    try {
+      await axios.post(`http://localhost:5000/talleres/create`, workshops);
+
+      const response = await axios.get("http://localhost:5000/talleres");
+      setWorkshop(response.data);
+
+      clearForm();
+    } catch (error) {
+      console.error(
+        "Error al enviar la solicitud de eliminación al servidor:",
+        error
+      );
+    }
+  };
+
+  const handleSubmitUpdate = async (e) => {
+    e.preventDefault();
+    const workshops = {
+      ID_Talleres: workshopData.ID_Talleres,
+      ID_Usuario: workshopData.ID_Usuario,
+      Titulo: workshopData.Titulo,
+      Fecha: workshopData.Fecha,
+      Lugar: workshopData.Lugar,
+      Horario: workshopData.Horario,
+      Imagen: workshopData.Imagen,
+    };
+    try {
+      await axios.put(`http://localhost:5000/talleres/update`, workshops);
+
+      const response = await axios.get("http://localhost:5000/talleres");
+      setWorkshop(response.data);
+
+      clearForm();
+    } catch (error) {
+      console.error(
+        "Error al enviar la solicitud de eliminación al servidor:",
+        error
+      );
+    }
+  };
+
+  const handleEdit = (workshops) => {
+    setWorkshopData({
+      ID_Talleres: workshops.ID_Talleres,
+      ID_Usuario: workshops.ID_Usuario,
+      Titulo: workshops.Titulo,
+      Fecha: workshops.Fecha,
+      Lugar: workshops.Lugar,
+      Horario: workshops.Horario,
+      Imagen: workshops.Imagen,
+    });
+  };
+
+  const handleDelete = async (workshops) => {
+    const id = workshops.ID_Talleres;
+    try {
+      await axios.delete(`http://localhost:5000/talleres/remove`, {
+        data: { ID_Talleres: id },
+      });
+
+      const response = await axios.get("http://localhost:5000/talleres");
+      setWorkshop(response.data);
+    } catch (error) {
+      console.error(
+        "Error al enviar la solicitud de eliminación al servidor:",
+        error
+      );
+    }
+  };
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/talleres");
+        setWorkshop(response.data);
+      } catch (error) {
+        console.error(
+          "Error al obtener los datos del servID_Talleresor:",
+          error
+        );
+      }
+    };
+    fetchAPI();
+  }, []);
+
+  function formatDate(currentDate) {
+    const newDate = new Date(currentDate);
+    const formatDate = new Intl.DateTimeFormat("es-Es").format(newDate);
+    return formatDate;
+  }
+
   return (
     <>
-   <h1>CrudWorkshop</h1>
-   </>
-  )
-}
+      <div className="adminpage-container">
+        <form className="form-container" onSubmit={handleSubmitCreate}>
+          <h1>Agrega un nuevo taller</h1>
+          <div className="input-container">
+            <label htmlFor="ID_Talleres">Taller:</label>
+            <input
+              className="input-workshop"
+              type="text"
+              id="ID_Talleres"
+              name="ID_Talleres"
+              value={workshopData.ID_Talleres}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="titulo">Título:</label>
+            <input
+              className="input-title"
+              type="text"
+              id="titulo"
+              name="Titulo"
+              value={workshopData.Titulo}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="descripcion">Descripción:</label>
+            <input
+              className="input-description"
+              type="text"
+              id="descripcion"
+              name="Descripción"
+              value={workshopData.Descripción}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="fecha">Fecha:</label>
+            <input
+              className="input-date"
+              type="text"
+              id="fecha"
+              name="Fecha"
+              value={workshopData.Fecha}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="lugar">Lugar:</label>
+            <input
+              className="input-place"
+              type="text"
+              id="lugar"
+              name="Lugar"
+              value={workshopData.Measurements}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="horario">Horario:</label>
+            <input
+              className="input-time"
+              type="text"
+              id="horario"
+              name="Horario"
+              value={workshopData.Unit_Price}
+              onChange={handleChange}
+              inputMode="numeric"
+              pattern="[0-9]*"
+              placeholder="00:00"
+              required
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="imagen">Imagen:</label>
+            <input
+              className="input-image"
+              type="text"
+              id="imagen"
+              name="Imagen"
+              value={workshopData.Imagen}
+              onChange={handleChange}
+              required
+            />
+            {workshopData.Imagen && (
+              <img
+                src={workshopData.Imagen}
+                alt="Previsualización de la imagen"
+                style={{ width: "50px", height: "auto" }}
+              />
+            )}
+          </div>
+          <button
+            className="button_form"
+            type="submit"
+            onClick={handleSubmitCreate}
+          >
+            Agregar taller
+          </button>
+          <button
+            className="button_form"
+            type="submit"
+            onClick={handleSubmitUpdate}
+          >
+            Editar taller
+          </button>
+        </form>
 
-export default CrudWorkshop
+      <section className="tabla_usuarios">
+        <h1>Talleres registrados</h1>
+        <table id="table_content">
+          <thead>
+            <tr>
+              <th>ID Talleres</th>
+              <th>Imagen</th>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Fecha</th>
+              <th>Lugar</th>
+              <th>Horario</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {workshop.map((workshops, index) => (
+              <tr key={index}>
+                <td className="user-data">{workshops.ID_Talleres}</td>
+                <td className="user-data">
+                  <img
+                    src={workshops.Imagen}
+                    alt={workshops.Imagen}
+                    style={{ width: "50px", height: "auto" }}
+                  />
+                </td>
+                <td className="user-data">{workshops.Titulo}</td>
+                <td className="user-data">{workshops.Descripción}</td>
+                <td className="user-data">{workshops.Fecha}</td>
+                <td className="user-data">{workshops.Lugar}</td>
+                <td className="user-data">{workshops.Horario}</td>
+                <td>
+                  <button
+                    className="botones_admin_btn"
+                    onClick={() => handleEdit(workshops)}
+                  >
+                    Editar
+                  </button>
+                </td>
+                {workshops.ID_Talleres && (
+                  <td>
+                    <button
+                      className="botones_admin_btn"
+                      onClick={() => {
+                        console.log(workshops.ID_Talleres);
+                        handleDelete(workshops);
+                      }}
+                    >
+                      Eliminar
+                    </button>
+                  </td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+      </div>
+    </>
+  );
+};
+
+export default CrudWorkshop;
