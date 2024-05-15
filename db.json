@@ -1,7 +1,69 @@
 {
+    "talleres": [
+        {
+            "ID_Talleres": "1a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Sanar desde el amor",
+            "Fecha": "18/01/23",
+            "Lugar": "Almería",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-1.jpeg",
+            "Descripción": "Descripción del taller."
+        },
+        {
+            "ID_Talleres": "2a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Sana tu duelo",
+            "Fecha": "02/03/21",
+            "Lugar": "Málaga",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-2.jpeg",
+            "Descripción": "Descripción del taller."
+        },
+        {
+            "ID_Talleres": "3a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "¿Dispuesto al cambio?",
+            "Fecha": "17/05/19",
+            "Lugar": "Málaga",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-3.jpeg",
+            "Descripción": "Descripción del taller."
+        },
+        {
+            "ID_Talleres": "4a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Vive",
+            "Fecha": "09/11/19",
+            "Lugar": "Málaga",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-4.jpeg",
+            "Descripción": "Descripción del taller."
+        },
+        {
+            "ID_Talleres": "5a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Curso teatro del ser",
+            "Fecha": "02/03/21",
+            "Lugar": "Málaga",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-5.jpeg",
+            "Descripción": "Descripción del taller."
+        },
+        {
+            "ID_Talleres": "6a",
+            "ID_Usuario": "migueldecastro",
+            "Titulo": "Taller teatro del ser",
+            "Fecha": "02/03/21",
+            "Lugar": "Málaga",
+            "Horario": "18:00 a 20:00",
+            "Imagen": "/img/taller-6.jpeg",
+            "Descripción": "Descripción del taller."
+        }
+    ],
     "articulo": [
         {
-            "ID_Articulo": "1",
+            "ID_Articulo": "1b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "La Verdad",
             "Contenido": "Contenido del blog.",
@@ -9,7 +71,7 @@
             "Imagen": "/img/blog-1.png"
         },
         {
-            "ID_Articulo": "2",
+            "ID_Articulo": "2b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "Cuando la negatividad te invade",
             "Contenido": "Contenido del blog.",
@@ -17,7 +79,7 @@
             "Imagen": "/img/blog-2.png"
         },
         {
-            "ID_Articulo": "3",
+            "ID_Articulo": "3b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "La negación como mecanismo de defensa",
             "Contenido": "Contenido del blog.",
@@ -25,7 +87,7 @@
             "Imagen": "/img/blog-3.png"
         },
         {
-            "ID_Articulo": "4",
+            "ID_Articulo": "4b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "Coeducación y feminismo",
             "Contenido": "Contenido del blog.",
@@ -33,7 +95,7 @@
             "Imagen": "/img/blog-4.jpeg"
         },
         {
-            "ID_Articulo": "5",
+            "ID_Articulo": "5b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "Esperanza o ilusión",
             "Contenido": "Contenido del blog.",
@@ -41,7 +103,7 @@
             "Imagen": "/img/blog-5.jpeg"
         },
         {
-            "ID_Articulo": "6",
+            "ID_Articulo": "6b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "Aprende a ser sordo",
             "Contenido": "Contenido del blog.",
@@ -49,7 +111,7 @@
             "Imagen": "/img/blog-6.jpeg"
         },
         {
-            "ID_Articulo": "7",
+            "ID_Articulo": "7b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "¿Evolución o Involución?",
             "Contenido": "Contenido del blog.",
@@ -57,7 +119,7 @@
             "Imagen": "/img/blog-7.jpeg"
         },
         {
-            "ID_Articulo": "8",
+            "ID_Articulo": "8b",
             "ID_Usuario": "migueldecastro",
             "Titulo": "¿Das o recibes?",
             "Contenido": "Contenido del blog.",
