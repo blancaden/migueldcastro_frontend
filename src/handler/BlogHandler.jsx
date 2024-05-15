@@ -1,26 +1,36 @@
 import BlogService from "../services/BlogService";
 
-export const BlogHandler = {
+const BlogHandler = {
   async getAllBlogs() {
-    let allBlogs = await BlogService.getBlogs();
-    return allBlogs;
+    try {
+      const allBlogs = await BlogService.getBlogs();
+      return allBlogs;
+    } catch (error) {
+      throw new Error("Error al obtener los artículos de blog:", error);
+    }
   },
 
   async getBlog(id) {
-    let blog = await BlogService.getBlog(id);
-    return blog;
+    try {
+      const blog = await BlogService.getBlog(id);
+      return blog;
+    } catch (error) {
+      throw new Error("Error al obtener el artículo de blog:", error);
+    }
   },
 
   async submitBlog(newBlog) {
-    return BlogService.submitBlog(newBlog).then((response) => {
+    try {
+      const response = await BlogService.submitBlog(newBlog);
       if (response.status === 201) {
         console.log(response.data);
       } else {
-        throw new Error('Error al enviar el articulo');
+        throw new Error('Error al enviar el artículo de blog');
       }
-    });
+    } catch (error) {
+      throw new Error("Error al enviar el artículo de blog:", error);
+    }
   }
-
-}
+};
 
 export default BlogHandler;
