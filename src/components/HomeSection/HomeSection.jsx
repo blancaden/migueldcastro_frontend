@@ -23,7 +23,9 @@ const HomeSection = () => {
       <div className='HomeSection-Services'>
 
         <div className='Therapy'>
+          <Link to="/therapy">
           <img src="/img/Terapia-Icono.svg" alt="Terapia" />
+          </Link>
           <h4>Terapia</h4>
           <p>La terapia es el acompañamiento a tu propio descubrir, déjame que te acompañe.</p>
 
@@ -34,7 +36,9 @@ const HomeSection = () => {
         </div>
 
         <div className='Coaching'>
+          <Link to="/coaching">
           <img src="/img/Coaching-Icono.svg" alt="Coaching" />
+          </Link>
           <h4>Coaching</h4>
           <p>Cada paso es una meta, cada avance es un logro en tu camino hacia el objetivo.</p>
 
@@ -45,7 +49,9 @@ const HomeSection = () => {
         </div>
 
         <div className='Workshop'>
+          <Link to="/workshop">
           <img src="/img/Talleres-Icono.svg" alt="Talleres" />
+          </Link>
           <h4>Talleres</h4>
           <p>Sumérgete en nuestros talleres para aprender y crecer juntos.</p>
 
@@ -56,7 +62,9 @@ const HomeSection = () => {
         </div>
 
         <div className='Equality'>
+          <Link to="/equality">
           <img src="/img/Igualdad-Icono.svg" alt="Igualdad" />
+          </Link>
           <h4>Igualdad</h4>
           <p>Explora el mundo de la terapia sistémica y su poder transformador.</p>
 

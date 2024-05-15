@@ -20,6 +20,7 @@ img[src='/img/Ondas.svg'] {
     font-family: 'Ovo', sans-serif;
     font-weight: 400;
     font-size: 64px;
+    margin-left: 1%;
 }
 
 .HomeSection-Header h2 {
@@ -27,7 +28,6 @@ img[src='/img/Ondas.svg'] {
     font-weight: 400;
     font-size: 36px;
     width: 50%;
-
 }
 
 .HomeSection-Header button {
@@ -52,7 +52,6 @@ img[src='/img/Ondas.svg'] {
 .HomeSection-Services {
     margin-top: 10%;
     margin-bottom: 10%;
-    margin-left: 5%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -62,14 +61,15 @@ img[src='/img/Ondas.svg'] {
     font-size: 24px;
     font-family: 'Ovo', sans-serif;
     font-weight: 400;
-    margin-left: 20%;
+    margin-left: 25%;
+    margin-bottom: 8%;
 }
 
 .HomeSection-Services p {
     font-family: 'Poppins';
     font-size: 14px;
     font-weight: 300;
-    width: 260px;
+    width: 250px;
 }
 
 .HomeSection-Services button {
@@ -78,7 +78,7 @@ img[src='/img/Ondas.svg'] {
     font-family: 'Poppins';
     font-size: 14px;
     width: 100px;
-    margin-left: 20%;
+    margin-left: 23%;
     margin-top: 5%;
     border-radius: 20px;
     border-style: solid;
@@ -88,6 +88,13 @@ img[src='/img/Ondas.svg'] {
 .HomeSection-Services img:hover {
     filter: brightness(80%);
     cursor: pointer;
+}
+
+.HomeSection-Services .Therapy,
+.HomeSection-Services .Coaching,
+.HomeSection-Services .Workshop,
+.HomeSection-Services .Equality {
+    margin-right: -50px;
 }
 
 .Therapy button {
@@ -105,7 +112,7 @@ img[src='/img/Ondas.svg'] {
 
 .Equality button {
     border-color: #F06D7D;
-    margin-top: 13.5%;
+    margin-top: 5%;
 }
 
 .Therapy button:hover {
@@ -162,6 +169,11 @@ img[src='/img/Ondas.svg'] {
     height: 37px;
     margin-left: 32%;
     margin-top: 3%;
+}
+
+.HomeSection-KnowMe button:hover{
+    background-color: #FBBA7E;
+    cursor: pointer;
 }
 
 .HomeSection-KnowMe img {
