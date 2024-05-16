@@ -12,9 +12,20 @@ img[src='/img/Ondas.svg'] {
     margin-left: -12%;
 }
 
+
+
 .HomeSection-Header {
     margin-bottom: 2%;
+    display: flex;
+    align-items: center;
 }
+
+.HomeSection-Header img {
+    grid-column: 2; 
+    justify-self: end; 
+    margin-right: -5%;
+}
+
 
 .HomeSection-Header h1 {
     font-family: 'Ovo', sans-serif;
@@ -25,9 +36,10 @@ img[src='/img/Ondas.svg'] {
 
 .HomeSection-Header h2 {
     font-family: 'Poppins';
+    margin-top: 0;
     font-weight: 400;
     font-size: 36px;
-    width: 50%;
+    width: 100%;
 }
 
 .HomeSection-Header button {
@@ -40,13 +52,17 @@ img[src='/img/Ondas.svg'] {
     border-radius: 20px;
     width: 127px;
     height: 37px;
-    margin-left: 15%;
+    margin-left: 30%;
     margin-top: 3%;
 }
 
 .HomeSection-Header button:hover {
       background-color: #FBBA7E;
       cursor: pointer;
+}
+
+.HomeSection-Title {
+    display: grid;
 }
 
 .HomeSection-Services {
@@ -147,6 +163,8 @@ img[src='/img/Ondas.svg'] {
     letter-spacing: 1px;
     line-height: 44px;
     margin-top: 7%;
+    position: relative;
+    z-index: 1;
 }
 
 .HomeSection-KnowMe p {
@@ -185,4 +203,12 @@ img[src='/img/Ondas.svg'] {
     left: 1;
     width: 20%;
     height: auto;
+}
+
+.knowme-img {
+    position: absolute;
+    top: 1600px; 
+    left: 63%;
+    width: 40%;
+    opacity: 60%;
 }
