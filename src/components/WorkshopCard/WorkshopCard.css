@@ -2,20 +2,19 @@
 .workshop-container {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
     flex-wrap: wrap;
     font-family: 'Poppins';
     color: #5E4B49;
-    background-color: #FFFAF2;
-    margin: 0px
    }
    
    .workshop-card {
     background-color: #FBF4E9;
     border-radius: 20px;
     padding: 20px;
-    width: 20%;
-    height: 40%;
+    width: 22%;
+    height: 550px;
+    margin-bottom: 10%;
    }
    
    .workshop-card img {
@@ -23,7 +22,7 @@
     height: 180px;
    }
   
-   .workshop-card a[href^="/products/"] {
+   .workshop-card a[href^="/talleres/"] {
      height: 0;
    }
    

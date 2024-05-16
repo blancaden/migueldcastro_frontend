@@ -22,11 +22,11 @@ const WorkshopCatalogue = () => {
 
   return (
     <div className="catalogue-main-container">
-      <div className="catalogue-body">
-        <section>
+    
+        <section className="catalogue-body">
           <WorkshopCard talleres={talleres} />
         </section>
-      </div>
+      
     </div>
   );
 }

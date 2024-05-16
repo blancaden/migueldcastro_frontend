@@ -1,6 +1,7 @@
 .catalogue-main-container {
     display: flex;
     justify-content: center; 
+    background-color: #FFFAF2;
   }
   
   .catalogue-body {
@@ -8,5 +9,14 @@
     flex-wrap: wrap; 
     justify-content: space-between; 
     max-width: 100%; 
+    margin-top: 10%;
+    margin-bottom: 10%
+  }
+
+  .catalogue-body::after {
+    content: "";
+    display: block;
+    height: 20px; /* Ajusta este valor según el espacio que desees */
+    margin-top: 20px; /* Ajusta este valor según el espacio que desees */
   }
   
