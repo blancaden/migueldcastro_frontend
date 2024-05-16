@@ -7,7 +7,7 @@ const BlogCard = ({ articulos }) => {
     <div className="product-container">
       {articulos && articulos.map((articulo, index) => (
         <div key={index} className="card">
-          <Link to={`/articulos/${articulo.ID_Articulo}`} state={{ articulo }}>            
+          <Link to={`/articulo/${articulo.Titulo}`} state={{ articulo }}>            
             <div className='product-image-container'>
               <img
                 src={articulo.Imagen}
