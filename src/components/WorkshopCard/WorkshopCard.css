@@ -2,7 +2,7 @@
 .workshop-container {
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 6.5%;
     flex-wrap: wrap;
     font-family: 'Poppins';
     color: #5E4B49;
@@ -10,7 +10,7 @@
    
    .workshop-card {
     background-color: #FBF4E9;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 20px;
     width: 22%;
     height: 550px;
@@ -62,29 +62,33 @@
     margin-bottom: 10px;
     text-align: center;
    }
-   
-   .workshop-title {
-    font-family: 'Ovo', sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-    margin-bottom: 5px;
-   }
 
+  .workshop-date-and-schedule-container{
+      display:flex;
+   }
+   
    .workshop-date {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 200;
     margin-bottom: 5px;
    }
 
    .workshop-schedule {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 200;
     margin-bottom: 5px;
    }
    
+   .workshop-title {
+    font-family: 'Ovo';
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 5px;
+   }
+   
    .workshop-description {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 200;
     margin-bottom: 10px;
    }
    
