@@ -13,7 +13,8 @@ import EqualityView from '../views/publicViews/EqualityView';
 import BlogView from '../views/publicViews/BlogView';
 import ContactView from '../views/publicViews/ContactView';
 import AdminLoginView from "../views/privateViews/AdminLoginView";
-
+import BlogDetailView from "../views/publicViews/BlogDetailView";
+import WorkshopDetailView from "../views/publicViews/WorkshopDetailView";
 
 
 export const Router = createBrowserRouter([
@@ -64,6 +65,14 @@ export const Router = createBrowserRouter([
                 path: '/login',
                 element: <AdminLoginView/>
             },
+            {
+                path: '/taller',
+                element: <WorkshopDetailView/>
+            },
+            {
+                path: '/articulo',
+                element: <BlogDetailView/>
+            }
             
             
         ]
