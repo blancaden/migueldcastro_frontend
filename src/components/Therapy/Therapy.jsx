@@ -20,7 +20,7 @@ function Therapy() {
           xs={1}
           md={2}
           lg={2}
-          className="therapy-content d-flex flex-row justify-content-between align-items-center"
+          className="therapy-content flex-row justify-content-between align-items-center"
         >
           <Col md={7} lg={7} className="therapy-content-p">
             <p>
@@ -49,7 +49,9 @@ function Therapy() {
               eso cada terapia se adapta a tus necesidades.
             </p>
           </Col>
-          <Col className="soyunaimagen"></Col>
+          <Col xs={1} className="soyunaimagen">
+            <div></div>
+          </Col>
         </Row>
       </Container>
     </>

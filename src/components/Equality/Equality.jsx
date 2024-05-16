@@ -11,7 +11,7 @@ function Equality() {
         <div>
           <h1 className="m-5 equality-h1">Igualdad</h1>
         </div>
-        <p>Que la Igualdad sea la base en la que se sustenta la sociedad</p>
+        <h2>Que la Igualdad sea la base en la que se sustenta la sociedad</h2>
         <div className="d-flex flex-row justify-content-between align-items-center">
           <div className="equality-content-p">
             <p>
@@ -35,9 +35,9 @@ function Equality() {
           <div className="soyunaimagen"></div>
         </div>
         <div>
-          <h2>Charlas, Talleres y Cursos impartidos:</h2>
+          <h2 className="mt-5">Charlas, Talleres y Cursos impartidos:</h2>
         </div>
-        <div className="d-flex flex-row ">
+        <div className="d-flex flex-row">
           <ul className="list-content">
             <li>Un viaje por la Igualdad</li>
             <li>Masculinidad vs Feminidad. ¿El género nos divide?</li>

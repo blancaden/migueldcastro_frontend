@@ -9,6 +9,7 @@
   padding-inline: 8%;
   flex-direction: column;
   color:#5E4B49;
+  
 }
 
 .therapy-container .therapy-h1{
@@ -47,19 +48,16 @@ line-height: 40px;
 margin-bottom: 65px;
 }
 
-/* .therapy-content-p{
-  width: 500px;
-} */
-
 .therapy-container .soyunaimagen{
- width: 400px;
- height: 400px;
+ width: calc(9rem + 16vw);
+ height: calc(9rem + 16vw);
  border-radius: 100%;
  background-color: red;
 }
 
-/* @media only screen and (min-width: 930px) {
-  .therapy-content {
-  flex-direction: column;
+
+@media (max-width: 800px) { /* Esto corresponde al tamaño de pantalla xs */
+  .soyunaimagen {
+    margin: auto;
   }
-} */
+}

@@ -6,7 +6,7 @@
 
 
 .coaching-container{
-  padding-inline: 8%;
+  padding-inline: 15%;
   flex-direction: column;
   color:#5E4B49;
 }
@@ -29,31 +29,45 @@
   z-index: -1;
 }
 
-.coaching-container b{
-  font-weight: 600;
-}
-
-.coaching-container > p{
+.coaching-container h3{
   font-family: 'Ovo' !important;
-  font-size: calc(1.6rem + 0.5vw) !important;
-margin-bottom: 40px !important;
-
+  font-size: calc(1.4rem + 0.2vw) !important;
+margin-bottom: 35px !important;
 }
 
 .coaching-container p{
 font-size: calc(0.7rem + 0.2vw);
 font-family: "Poppins", sans-serif;
-line-height: 40px;
-margin-bottom: 65px;
-}
-
-.coaching-content-p{
-  width: 60%;
+line-height: 26px;
+margin-bottom: 30px;
 }
 
 .coaching-container .soyunaimagen{
- width: 400px;
- height: 400px;
  border-radius: 100%;
  background-color: red;
+}
+
+.btn-info{
+  font-size: calc(0.7rem + 0.2vw);
+  color: #9D7D79;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+font-family: "Poppins", sans-serif;
+}
+
+.btn-info .bi{
+  font-size: 1.2rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-right: 0.4rem;
+  background-color: #FFEAEA;
+  border: 1px solid;
+  border-radius: 100%;
+}
+
+
+.btn-info .bi::before{
+  vertical-align: 0em !important;
 }

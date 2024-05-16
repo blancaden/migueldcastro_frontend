@@ -6,13 +6,13 @@ import { Container } from "react-bootstrap";
 function AboutMe() {
   return (
     <>
-      <Container fluid className="equality-container d-flex align-items-center">
+      <Container fluid className="aboutme-container d-flex align-items-center">
         <div>
-          <h1 className="m-5 equality-h1">Sobre mi</h1>
+          <h1 className="m-5 aboutme-h1">Sobre mi</h1>
         </div>
-        <p>¿Crees que ha llegado tu momento?</p>
-        <div className="d-flex flex-row justify-content-between align-items-center">
-          <div className="equality-content-p">
+        <div className="d-flex flex-md-row flex-sm-column justify-content-between align-items-center">
+          <div className="aboutme-content-p col-lg-8 col-md-7 col-sm-12">
+            <p>¿Crees que ha llegado tu momento?</p>
             <p>
               Mi visión eres tú, como persona, como ser humano. Creo firmemente
               en que todos nacemos bajo un mismo paraguas y que por lo tanto
@@ -26,7 +26,7 @@ function AboutMe() {
               acompañarte en el tuyo. Me formé en:
             </p>
           </div>
-          <ul className="list-content">
+          <ul className="list-content col-lg-4 col-md-5 col-sm-12">
             <li>Coaching</li>
             <li>PersonalCoaching sistémico</li>
             <li>Programación Neurolingüística</li>
@@ -39,11 +39,8 @@ function AboutMe() {
             <li>Expresión Corporal. </li>
           </ul>
         </div>
-        <div>
-          <h2>Charlas, Talleres y Cursos impartidos:</h2>
-        </div>
         <div className="">
-          <h3>Estudios:</h3>
+          <p className="p-studies">Estudios:</p>
           <ul className="list-content">
             <li>
               Master en Agente de Igualdad por el Instituto superior de estudios
@@ -51,7 +48,7 @@ function AboutMe() {
               a distancia de Madrid
             </li>
           </ul>
-          <h3>Cursos:</h3>
+          <p className="p-courses">Cursos:</p>
           <ul className="list-content">
             <li>
               Intervención social con enfoque de género para el voluntariado:

@@ -50,9 +50,15 @@ a.nav-link{
 
 
 .offcanvas{
-  background-color: black !important;
-  color: white !important;
+  background-color: #FEEBE1 !important;
+  color: #5E4B49 !important;
 }
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border: none;
+}
+
 
 @media only screen and (min-width: 930px) {
   a.nav-link {

@@ -36,11 +36,10 @@
   font-weight: 600;
 }
 
-.equality-container > p{
+.equality-container h2{
   font-family: 'Ovo' !important;
   font-size: calc(1.6rem + 0.5vw) !important;
-margin-bottom: 40px !important;
-
+  margin-bottom: 40px !important;
 }
 
 .equality-container p{
@@ -55,8 +54,8 @@ margin-bottom: 65px;
 }
 
 .equality-container .soyunaimagen{
- width: 400px;
- height: 400px;
+width: calc(8rem + 14vw);
+ height: calc(8rem + 14vw);
  border-radius: 100%;
  background-color: red;
 }
