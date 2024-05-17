@@ -1,0 +1,18 @@
+.workshopdetail-body-detail {
+    background-color: #FFFAF2;
+}
+
+.workshop-title-detail{
+    font-size: 48pt;
+    font-weight:lighter;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    margin-right: 5%;
+}
+.workshop-date-and-schedule-container-detail{
+    display: flex;
+   
+}
+.workshop-schedule-detail{
+    margin-left: 1%;
+}
