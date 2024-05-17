@@ -10,7 +10,7 @@ const BlogView = () => {
     <BlogCard/>
     <BlogCatalogue/>
     <BlogFiles/>
-    
+    <h1>Hola Blog</h1>
     </>
 
   )

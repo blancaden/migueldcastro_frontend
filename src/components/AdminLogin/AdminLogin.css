@@ -1,0 +1,111 @@
+.container-gralformLogin{
+    display: flex;
+    height: 100vh;
+    background-color:#FFFAF2;
+    
+
+}
+
+.container-formlgn{
+   background-color: #FBF4E9;
+   width: 448px;
+   height: 481px;
+   margin-left: 30%;
+   margin-top: 50px;
+   border-radius: 20px;
+   /* display: flex; 
+   /* flex-direction: column; 
+   /* justify-content: center; 
+   /* align-items: center;  */ 
+   
+}
+
+
+.container-formlgn .input-group1 #input-name {
+    margin-top: 4%;
+    margin-left: 15%;
+    width: 329px;
+    height: 27px;
+    border-radius: 52.5px;
+    border: none;
+  
+}
+
+.container-formlgn .input-group2 #input-pw{
+    margin-left: 15%;
+    margin-top: 6%;
+    width: 329px;
+    height: 27px;
+    border-radius: 52.5px;
+    border: none;
+}
+
+.container-formlgn #labl-user{
+    display: flex;
+    width: 70px;
+    margin-top: 25%;
+    margin-left: 15%;
+    font-family:'Poppins', sans-serif;
+
+    
+}
+
+.container-formlgn #labl-pw{
+    display: flex;
+    width: 80px;
+    margin-top: 10%;
+    margin-left: 15%;
+    font-style: #5E4B49;
+    font-family:'Poppins', sans-serif;
+
+}
+
+.iniciar-sesiónbtn {
+    margin-top: 20% ;
+    margin-left: 30%;
+    width: 164px;
+    height: 33px;
+    border-radius: 52.5px;
+    border: none;
+    background-color: #F06D7D;
+
+}
+
+.image-container .login-image{
+
+    display: flex;
+    margin-top: 160%;
+    width: 255.1px;
+    height: 313.97px;
+    margin-left: 30%;
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container-formlgn {
+        width: 80%; /* Utiliza un ancho del 80% del contenedor padre */
+    }
+
+    .iniciar-sesiónbtn {
+        margin-top: 20px; /* Ajusta el margen superior */
+    }
+
+    .image-container .login-image {
+        max-width: 200px; /* Reduce el ancho máximo de la imagen */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .container-formlgn {
+        width: 80%; /* Utiliza un ancho del 90% del contenedor padre */
+    }
+
+    .image-container .login-image {
+        max-width: 150px; /* Reduce aún más el ancho máximo de la imagen */
+    }
+}
+
+
+
