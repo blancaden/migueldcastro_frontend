@@ -70,10 +70,18 @@ export const Router = createBrowserRouter([
                 element: <WorkshopDetailView/>
             },
             {
+                path: '/taller/:id',
+                element: <WorkshopDetailView /> 
+              },
+            {
                 path: '/articulo',
                 element: <BlogDetailView/>
-            }
-            
+            },
+
+            {
+                path: '/articulo/:id',
+                element: <BlogDetailView /> 
+              }
             
         ]
     },
