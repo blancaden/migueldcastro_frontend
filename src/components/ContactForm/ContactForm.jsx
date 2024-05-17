@@ -96,7 +96,7 @@ const ContactForm = () => {
                 <TextField
                   id="standard-basic"
                   label="Nombre"
-                  name="Nombre" // Agregado aquí
+                  name="Nombre"
                   variant="standard"
                   sx={{ width: "80%" }}
                   onChange={handleChange}
@@ -107,7 +107,7 @@ const ContactForm = () => {
                 <TextField
                   id="standard-basic"
                   label="Email"
-                  name="Email" // Agregado aquí
+                  name="Email"
                   variant="standard"
                   sx={{ width: "80%" }}
                   onChange={handleChange}
@@ -118,7 +118,7 @@ const ContactForm = () => {
                 <TextField
                   id="standard-basic"
                   label="Asunto"
-                  name="Asunto" // Agregado aquí
+                  name="Asunto"
                   variant="standard"
                   sx={{ width: "80%" }}
                   onChange={handleChange}
@@ -129,7 +129,7 @@ const ContactForm = () => {
                 <TextField
                   id="standard-basic"
                   label="Mensaje"
-                  name="Mensaje" // Agregado aquí
+                  name="Mensaje"
                   variant="standard"
                   sx={{ width: "90%" }}
                   onChange={handleChange}
@@ -145,6 +145,7 @@ const ContactForm = () => {
                 borderColor: "#E3AAB6",
                 borderRadius: "20px",
                 padding: "10px 20px",
+                fontFamily: "'poppins', sans-serif",
               }}
               onClick={handleSubmitCreate}
             >

@@ -34,17 +34,11 @@ const FormData = () => {
     fetchAPI();
   }, []);
 
-  function formatDate(currentDate) {
-    const newDate = new Date(currentDate);
-    const formatDate = new Intl.DateTimeFormat("es-Es").format(newDate);
-    return formatDate;
-  }
-
   return (
     <>
-      <section className="tabla_usuarios">
+      <section className="user-table">
         <h1>Usuarios en contacto</h1>
-        <table id="table_content">
+        <table id="table_content_user">
           <thead>
             <tr>
               <th>ID</th>
@@ -58,14 +52,14 @@ const FormData = () => {
           <tbody>
             {users.map((user, index) => (
               <tr key={index}>
-                <td className="user-data">{user.ID_Contacto}</td>
-                <td className="user-data">{user.Nombre}</td>
-                <td className="user-data">{user.Email}</td>
-                <td className="user-data">{user.Asunto}</td>
-                <td className="user-data">{user.Mensaje}</td>
+                <td className="contact-data">{user.ID_Contacto}</td>
+                <td className="contact-data">{user.Nombre}</td>
+                <td className="contact-data">{user.Email}</td>
+                <td className="contact-data">{user.Asunto}</td>
+                <td className="contact-data">{user.Mensaje}</td>
                 <td>
                   <button
-                    className="botones_admin_btn"
+                    className="buttons_admin_btn"
                     onClick={() => handleDelete(user)}
                   >
                     Eliminar

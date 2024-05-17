@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './CrudWorkshop.css'
+import "./CrudWorkshop.css";
 
 const CrudWorkshop = () => {
   const [workshop, setWorkshop] = useState([]);
   const [workshopData, setWorkshopData] = useState({
+    ID_Talleres: "",
     ID_Usuario: "",
     Titulo: "",
     Fecha: "",
     Lugar: "",
     Horario: "",
     Imagen: "",
-    Descripción: ""
+    Descripción: "",
   });
 
   const clearForm = () => {
     setWorkshopData({
+      ID_Talleres: "",
       ID_Usuario: "",
       Titulo: "",
       Fecha: "",
@@ -32,14 +34,19 @@ const CrudWorkshop = () => {
 
   const handleSubmitCreate = async (e) => {
     e.preventDefault();
+    const formattedDate = new Date(workshopData.Fecha)
+      .toISOString()
+      .split("T")[0];
     const workshops = {
       ID_Usuario: workshopData.ID_Usuario,
       Titulo: workshopData.Titulo,
-      Fecha: workshopData.Fecha,
+      Fecha: formattedDate,
       Lugar: workshopData.Lugar,
       Horario: workshopData.Horario,
       Imagen: workshopData.Imagen,
+      Descripción: workshopData.Descripción,
     };
+    console.log("Datos a enviar:", workshops);
     try {
       await axios.post(`http://localhost:5000/talleres/create`, workshops);
 
@@ -49,7 +56,7 @@ const CrudWorkshop = () => {
       clearForm();
     } catch (error) {
       console.error(
-        "Error al enviar la solicitud de eliminación al servidor:",
+        "Error al enviar la solicitud de creación al servidor:",
         error
       );
     }
@@ -57,14 +64,18 @@ const CrudWorkshop = () => {
 
   const handleSubmitUpdate = async (e) => {
     e.preventDefault();
+    const formattedDate = new Date(workshopData.Fecha)
+      .toISOString()
+      .split("T")[0];
     const workshops = {
       ID_Talleres: workshopData.ID_Talleres,
       ID_Usuario: workshopData.ID_Usuario,
       Titulo: workshopData.Titulo,
-      Fecha: workshopData.Fecha,
+      Fecha: formattedDate,
       Lugar: workshopData.Lugar,
       Horario: workshopData.Horario,
       Imagen: workshopData.Imagen,
+      Descripción: workshopData.Descripción,
     };
     try {
       await axios.put(`http://localhost:5000/talleres/update`, workshops);
@@ -75,7 +86,7 @@ const CrudWorkshop = () => {
       clearForm();
     } catch (error) {
       console.error(
-        "Error al enviar la solicitud de eliminación al servidor:",
+        "Error al enviar la solicitud de actualización al servidor:",
         error
       );
     }
@@ -90,6 +101,7 @@ const CrudWorkshop = () => {
       Lugar: workshops.Lugar,
       Horario: workshops.Horario,
       Imagen: workshops.Imagen,
+      Descripción: workshops.Descripción,
     });
   };
 
@@ -109,27 +121,25 @@ const CrudWorkshop = () => {
       );
     }
   };
-
+  const handleExpandDescription = (workshops) => {
+    alert(workshops.Descripción); 
+  };
+  
   useEffect(() => {
     const fetchAPI = async () => {
       try {
         const response = await axios.get("http://localhost:5000/talleres");
-        setWorkshop(response.data);
+        const formattedData = response.data.map((workshop) => ({
+          ...workshop,
+          Fecha: new Date(workshop.Fecha).toLocaleDateString("es-ES"),
+        }));
+        setWorkshop(formattedData);
       } catch (error) {
-        console.error(
-          "Error al obtener los datos del servID_Talleresor:",
-          error
-        );
+        console.error("Error al obtener los datos del servidor:", error);
       }
     };
     fetchAPI();
   }, []);
-
-  function formatDate(currentDate) {
-    const newDate = new Date(currentDate);
-    const formatDate = new Intl.DateTimeFormat("es-Es").format(newDate);
-    return formatDate;
-  }
 
   return (
     <>
@@ -143,7 +153,19 @@ const CrudWorkshop = () => {
               type="text"
               id="ID_Talleres"
               name="ID_Talleres"
-              value={workshopData.ID_Talleres}
+              value={workshopData.ID_Talleres || ""}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="ID_Talleres">Creador:</label>
+            <input
+              className="input-workshop"
+              type="text"
+              id="ID_Usuario"
+              name="ID_Usuario"
+              value={workshopData.ID_Usuario || ""}
               onChange={handleChange}
               required
             />
@@ -155,7 +177,7 @@ const CrudWorkshop = () => {
               type="text"
               id="titulo"
               name="Titulo"
-              value={workshopData.Titulo}
+              value={workshopData.Titulo || ""}
               onChange={handleChange}
               required
             />
@@ -167,7 +189,7 @@ const CrudWorkshop = () => {
               type="text"
               id="descripcion"
               name="Descripción"
-              value={workshopData.Descripción}
+              value={workshopData.Descripción || ""}
               onChange={handleChange}
               required
             />
@@ -176,10 +198,10 @@ const CrudWorkshop = () => {
             <label htmlFor="fecha">Fecha:</label>
             <input
               className="input-date"
-              type="text"
+              type="date"
               id="fecha"
               name="Fecha"
-              value={workshopData.Fecha}
+              value={workshopData.Fecha || ""}
               onChange={handleChange}
               required
             />
@@ -191,7 +213,7 @@ const CrudWorkshop = () => {
               type="text"
               id="lugar"
               name="Lugar"
-              value={workshopData.Measurements}
+              value={workshopData.Lugar || ""}
               onChange={handleChange}
               required
             />
@@ -203,7 +225,7 @@ const CrudWorkshop = () => {
               type="text"
               id="horario"
               name="Horario"
-              value={workshopData.Unit_Price}
+              value={workshopData.Horario || ""}
               onChange={handleChange}
               inputMode="numeric"
               pattern="[0-9]*"
@@ -218,7 +240,7 @@ const CrudWorkshop = () => {
               type="text"
               id="imagen"
               name="Imagen"
-              value={workshopData.Imagen}
+              value={workshopData.Imagen || ""}
               onChange={handleChange}
               required
             />
@@ -246,63 +268,74 @@ const CrudWorkshop = () => {
           </button>
         </form>
 
-      <section className="tabla_usuarios">
-        <h1>Talleres registrados</h1>
-        <table id="table_content">
-          <thead>
-            <tr>
-              <th>ID Talleres</th>
-              <th>Imagen</th>
-              <th>Título</th>
-              <th>Descripción</th>
-              <th>Fecha</th>
-              <th>Lugar</th>
-              <th>Horario</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {workshop.map((workshops, index) => (
-              <tr key={index}>
-                <td className="user-data">{workshops.ID_Talleres}</td>
-                <td className="user-data">
-                  <img
-                    src={workshops.Imagen}
-                    alt={workshops.Imagen}
-                    style={{ width: "50px", height: "auto" }}
-                  />
-                </td>
-                <td className="user-data">{workshops.Titulo}</td>
-                <td className="user-data">{workshops.Descripción}</td>
-                <td className="user-data">{workshops.Fecha}</td>
-                <td className="user-data">{workshops.Lugar}</td>
-                <td className="user-data">{workshops.Horario}</td>
-                <td>
-                  <button
-                    className="botones_admin_btn"
-                    onClick={() => handleEdit(workshops)}
-                  >
-                    Editar
-                  </button>
-                </td>
-                {workshops.ID_Talleres && (
+        <section className="tabla_usuarios">
+          <h1>Talleres registrados</h1>
+          <table id="table_content">
+            <thead>
+              <tr>
+                <th>ID Talleres</th>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Lugar</th>
+                <th>Horario</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {workshop.map((workshops, index) => (
+                <tr key={index}>
+                  <td className="user-data">{workshops.ID_Talleres}</td>
+                  <td className="user-data">
+                    <img
+                      src={workshops.Imagen}
+                      alt={workshops.Imagen}
+                      style={{ width: "50px", height: "auto" }}
+                    />
+                  </td>
+                  <td className="user-data">{workshops.Titulo}</td>
+                  <td className="user-data">
+                    {workshops.Descripción.length > 50 ? (
+                      <span>
+                        {`${workshops.Descripción.substring(0, 50)}...`}
+                        <button
+                          className="botones_admin_btn"
+                          onClick={() => handleExpandDescription(workshops)}
+                        >
+                          Ver más
+                        </button>
+                      </span>
+                    ) : (
+                      workshops.Descripción
+                    )}
+                  </td>
+                  <td className="user-data">{workshops.Fecha}</td>
+                  <td className="user-data">{workshops.Lugar}</td>
+                  <td className="user-data">{workshops.Horario}</td>
                   <td>
                     <button
                       className="botones_admin_btn"
-                      onClick={() => {
-                        console.log(workshops.ID_Talleres);
-                        handleDelete(workshops);
-                      }}
+                      onClick={() => handleEdit(workshops)}
                     >
-                      Eliminar
+                      Editar
                     </button>
                   </td>
-                )}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+                  {workshops.ID_Talleres && (
+                    <td>
+                      <button
+                        className="botones_admin_btn"
+                        onClick={() => handleDelete(workshops)}
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       </div>
     </>
   );

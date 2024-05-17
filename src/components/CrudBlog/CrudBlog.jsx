@@ -28,11 +28,12 @@ const CrudBlog = () => {
 
   const handleSubmitCreate = async (e) => {
     e.preventDefault();
+    const formattedDate = new Date(blogData.Fecha).toISOString().split("T")[0];
     const blogs = {
       ID_Usuario: blogData.ID_Usuario,
       Titulo: blogData.Titulo,
       Contenido: blogData.Contenido,
-      Fecha: blogData.Fecha,
+      Fecha: formattedDate,
       Imagen: blogData.Imagen,
     };
     try {
@@ -44,7 +45,7 @@ const CrudBlog = () => {
       clearForm();
     } catch (error) {
       console.error(
-        "Error al enviar la solicitud de eliminación al servidor:",
+        "Error al enviar la solicitud de creación al servidor:",
         error
       );
     }
@@ -52,12 +53,13 @@ const CrudBlog = () => {
 
   const handleSubmitUpdate = async (e) => {
     e.preventDefault();
+    const formattedDate = new Date(blogData.Fecha).toISOString().split("T")[0];
     const blogs = {
       ID_Articulo: blogData.ID_Articulo,
       ID_Usuario: blogData.ID_Usuario,
       Titulo: blogData.Titulo,
       Contenido: blogData.Contenido,
-      Fecha: blogData.Fecha,
+      Fecha: formattedDate,
       Imagen: blogData.Imagen,
     };
     try {
@@ -69,7 +71,7 @@ const CrudBlog = () => {
       clearForm();
     } catch (error) {
       console.error(
-        "Error al enviar la solicitud de eliminación al servidor:",
+        "Error al enviar la solicitud de actualización al servidor:",
         error
       );
     }
@@ -80,9 +82,8 @@ const CrudBlog = () => {
       ID_Articulo: blogs.ID_Articulo,
       ID_Usuario: blogs.ID_Usuario,
       Titulo: blogs.Titulo,
+      Contenido: blogs.Contenido,
       Fecha: blogs.Fecha,
-      Lugar: blogs.Lugar,
-      Horario: blogs.Horario,
       Imagen: blogs.Imagen,
     });
   };
@@ -103,27 +104,26 @@ const CrudBlog = () => {
       );
     }
   };
+  const handleExpandDescription = (blogs) => {
+    alert(blogs.Contenido); // Muestra una alerta con el texto completo
+    // O puedes almacenarlo en un estado y mostrarlo en otro lugar, como un modal
+  };
 
   useEffect(() => {
     const fetchAPI = async () => {
       try {
         const response = await axios.get("http://localhost:5000/articulos");
-        setBlog(response.data);
+        const formattedData = response.data.map((article) => ({
+          ...article,
+          Fecha: new Date(article.Fecha).toLocaleDateString("es-ES"),
+        }));
+        setBlog(formattedData);
       } catch (error) {
-        console.error(
-          "Error al obtener los datos del servID_Articuloor:",
-          error
-        );
+        console.error("Error al obtener los datos del servidor:", error);
       }
     };
     fetchAPI();
   }, []);
-
-  function formatDate(currentDate) {
-    const newDate = new Date(currentDate);
-    const formatDate = new Intl.DateTimeFormat("es-Es").format(newDate);
-    return formatDate;
-  }
 
   return (
     <>
@@ -137,7 +137,7 @@ const CrudBlog = () => {
               type="text"
               id="ID_Usuario"
               name="ID_Usuario"
-              value={blogData.ID_Usuario}
+              value={blogData.ID_Usuario || ""}
               onChange={handleChange}
               required
             />
@@ -149,7 +149,7 @@ const CrudBlog = () => {
               type="text"
               id="titulo"
               name="Titulo"
-              value={blogData.Titulo}
+              value={blogData.Titulo || ""}
               onChange={handleChange}
               required
             />
@@ -161,7 +161,7 @@ const CrudBlog = () => {
               type="text"
               id="Contenido"
               name="Descripción"
-              value={blogData.Descripción}
+              value={blogData.Contenido || ""}
               onChange={handleChange}
               required
             />
@@ -170,10 +170,10 @@ const CrudBlog = () => {
             <label htmlFor="fecha">Fecha:</label>
             <input
               className="input-date"
-              type="text"
+              type="date"
               id="fecha"
               name="Fecha"
-              value={blogData.Fecha}
+              value={blogData.Fecha || ""}
               onChange={handleChange}
               required
             />
@@ -185,7 +185,7 @@ const CrudBlog = () => {
               type="text"
               id="imagen"
               name="Imagen"
-              value={blogData.Imagen}
+              value={blogData.Imagen || ""}
               onChange={handleChange}
               required
             />
@@ -238,7 +238,21 @@ const CrudBlog = () => {
                     />
                   </td>
                   <td className="user-data">{blogs.Titulo}</td>
-                  <td className="user-data">{blogs.Contenido}</td>
+                  <td className="user-data">
+                    {blogs.Contenido.length > 50 ? (
+                      <span>
+                        {`${blogs.Contenido.substring(0, 50)}...`}
+                        <button
+                          className="botones_admin_btn"
+                          onClick={() => handleExpandDescription(blogs)}
+                        >
+                          Ver más
+                        </button>
+                      </span>
+                    ) : (
+                      blogs.Contenido
+                    )}
+                  </td>
                   <td className="user-data">{blogs.Fecha}</td>
                   <td>
                     <button
