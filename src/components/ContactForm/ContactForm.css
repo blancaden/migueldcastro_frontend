@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+.contact-page {
+    background-color: #FFFAF2;
+}
+
+.contact-container {
+    font-family: 'Poppins', Courier, monospace;
+    display: flex;
+    background-color: #FBF4E9;
+    margin: 80px;
+    border-radius: 25px;
+    max-width: 1400px;
+    align-content: center;
+}
+
+.contact-formUser {
+    flex: 1;
+    margin: 30px;
+}
+
+.social-media {
+    background-color: #FBF4E9;
+    flex: 1; /* Hacer que este div ocupe todo el espacio disponible */
+    margin-left: 150px;
+    margin-right: 30px;
+    margin-top: 40px;
+    font-size: large;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .social-media {
+        margin: 20px; /* Reduce el margen en dispositivos móviles */
+        display: flex; /* Cambia el diseño a una columna en dispositivos móviles */
+        flex-direction: column;
+        align-items: center; /* Alinea los elementos al centro */
+    }
+}
+
+.text-content {
+    font-family: 'Ovo', Courier, monospace;
+    font-size: larger;
+    text-align: center;
+    text-align: center;
+    margin: 70px;
+}
+
+.highlighted-heading {
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.highlighted-heading::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 10px;
+    bottom: -10px;
+    left: -10px;
+    background-color: #FBBA7E;
+}
+
+.text-content p {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.deco-butterfly {
+    margin: 90px;
+}
+@media (max-width: 768px) {
+    .social-media {
+        display: none; /* Oculta las redes sociales en dispositivos móviles */
+    }
+}
