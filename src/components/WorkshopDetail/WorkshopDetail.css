@@ -2,7 +2,6 @@
     background-color: #FFFAF2;
    
 }
-
 .workshop-title-detail{
 
     font-size: 48pt;
@@ -11,6 +10,7 @@
     margin-bottom: 3%;
     margin-right: 5%;
     color: #5E4B49;
+    margin-top: 7%;
 }
 .workshop-date-and-schedule-container-detail{
     display: flex;
@@ -34,6 +34,7 @@
    font-weight: light;
     margin:7%;
     color: #5E4B49;
+    margin-bottom: 7%;
 }
 
 .watch-icon-detail{
@@ -47,6 +48,7 @@
 .workshop-date-and-schedule-container-detail {
     font-family: 'Poppins';
     font-size: 12pt;
+}
 
 @media screen {
     
