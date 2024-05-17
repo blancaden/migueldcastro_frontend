@@ -6,13 +6,8 @@ const LayoutPrivate = () => {
 
         return(
             <>
-                
-              
                 <AdminNavbar/>
                 <Outlet/> 
-
-                
-                
             </>
     
         )
