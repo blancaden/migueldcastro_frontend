@@ -49,7 +49,9 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
                 required
               />
             </div>
-            <button className='iniciar-sesiónbtn' type="submit">Iniciar Sesión</button>
+            <div>
+            <button className='iniciar-sesionbtn' type="submit">Iniciar Sesión</button>
+            </div>
           </form>
         </div>
       ) : (

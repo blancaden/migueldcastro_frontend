@@ -13,16 +13,11 @@
    margin-left: 30%;
    margin-top: 50px;
    border-radius: 20px;
-   /* display: flex; 
-   /* flex-direction: column; 
-   /* justify-content: center; 
-   /* align-items: center;  */ 
-   
 }
 
 
 .container-formlgn .input-group1 #input-name {
-    margin-top: 4%;
+    margin-top: 7%;
     margin-left: 15%;
     width: 329px;
     height: 27px;
@@ -33,7 +28,7 @@
 
 .container-formlgn .input-group2 #input-pw{
     margin-left: 15%;
-    margin-top: 6%;
+    margin-top: 7%;
     width: 329px;
     height: 27px;
     border-radius: 52.5px;
@@ -43,7 +38,7 @@
 .container-formlgn #labl-user{
     display: flex;
     width: 70px;
-    margin-top: 25%;
+    margin-top: 10%;
     margin-left: 15%;
     font-family:'Poppins', sans-serif;
 
@@ -60,13 +55,14 @@
 
 }
 
-.iniciar-sesiónbtn {
+.content-form .iniciar-sesionbtn{
     margin-top: 20% ;
     margin-left: 30%;
     width: 164px;
     height: 33px;
     border-radius: 52.5px;
     border: none;
+    color: white;
     background-color: #F06D7D;
 
 }
@@ -81,31 +77,66 @@
 
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .container-formlgn {
-        width: 80%; /* Utiliza un ancho del 80% del contenedor padre */
+@media only screen and (max-width: 480px) {
+     .container-gralformLogin{
+       
+        width: 100%;
+        background-color:#FFFAF2;
+          
+    } 
+    .container-formlgn{
+        
+       width: 90%;
+       height: 55%;
+       margin-left: 3%;
+       margin-right: -47px;
+        
     }
+    .container-formlgn .input-group1 #input-name {
+        
+        width: 70%;
+        height: 25px;
+      
+    }
+    .container-formlgn #labl-user{
+        font-size: 90%;
+        
+    }
+    .container-formlgn .input-group2 #input-pw{
+        width: 70%;
+        height: 25px;
+    }
+    .container-formlgn #labl-pw{
+        font-size: 90%;
+    
+    }
+   .content-form .iniciar-sesionbtn{
+    width: 40%;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 30%;
+    border-radius: 52.5px;
+    border: none;   
+    font-family:'Poppins', sans-serif;
+    font-size: 100%;
+    color: white;
+    background-color: #F06D7D;
+   }
+   .image-container .login-image{
 
-    .iniciar-sesiónbtn {
-        margin-top: 20px; /* Ajusta el margen superior */
-    }
+    display: flex;
+    margin-top: 660%;
+    width: 50%;
+    height: 9%;
+    margin-left: 20%;
 
-    .image-container .login-image {
-        max-width: 200px; /* Reduce el ancho máximo de la imagen */
-    }
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
-    .container-formlgn {
-        width: 80%; /* Utiliza un ancho del 90% del contenedor padre */
-    }
-
-    .image-container .login-image {
-        max-width: 150px; /* Reduce aún más el ancho máximo de la imagen */
-    }
 }
 
 
+
+
+    
+  
 
