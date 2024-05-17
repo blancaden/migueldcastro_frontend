@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+.user-table {
+  font-family: 'Ovo', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border: none;
+  border-radius: 40px;
+  background-color: #FBF4E9;
+  margin: 15px auto;
+  padding: 10px;
+  max-width: 1000px;
+}
+
+.user-table table {
+  width: 100%;
+  border-collapse: separate;
+  margin: 0;
+}
+
+.user-table table td,
+.user-table table th {
+  font-family: 'Ovo', Courier, monospace;
+  padding: 8px;
+  min-height: 50px;
+}
+
+.user-table table tr td:first-child,
+.user-table table tr th:first-child {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.user-table table tr td:last-child,
+.user-table table tr th:last-child {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.user-table table tr:nth-child(even) {
+  background-color: #FBF4E9;
+}
+
+.user-table table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.user-table table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F7DFB8;
+  border-color: black;
+  color: black;
+  border-radius: 0;
+}
+
+.buttons_admin_btn {
+  font-family: 'Ovo', Courier, monospace;
+  border-radius: 40px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+}
+
+.buttons_admin_btn:hover {
+  background-color: #F5D8AA;
+  color: black;
+}
+
+.contact-data {
+  font-family: 'Poppins', sans-serif;
+}

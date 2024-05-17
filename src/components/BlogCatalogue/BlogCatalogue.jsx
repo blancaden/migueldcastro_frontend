@@ -22,7 +22,7 @@ const BlogCatalogue = () => {
     <div className="catalogue-main-container">
       <div className="catalogue-body">
         <section>
-          <BlogCard articulos={articulos} />
+          <BlogCard article={article} />
         </section>
       </div>
     </div>

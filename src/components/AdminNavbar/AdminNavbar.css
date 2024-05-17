@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+.navbar {
+  font-family: 'Ovo', Courier, monospace;
+  background-color: #FBF4E9;
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-list li {
+  margin-right: 10px;
+}
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.navbar-link:hover {
+  background-color: #F7DFB8;
+}
