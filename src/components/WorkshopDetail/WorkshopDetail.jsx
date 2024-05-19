@@ -24,7 +24,7 @@ const WorkshopDetail = () => {
     <div className="workshop-details-container-detail">
       <div className="workshop-date-and-schedule-container-detail">
      
-      <img src="/img/calendar-icon.svg" alt="calendar-icon" />
+      <img className='calendar-icon-blog-size' src="/img/calendar-icon.svg" alt="calendar-icon" />
 
         <p className="workshop-date-detail">{talleres.Fecha}</p>
         <img className= 'watch-icon-detail'src="/img/watch-icon.svg" alt="Miguel de Castro" />

@@ -4,10 +4,12 @@ import './BlogCard.css';
 
 const BlogCard = ({ articulos }) => {
   return (
-    <div>
+    <div className='container-blog'>
+      
       <div className="product-container">
         {articulos && articulos.map((articulo, index) => (
           <div key={index} className="card">
+            
             <Link to={`/articulo/${articulo.Titulo}`} state={{ articulo }}>            
               <div className='product-image-container'>
                 <img className='blog-img'

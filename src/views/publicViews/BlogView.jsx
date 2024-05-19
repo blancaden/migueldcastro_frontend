@@ -6,7 +6,7 @@ import BlogFiles from '../../components/BlogFiles/BlogFiles'
 const BlogView = () => {
   return (
     <>
-
+<h2>Blogs</h2>
     <BlogCard/>
     <BlogCatalogue/>
     <BlogFiles/>

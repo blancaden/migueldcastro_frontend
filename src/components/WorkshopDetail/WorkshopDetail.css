@@ -17,13 +17,13 @@
    font-family: 'Poppins';
    font-size: 16pt;
    font-weight: light;
-   /* margin:3%; */
    margin-left: 7%;
    margin-top: 1%;
    
 }
 .workshop-date-detail{
     margin-left: 0%;
+  
 }
 .workshop-schedule-detail{
     margin-left: 0.2%;
@@ -40,6 +40,7 @@
 .watch-icon-detail{
     margin-left: 1%;
     size-adjust: 50%;
+    width: 20px;
 }
 .img-workshop-detail{
     margin-left: 7%;
