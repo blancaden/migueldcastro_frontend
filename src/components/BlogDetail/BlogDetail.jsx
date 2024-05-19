@@ -24,7 +24,7 @@ const BlogDetail = () => {
         </div>
         <div className="blog-details-container-detail">
           <div className="blog-date-and-schedule-container-detail">
-          <img src="/img/calendar-icon.svg" alt="calendar-icon" />
+          <img className='calendar-icon-blog-size' src="/img/calendar-icon.svg" alt="calendar-icon" />
 
             <p className="blog-date-detail">{articulo.Fecha}</p>
             <p className="blog-schedule-detail">{articulo.Horario}</p>

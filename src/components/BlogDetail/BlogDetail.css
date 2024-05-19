@@ -2,6 +2,9 @@
     background-color: #FFFAF2;
    
 }
+.calendar-img{
+    width: 20px;
+}
 .blog-title-detail{
 
     font-size: 48pt;
@@ -22,6 +25,7 @@
    margin-top: 1%;
    
 }
+
 .blog-date-detail{
     margin-left: 1%;
 }
