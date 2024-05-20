@@ -214,72 +214,66 @@ const CrudBlog = () => {
         </form>
 
         <section className="tabla_usuarios">
-          <h1>Artículos registrados</h1>
-          <table id="table_content">
-            <thead>
-              <tr>
-                <th>ID Artículo</th>
-                <th>Imagen</th>
-                <th>Título</th>
-                <th>Contenido</th>
-                <th>Fecha</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {blog.map((blogs, index) => (
-                <tr key={index}>
-                  <td className="user-data">{blogs.ID_Articulo}</td>
-                  <td className="user-data">
-                    <img
-                      src={blogs.Imagen}
-                      alt={blogs.Imagen}
-                      style={{ width: "50px", height: "auto" }}
-                    />
-                  </td>
-                  <td className="user-data">{blogs.Titulo}</td>
-                  <td className="user-data">
-                    {blogs.Contenido.length > 50 ? (
-                      <span>
-                        {`${blogs.Contenido.substring(0, 50)}...`}
-                        <button
-                          className="botones_admin_btn"
-                          onClick={() => handleExpandDescription(blogs)}
-                        >
-                          Ver más
-                        </button>
-                      </span>
-                    ) : (
-                      blogs.Contenido
-                    )}
-                  </td>
-                  <td className="user-data">{blogs.Fecha}</td>
-                  <td>
-                    <button
-                      className="botones_admin_btn"
-                      onClick={() => handleEdit(blogs)}
-                    >
-                      Editar
-                    </button>
-                  </td>
-                  {blogs.ID_Articulo && (
-                    <td>
-                      <button
-                        className="botones_admin_btn"
-                        onClick={() => {
-                          console.log(blogs.ID_Articulo);
-                          handleDelete(blogs);
-                        }}
-                      >
-                        Eliminar
-                      </button>
-                    </td>
-                  )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+  <h1>Artículos registrados</h1>
+  <table id="table_content">
+    <thead>
+      <tr>
+        <th>ID Artículo</th>
+        <th>Imagen</th>
+        <th>Título</th>
+        <th>Contenido</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {blog.map((blogs, index) => (
+        <tr key={index}>
+          <td className="user-data">{blogs.ID_Articulo}</td>
+          <td className="user-data">
+            <img
+              src={blogs.Imagen}
+              alt={blogs.Imagen}
+              style={{ width: "50px", height: "auto" }}
+            />
+          </td>
+          <td className="user-data">{blogs.Titulo}</td>
+          <td className="user-data">
+            {blogs.Contenido.length > 50 ? (
+              <span>
+                {`${blogs.Contenido.substring(0, 50)}...`}
+                <button
+                  className="botones_admin_btn"
+                  onClick={() => handleExpandDescription(blogs)}
+                >
+                  Ver más
+                </button>
+              </span>
+            ) : (
+              blogs.Contenido
+            )}
+          </td>
+          <td className="user-data">{blogs.Fecha}</td>
+          <td className="actions">
+            <button
+              className="botones_admin_btn edit"
+              onClick={() => handleEdit(blogs)}
+            >
+              Editar
+            </button>
+            <button
+              className="botones_admin_btn delete"
+              onClick={() => handleDelete(blogs)}
+            >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</section>
+
       </div>
     </>
   );
