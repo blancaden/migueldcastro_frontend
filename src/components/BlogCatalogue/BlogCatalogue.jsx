@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import BlogCard from '../BlogCard/BlogCard';
-import BlogHandler from "../../handler/BlogHandler";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import BlogCard from "../BlogCard/BlogCard";
 
 const BlogCatalogue = () => {
-  const [articulos, setArticulos] = useState([]);
+  const [blog, setBlog] = useState([]);
 
   useEffect(() => {
-    const fetchArticulos = async () => {
+    const fetchAPI = async () => {
       try {
-        const response = await BlogHandler.getAllBlogs();
-        setArticulos(response);
+        const response = await axios.get("http://localhost:5000/articulos");
+        const formattedData = response.data.map((article) => ({
+          ...article,
+          Fecha: new Date(article.Fecha).toLocaleDateString("es-ES"),
+        }));
+        setBlog(formattedData);
       } catch (error) {
-        console.error("Error al cargar los artículos de blog:", error);
+        console.error("Error al obtener los datos del servidor:", error);
       }
     };
-
-    fetchArticulos();
+    fetchAPI();
   }, []);
 
   return (
     <div className="catalogue-main-container">
       <div className="catalogue-body">
         <section>
-          <BlogCard article={article} />
+          <BlogCard blogs={blog} />
         </section>
       </div>
     </div>
   );
-}
+};
 
 export default BlogCatalogue;
