@@ -3,29 +3,32 @@ import axios from "axios";
 import BlogCard from "../BlogCard/BlogCard";
 
 const BlogCatalogue = () => {
-  const [blog, setBlog] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     const fetchAPI = async () => {
       try {
         const response = await axios.get("http://localhost:5000/articulos");
-        const formattedData = response.data.map((article) => ({
-          ...article,
-          Fecha: new Date(article.Fecha).toLocaleDateString("es-ES"),
+        const formattedData = response.data.map((blog) => ({
+          ...blog,
+          Fecha: new Date(blog.Fecha).toLocaleDateString("es-ES"),
         }));
-        setBlog(formattedData);
+        setBlogs(formattedData);
       } catch (error) {
         console.error("Error al obtener los datos del servidor:", error);
       }
     };
-    fetchAPI();
-  }, []);
+
+    if (blogs.length === 0) {
+      fetchAPI();
+    }
+  }, [blogs]);
 
   return (
     <div className="catalogue-main-container">
       <div className="catalogue-body">
         <section>
-          <BlogCard blogs={blog} />
+          <BlogCard blogs={blogs} />
         </section>
       </div>
     </div>
