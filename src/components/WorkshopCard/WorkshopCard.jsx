@@ -4,7 +4,9 @@ import './WorkshopCard.css';
 
 
 
+
 const WorkshopCard = ({ talleres }) => {
+
   return (
     <>
       <div className="workshop-body">

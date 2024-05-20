@@ -6,9 +6,11 @@ import BlogFiles from "../../components/BlogFiles/BlogFiles";
 const BlogView = () => {
   return (
     <>
-      <BlogCard />
-      <BlogCatalogue />
-      <BlogFiles />
+<h2 className='title-blogview-style'>Blogs</h2>
+    <BlogCard/>
+    <BlogCatalogue/>
+    <BlogFiles/>
+    
     </>
   );
 };

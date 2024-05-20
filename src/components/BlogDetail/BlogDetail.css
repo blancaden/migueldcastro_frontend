@@ -1,0 +1,59 @@
+.blogdetail-body-detail {
+    background-color: #FFFAF2;
+   
+}
+.calendar-img{
+    width: 20px;
+}
+.blog-title-detail{
+
+    font-size: 48pt;
+    font-weight:lighter;
+    margin-left: 7%;
+    margin-bottom: 3%;
+    margin-right: 5%;
+    color: #5E4B49;
+    margin-top: 7%;
+}
+.blog-date-and-schedule-container-detail{
+    display: flex;
+   font-family: 'Poppins';
+   font-size: 16pt;
+   font-weight: light;
+   /* margin:3%; */
+   margin-left: 7%;
+   margin-top: 1%;
+   
+}
+
+.blog-date-detail{
+    margin-left: 1%;
+}
+.blog-schedule-detail{
+    margin-left: 0.2%;
+}
+.blog-description-detail{
+    font-family: 'Poppins';
+   font-size: 12pt;
+   font-weight: light;
+    margin:7%;
+    color: #5E4B49;
+    margin-bottom: 7%;
+}
+
+.watch-icon-detail{
+    margin-left: 1%;
+    size-adjust: 50%;
+}
+.img-blog-detail{
+    margin-left: 7%;
+    width: 50%;
+}
+.blog-date-and-schedule-container-detail {
+    font-family: 'Poppins';
+    font-size: 12pt;
+}
+
+@media screen {
+    
+}
