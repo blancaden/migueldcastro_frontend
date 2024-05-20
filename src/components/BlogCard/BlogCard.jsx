@@ -9,7 +9,7 @@ const BlogCard = ({ articulos }) => {
       <div className="product-container">
         {articulos && articulos.map((articulo, index) => (
           <div key={index} className="card">
-            
+             <img className='blog-icon-blog' src="/img/blogicon.svg" alt="calendar-icon" />
             <Link to={`/articulo/${articulo.Titulo}`} state={{ articulo }}>            
               <div className='product-image-container'>
                 <img className='blog-img'
@@ -21,6 +21,7 @@ const BlogCard = ({ articulos }) => {
                 </div>
               </div>
             </Link>
+           
             <div className="product-details">
               <h3 className="product-title">{articulo.Titulo}</h3>
              <div className='date-calendar-style-blog'>

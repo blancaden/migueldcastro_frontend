@@ -19,7 +19,10 @@
 .card a[href^="/products/"] {
   height: 0;
 }
-
+.blog-icon-blog{
+  margin-bottom: 180px;
+  margin-right: 20px;
+}
 .product-image-container {
   position: relative;
   width: auto;
