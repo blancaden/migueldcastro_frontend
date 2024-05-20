@@ -1,36 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import WorkshopCard from '../WorkshopCard/WorkshopCard';
-import WorkshopHandler from "../../handler/WorkshopHandler";
-import './WorkshopCatalogue.css';
-
+import React, { useState, useEffect } from "react";
+import axios from "axios"; // Importa axios
+import WorkshopCard from "../WorkshopCard/WorkshopCard";
+import "./WorkshopCatalogue.css";
 
 const WorkshopCatalogue = () => {
-  const [talleres, setTalleres] = useState([]);
+  const [workshops, setWorkshops] = useState([]);
 
   useEffect(() => {
-    const fetchTalleres = async () => {
+    const fetchAPI = async () => {
       try {
-        const response = await WorkshopHandler.getAllWorkshops();
-        setTalleres(response);
+        const response = await axios.get("http://localhost:5000/talleres");
+        const formattedData = response.data.map((workshop) => ({
+          ...workshop,
+          Fecha: new Date(workshop.Fecha).toLocaleDateString("es-ES"),
+        }));
+        setWorkshops(formattedData);
       } catch (error) {
-        console.error("Error al cargar los talleres:", error);
+        console.error("Error al obtener los datos del servidor:", error);
       }
     };
-
-    fetchTalleres();
-  }, []);
+    fetchAPI();
+  }, []); // Cambia la dependencia a []
 
   return (
     <div className="catalogue-main-container">
-    
-        <section className="catalogue-body">
-          <WorkshopCard talleres={talleres} />
-        </section>
-      
+      <section className="catalogue-body">
+        <WorkshopCard workshops={workshops} />
+      </section>
     </div>
   );
-}
+};
 
 export default WorkshopCatalogue;
-
-
