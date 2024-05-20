@@ -15,7 +15,7 @@ const WorkshopCard = ({ talleres }) => {
         <div key={index} className="workshop-card">
           <Link to={`/taller/${talleres.ID_Talleres}`} state={{ talleres }}>            
             <div className='workshop-image-container'>
-              <img
+              <img 
                 src={talleres.Imagen}
                 alt={talleres.Titulo}
               />

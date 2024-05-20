@@ -17,9 +17,9 @@
     margin-bottom: 10%;
    }
    
-   .workshop-card img {
-    width: 260px;
-    height: 180px;
+   .workshop-image-container img {
+    width: 100%;
+    height: 100%;
    }
   
    .workshop-card a[href^="/talleres/"] {
