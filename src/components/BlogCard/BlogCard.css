@@ -98,6 +98,46 @@
 }
 
 
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .blog-img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .product-details {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .product-description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .blog-content {
+    max-width: 100%;
+    text-align: center;
+    
+  }
+  .blog-icon-blog{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  }
+
 
 
 
