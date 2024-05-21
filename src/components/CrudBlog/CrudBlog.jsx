@@ -159,7 +159,7 @@ const CrudBlog = () => {
               className="input-description"
               type="text"
               id="Contenido"
-              name="Descripción"
+              name="Contenido"
               value={blogData.Contenido || ""}
               onChange={handleChange}
               required
