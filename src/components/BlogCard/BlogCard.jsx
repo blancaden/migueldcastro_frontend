@@ -9,31 +9,31 @@ const BlogCard = ({ blogs }) => {
 
   return (
     <div className='container-blog'>
-      
+
       <div className="product-container">
-        {articulos && articulos.map((articulo, index) => (
+        {blogs.map((blog, index) => (
           <div key={index} className="card">
-             <img className='blog-icon-blog' src="/img/blogicon.svg" alt="calendar-icon" />
-            <Link to={`/articulo/${articulo.Titulo}`} state={{ articulo }}>            
+            <img className='blog-icon-blog' src="/img/blogicon.svg" alt="calendar-icon" />
+            <Link to={`/articulo/${blog.ID_Articulo}`} state={{ article: blog }}>
               <div className='product-image-container'>
                 <img className='blog-img'
-                  src={articulo.Imagen}
-                  alt={articulo.Titulo}
+                  src={blog.Imagen}
+                  alt={blog.Titulo}
                 />
                 <div className="overlay">
                   Leer más
                 </div>
               </div>
             </Link>
-           
+
             <div className="product-details">
-              <h3 className="product-title">{articulo.Titulo}</h3>
-             <div className='date-calendar-style-blog'>
-              <img className='calendar-icon-blog-size' src="/img/calendar-icon.svg" alt="calendar-icon" />
-              <p className="blog-date">{articulo.Fecha}</p>
-              </div> 
-              <p className="blog-content">{articulo.Contenido}</p>
-            </div>           
+              <h3 className="product-title">{blog.Titulo}</h3>
+              <div className='date-calendar-style-blog'>
+                <img className='calendar-icon-blog-size' src="/img/calendar-icon.svg" alt="calendar-icon" />
+                <p className="blog-date">{blog.Fecha}</p>
+              </div>
+              <p className="blog-content">{blog.Contenido}</p>
+            </div>
           </div>
         ))}
       </div>
