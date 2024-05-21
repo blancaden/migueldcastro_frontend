@@ -22,6 +22,7 @@ img[src='/img/Ondas.svg'] {
     grid-column: 2;
     justify-self: end;
     margin-right: -5%;
+    width: 50%;
 }
 
 
@@ -97,6 +98,14 @@ img[src='/img/Ondas.svg'] {
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
+}
+
+.Coaching img {
+    width: 85%;
+}
+
+.Workshop img {
+    width: 83%;
 }
 
 .HomeSection-Services img:hover {
@@ -209,4 +218,222 @@ img[src='/img/Ondas.svg'] {
     left: 63%;
     width: 40%;
     opacity: 60%;
+}
+
+@media (max-width: 1200px) {
+    .HomeSection-Header h1 {
+        font-size: 48px;
+    }
+
+    .HomeSection-Header h2 {
+        font-size: 28px;
+    }
+
+    .HomeSection-Header button {
+        margin-left: 20%;
+    }
+
+    .HomeSection-Services {
+        padding: 20px;
+    }
+
+    .HomeSection-Services h4 {
+        font-size: 20px;
+    }
+
+    .Therapy button {
+        margin-bottom: 50px;
+    }
+
+    .HomeSection-KnowMe h3 {
+        font-size: 28px;
+    }
+
+    .HomeSection-KnowMe p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        margin: 5%;
+    }
+
+    .HomeSection-Header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomeSection-Header img {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .HomeSection-Header h1 {
+        font-size: 36px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .HomeSection-Header h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .HomeSection-Header button {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .HomeSection-Services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomeSection-Services>div {
+        margin: 20px 0;
+    }
+
+    .HomeSection-Services img {
+        display: block;
+        margin-left: 100px;
+    }
+
+    .HomeSection-Services h4 {
+        margin-left: 160px;
+        margin-bottom: -5px;
+    }
+
+    .HomeSection-Services p {
+        font-size: 14px;
+        text-align: center;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .HomeSection-Services button {
+        margin-left: 160px;
+        margin-top: 10px;
+        width: 80px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    .HomeSection-KnowMe h3 {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .HomeSection-KnowMe p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .HomeSection-KnowMe button {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .HomeSection-KnowMe img {
+        display: none;
+    }
+
+    .knowme-img {
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        margin-top: 20px;
+        position: static;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .HomeSection-Header h1 {
+        font-size: 32px;
+    }
+
+    .HomeSection-Header h2 {
+        font-size: 18px;
+    }
+
+    .HomeSection-Header button {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 145px;
+        text-decoration: none;
+    }
+
+    .HomeSection-Header img {
+        width: 300px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+
+    .HomeSection-Services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomeSection-Services>div {
+        margin: 20px 0;
+    }
+
+    .HomeSection-Services img {
+        width: 200px;
+        display: block;
+        margin-left: 100px;
+    }
+
+    .HomeSection-Services h4 {
+        margin-left: 160px;
+        margin-bottom: -5px;
+    }
+
+    .HomeSection-Services p {
+        font-size: 12px;
+        text-align: center;
+        width: 70%;
+        margin-left: 60px;
+    }
+
+    .HomeSection-Services button {
+        margin-left: 160px;
+        margin-top: 10px;
+        width: 80px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    .HomeSection-KnowMe h3 {
+        font-size: 20px;
+    }
+
+    .HomeSection-KnowMe p {
+        font-size: 14px;
+    }
+
+    .HomeSection-KnowMe button {
+        margin-left: 120px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        width: 140px;
+        font-size: 14px;
+    }
+
+    .HomeSection-KnowMe img {
+        display: none;
+    }
+
+    .knowme-img {
+        display: none;
+    }
+
+
 }
