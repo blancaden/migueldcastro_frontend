@@ -13,7 +13,7 @@ const BlogCard = ({ blogs }) => {
       <div className="product-container">
         {blogs.map((blog, index) => (
           <div key={index} className="card">
-            <img className='blog-icon-blog' src="/img/blogicon.svg" alt="calendar-icon" />
+            <img className='blog-icon-blog' src="/img/blogicon (2).svg" alt="calendar-icon" />
             <Link to={`/articulo/${blog.ID_Articulo}`} state={{ article: blog }}>
               <div className='product-image-container'>
                 <img className='blog-img'
