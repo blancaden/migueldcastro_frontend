@@ -1,4 +1,3 @@
-
 .workshop-container {
   display: flex;
   justify-content: center;
@@ -6,94 +5,106 @@
   flex-wrap: wrap;
   font-family: 'Poppins';
   color: #5E4B49;
- }
- 
- .workshop-card {
+  margin-top: 10%;
+}
+
+.workshop-card {
   background-color: #FBF4E9;
   border-radius: 30px;
   padding: 20px;
   width: 22%;
   height: 550px;
   margin-bottom: 10%;
- }
- 
- .workshop-image {
+}
+
+.workshop-image-container img {
   width: 300px;
   height: 220px;
- }
+}
 
- .workshop-card a[href^="/talleres/"] {
-   height: 0;
- }
- 
- .workshop-image-container {
+.workshop-image-container {
   position: relative;
   width: 100px;
-  height: 100pz ;
+  height: 100px;
   display: inline-block;
   margin: 0;
   padding: 0;
- }
- 
- .workshop-image-container .workshop-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 98.5%;
-  background: rgba(0, 0, 0, 0.5);
+}
+
+.workshop-details-container {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.workshop-date-and-schedule-container {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  margin-left: 15%
+}
+
+.workshop-date {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity .8s ease;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
- }
- 
- .workshop-image-container:hover .workshop-overlay {
-  opacity: 1;
-  cursor: pointer;
- }
- 
- .workshop-details-container {
-  margin-bottom: 10px;
-  text-align: center;
- }
-
-.workshop-date-and-schedule-container{
-    display:flex;
- }
- 
- .workshop-date {
   font-size: 12px;
-  font-weight: 200;
-  margin-bottom: 5px;
- }
+  font-weight: 100;
+  gap: 15%
+}
 
- .workshop-schedule {
+.workshop-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
-  font-weight: 200;
-  margin-bottom: 5px;
- }
- 
- .workshop-title {
+  font-weight: 100;
+
+}
+
+.workshop-title {
   font-family: 'Ovo';
   font-size: 25px;
   font-weight: 100;
-  margin-bottom: 5px;
- }
- 
- .workshop-description {
-  font-size: 16px;
+  margin: 5%
+}
+
+.workshop-description {
+  font-size: 14px;
   font-weight: 200;
-  margin-bottom: 10px;
- }
- 
- 
- 
-   
-   
-   
+  margin: 0 10% 10% 10%;
+  text-align: justify;
+  line-height: 2;
+}
+
+.icon-workshop {
+  width: 20px;
+  height: 20px
+}
+
+.workshop-button-container {
+  position: relative;
+  text-decoration: none;
+}
+
+.workshop-button-container {
+  position: relative;
+  text-decoration: none;
+}
+
+.svg2 {
+  display: none;
+  /* Oculta el segundo SVG inicialmente */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-container:hover .svg1 {
+  display: none;
+  /* Oculta el primer SVG cuando se hace hover */
+}
+
+.svg-container:hover .svg2 {
+  display: block;
+  /* Muestra el segundo SVG cuando se hace hover */
+}

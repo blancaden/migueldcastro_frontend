@@ -9,7 +9,7 @@ const WorkshopCatalogue = () => {
   useEffect(() => {
     const fetchAPI = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/talleres");
+        const response = await axios.get("http://localhost:5001/talleres");
         const formattedData = response.data.map((workshop) => ({
           ...workshop,
           Fecha: new Date(workshop.Fecha).toLocaleDateString("es-ES"),
