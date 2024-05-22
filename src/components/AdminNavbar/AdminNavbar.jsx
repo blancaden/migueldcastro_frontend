@@ -1,19 +1,17 @@
-
 import React from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import "./AdminNavbar.css";
 
 
 const AdminNavbar = ({ onLogout }) => {
-  const navigate = useNavigate(); // Llama a useNavigate aquí
+  const navigate = useNavigate(); 
 
   const handleLogout = () => {
-    // Llama a la función onLogout para cerrar la sesión del usuario
     onLogout();
   };
 
   const handleBackClick = () => {
-    navigate('/login'); // Redirige a la página principal
+    navigate('/login'); 
   };
 
   return (

@@ -11,7 +11,7 @@ const WorkshopCard = ({ workshops }) => {
             <div key={index} className="workshop-card">
 
               <div className="workshop-image-container">
-                <img src={workshop.Imagen} alt={workshop.Titulo} />
+                <img className="workshop-image" src={workshop.Imagen} alt={workshop.Titulo} />
               </div>
 
               <div className="workshop-details-container">
@@ -28,8 +28,12 @@ const WorkshopCard = ({ workshops }) => {
 
                   </div>
                 </div>
+
+                <div className="workshop-title-and-description">
                 <h3 className="workshop-title">{workshop.Titulo}</h3>
                 <p className="workshop-description">{workshop.Descripción}</p>
+                </div>
+
               </div>
 
 

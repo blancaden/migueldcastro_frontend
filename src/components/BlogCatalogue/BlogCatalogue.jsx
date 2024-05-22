@@ -8,7 +8,7 @@ const BlogCatalogue = () => {
   useEffect(() => {
     const fetchAPI = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/articulos");
+        const response = await axios.get("http://localhost:5001/articulos");
         const formattedData = response.data.map((blog) => ({
           ...blog,
           Fecha: new Date(blog.Fecha).toLocaleDateString("es-ES"),

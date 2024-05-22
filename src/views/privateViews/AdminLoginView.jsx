@@ -1,10 +1,7 @@
-
-//funciona al hacer inicio de sesión y mensaje rojo de usuario incorrecto.agregado handlelogOut.PERO EL MENSAJE ESTÁ FUERA DEL FORMULARIO
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import AdminLogin from '../../components/AdminLogin/AdminLogin';
-import AdminNavbar from '../../components/AdminNavbar/AdminNavbar';
-import axios from 'axios'; // Importa axios para realizar solicitudes HTTP
+import axios from 'axios'; 
 import './AdminLoginView.css'
 
 const AdminLoginView = () => {
@@ -14,42 +11,41 @@ const AdminLoginView = () => {
   const handleLogin = async (userData) => {
    
     try {
-      // Realiza una solicitud POST al endpoint de inicio de sesión del backend
-      const response = await axios.post('http://127.0.0.1:5000/api/login', userData);
+     
+      const response = await axios.post('http://127.0.0.1:5001/api/login', userData);
   
-      // Si la solicitud es exitosa y se recibe un token de autenticación
+      
       if (response.data.token) {
-        // Marca al usuario como autenticado
+        
         setIsLoggedIn(true);
-        // Guarda el token de autenticación en el almacenamiento local
+        
         localStorage.setItem('token', response.data.token);
         setError('');
       } else {
-        // Si no se recibe un token de autenticación, muestra un mensaje de error al usuario
+        
         setError('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
       }
     } catch (error) {
-      // Si ocurre algún error durante la solicitud, muestra un mensaje de error al usuario
+      
       setError('Usuario o contraseña incorrectos. Inténtalo de nuevo.');
     }
   };
 
   const handleLogout = () => {
-    // Llama al endpoint de logout en el backend para invalidar el token
-    axios.post('http://127.0.0.1:5000/api/logout', null, {
+    
+    axios.post('http://127.0.0.1:5001/api/logout', null, {
       headers: {
         Authorization: localStorage.getItem('token')
       }
     }).then(() => {
-      // Elimina el token de autenticación del almacenamiento local
+      
       localStorage.removeItem('token');
-      // Marca al usuario como no autenticado
+      
       setIsLoggedIn(false);
-      // Redirige al usuario a la página de inicio de sesión u otra página deseada
-      // history.push('/login'); // Asegúrate de tener acceso a history
+      
     }).catch(error => {
       console.error('Error al cerrar sesión:', error);
-      // Manejar errores de manera adecuada
+      
     });
   };
 
