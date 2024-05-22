@@ -1,0 +1,15 @@
+.msj-error-red .error-message{
+    margin-top: -56vh;
+    margin-left: 35%;
+    color: red;
+}
+
+@media only screen and (max-width: 480px) {
+    .msj-error-red .error-message{
+        margin-top: -61vh;
+        margin-left: 15%;
+        color: red;
+    }
+    
+
+}
