@@ -17,6 +17,13 @@ const ContactForm = () => {
     Asunto: "",
   });
 
+  const [errors, setErrors] = useState({
+    Nombre: "",
+    Email: "",
+    Mensaje: "",
+    Asunto: "",
+  });
+
   const clearForm = () => {
     setFormData({
       Nombre: "",
@@ -24,14 +31,52 @@ const ContactForm = () => {
       Mensaje: "",
       Asunto: "",
     });
+    setErrors({
+      Nombre: "",
+      Email: "",
+      Mensaje: "",
+      Asunto: "",
+    });
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email) ? "" : "Email no es válido";
+  };
+
+  const validateRequired = (value) => {
+    return value.trim() === "" ? "Este campo es obligatorio" : "";
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    let error = "";
+    if (name === "Email") {
+      error = validateEmail(value);
+    } else {
+      error = validateRequired(value);
+    }
+    setErrors({ ...errors, [name]: error });
   };
 
   const handleSubmitCreate = async (e) => {
     e.preventDefault();
+
+    const newErrors = {
+      Nombre: validateRequired(formData.Nombre),
+      Email: validateEmail(formData.Email),
+      Mensaje: validateRequired(formData.Mensaje),
+      Asunto: validateRequired(formData.Asunto),
+    };
+
+    setErrors(newErrors);
+
+    if (Object.values(newErrors).some((error) => error !== "")) {
+      return;
+    }
+
     const user = {
       Nombre: formData.Nombre,
       Email: formData.Email,
@@ -47,7 +92,7 @@ const ContactForm = () => {
       clearForm();
     } catch (error) {
       console.error(
-        "Error al enviar la solicitud de eliminación al servidor:",
+        "Error al enviar la solicitud de creación al servidor:",
         error
       );
     }
@@ -101,6 +146,8 @@ const ContactForm = () => {
                   sx={{ width: "80%" }}
                   onChange={handleChange}
                   value={formData.Nombre}
+                  error={!!errors.Nombre}
+                  helperText={errors.Nombre}
                 />
               </div>
               <div className="formUser-email">
@@ -112,6 +159,8 @@ const ContactForm = () => {
                   sx={{ width: "80%" }}
                   onChange={handleChange}
                   value={formData.Email}
+                  error={!!errors.Email}
+                  helperText={errors.Email}
                 />
               </div>
               <div className="formUser-title">
@@ -123,6 +172,8 @@ const ContactForm = () => {
                   sx={{ width: "80%" }}
                   onChange={handleChange}
                   value={formData.Asunto}
+                  error={!!errors.Asunto}
+                  helperText={errors.Asunto}
                 />
               </div>
               <div className="formUser-message">
@@ -134,6 +185,8 @@ const ContactForm = () => {
                   sx={{ width: "90%" }}
                   onChange={handleChange}
                   value={formData.Mensaje}
+                  error={!!errors.Mensaje}
+                  helperText={errors.Mensaje}
                 />
               </div>
             </Box>
