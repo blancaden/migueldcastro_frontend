@@ -11,13 +11,12 @@
 .workshop-card {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   background-color: #FBF4E9;
   border-radius: 30px;
-
   width: 22%;
-  height: 550px;
+  height: 600px;
+  padding: 65px 20px 10px 20px;
   margin-bottom: 10%;
 }
 
@@ -29,14 +28,13 @@
 .workshop-image{
   width: 300px;
   height: 220px;
-
 }
 
 .workshop-date-and-schedule-container {
   display: flex;
   align-items: center;
-  gap: 10%;
-  margin-left: 15%
+  gap: 15%;
+  margin-left: 3%
 }
 
 .workshop-date {
@@ -54,7 +52,11 @@
   align-items: center;
   font-size: 12px;
   font-weight: 100;
+  gap: 10%;
 
+}
+.workshop-schedule p {
+  width: 50px;
 }
 
 .workshop-title-and-description{
@@ -69,10 +71,10 @@
 }
 
 .workshop-description {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 200;
   text-align: justify;
-  line-height: 2;
+  line-height: 1.75;
 }
 
 .icon-workshop {
@@ -88,6 +90,12 @@
 .workshop-button-container {
   position: relative;
   text-decoration: none;
+}
+
+.svg1{
+  width: 125px;
+  height: 30px;
+  margin-top: 10%;
 }
 
 .svg2 {
