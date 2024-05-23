@@ -61,7 +61,7 @@ const AdminLoginView = () => {
   return (
     <div className='msj-error-red'>
       
-      <AdminLogin onLogin={handleLogin} />
+      <AdminLogin onLogin={handleLogin} /> 
       {error && <p className='error-message'>{error}</p>}
     </div>
   );
