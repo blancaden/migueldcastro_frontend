@@ -3,7 +3,10 @@ import ContactForm from '../../components/ContactForm/ContactForm'
 
 const ContactView = () => {
   return (
-    <ContactForm/>
+  <>
+  <ContactForm/>
+  <h1>Hola Contacto</h1>
+  </>
   )
 }
 
