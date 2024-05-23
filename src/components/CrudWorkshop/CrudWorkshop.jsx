@@ -269,73 +269,70 @@ const CrudWorkshop = () => {
         </form>
 
         <section className="tabla_usuarios">
-          <h1>Talleres registrados</h1>
-          <table id="table_content">
-            <thead>
-              <tr>
-                <th>ID Talleres</th>
-                <th>Imagen</th>
-                <th>Título</th>
-                <th>Descripción</th>
-                <th>Fecha</th>
-                <th>Lugar</th>
-                <th>Horario</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {workshop.map((workshops, index) => (
-                <tr key={index}>
-                  <td className="user-data">{workshops.ID_Talleres}</td>
-                  <td className="user-data">
-                    <img
-                      src={workshops.Imagen}
-                      alt={workshops.Imagen}
-                      style={{ width: "50px", height: "auto" }}
-                    />
-                  </td>
-                  <td className="user-data">{workshops.Titulo}</td>
-                  <td className="user-data">
-                    {workshops.Descripción.length > 50 ? (
-                      <span>
-                        {`${workshops.Descripción.substring(0, 50)}...`}
-                        <button
-                          className="botones_admin_btn"
-                          onClick={() => handleExpandDescription(workshops)}
-                        >
-                          Ver más
-                        </button>
-                      </span>
-                    ) : (
-                      workshops.Descripción
-                    )}
-                  </td>
-                  <td className="user-data">{workshops.Fecha}</td>
-                  <td className="user-data">{workshops.Lugar}</td>
-                  <td className="user-data">{workshops.Horario}</td>
-                  <td>
-                    <button
-                      className="botones_admin_btn"
-                      onClick={() => handleEdit(workshops)}
-                    >
-                      Editar
-                    </button>
-                  </td>
-                  {workshops.ID_Talleres && (
-                    <td>
-                      <button
-                        className="botones_admin_btn"
-                        onClick={() => handleDelete(workshops)}
-                      >
-                        Eliminar
-                      </button>
-                    </td>
-                  )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+  <h1>Talleres registrados</h1>
+  <table id="table_content">
+    <thead>
+      <tr>
+        <th>ID Talleres</th>
+        <th>Imagen</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+        <th>Lugar</th>
+        <th>Horario</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {workshop.map((workshops, index) => (
+        <tr key={index}>
+          <td className="user-data">{workshops.ID_Talleres}</td>
+          <td className="user-data">
+            <img
+              src={workshops.Imagen}
+              alt={workshops.Imagen}
+              style={{ width: "50px", height: "auto" }}
+            />
+          </td>
+          <td className="user-data">{workshops.Titulo}</td>
+          <td className="user-data">
+            {workshops.Descripción.length > 50 ? (
+              <span>
+                {`${workshops.Descripción.substring(0, 50)}...`}
+                <button
+                  className="botones_admin_btn"
+                  onClick={() => handleExpandDescription(workshops)}
+                >
+                  Ver más
+                </button>
+              </span>
+            ) : (
+              workshops.Descripción
+            )}
+          </td>
+          <td className="user-data">{workshops.Fecha}</td>
+          <td className="user-data">{workshops.Lugar}</td>
+          <td className="user-data">{workshops.Horario}</td>
+          <td className="actions">
+            <button
+              className="botones_admin_btn edit"
+              onClick={() => handleEdit(workshops)}
+            >
+              Editar
+            </button>
+            <button
+              className="botones_admin_btn delete"
+              onClick={() => handleDelete(workshops)}
+            >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</section>
+
       </div>
     </>
   );
