@@ -12,7 +12,7 @@ const BlogDetail = () => {
     if (!blog) {
       const fetchBlog = async () => {
         try {
-          const { data } = await axios.get(`http://localhost:5000/articulos`);
+          const { data } = await axios.get(`http://localhost:5001/articulos`);
 
           const blogDetail = data.find(
             (blog) => blog.ID_Articulo === Number(id)
