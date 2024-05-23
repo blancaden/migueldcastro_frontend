@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './BlogFiles.css';
 
 const BlogFiles = () => {
@@ -7,8 +8,7 @@ const BlogFiles = () => {
   useEffect(() => {
     const fetchArticulos = async () => {
       try {
-        // Realiza la llamada a tu endpoint "articulo" para obtener los datos
-        const response = await fetch('URL_DEL_ENDPOINT/articulo');
+        const response = await fetch("http://localhost:5000/articulos");
         const data = await response.json();
         setArticulos(data);
       } catch (error) {
@@ -23,9 +23,9 @@ const BlogFiles = () => {
       <h1>Archivos</h1>
       {articulos.map(articulo => (
         <div key={articulo.id}>
-          <h2>{articulo.title}</h2>
-          <p>{articulo.content}</p>
-          <p>{new Date(articulo.date).toLocaleDateString()}</p>
+          <Link to={`/blogdetail/${articulo.id}`}>
+            <p>{new Date(articulo.date).toLocaleDateString()}</p>
+          </Link>
         </div>
       ))}
     </div>
