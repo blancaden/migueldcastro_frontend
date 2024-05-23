@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BlogCard from "../BlogCard/BlogCard";
-
+import './BlogCatalogue.css'
 const BlogCatalogue = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -25,11 +25,16 @@ const BlogCatalogue = () => {
   }, [blogs]);
 
   return (
-    <div className="catalogue-main-container">
-      <div className="catalogue-body">
-        <section>
-          <BlogCard blogs={blogs} />
-        </section>
+    <div>
+      <div className="h1-blogs-catalogue-container">
+        <h1 className="h1-blogs-catalogue">Blogs</h1>
+      </div>
+      <div className="catalogue-main-container">
+        <div className="catalogue-body">
+          <section>
+            <BlogCard blogs={blogs} />
+          </section>
+        </div>
       </div>
     </div>
   );
