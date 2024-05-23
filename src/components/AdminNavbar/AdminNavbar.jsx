@@ -18,8 +18,10 @@ const AdminNavbar = ({ onLogout }) => {
     <>
       <nav className="navbar">
         <ul className="navbar-list">
-        <li>
-          <button onClick={handleBackClick}>Cerrar Sesión</button>
+          <li>
+            <Link onClick={handleBackClick} className="navbar-link">
+              Cerrar Sesión
+            </Link>
           </li>
           <li>
             <Link to="/workshop" className="navbar-link">
