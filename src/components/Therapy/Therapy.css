@@ -57,6 +57,7 @@ margin-bottom: calc(1.5rem + 2.5vw);
 
 .therapy-btn{
   background-color: transparent;
+font-family: "Poppins", sans-serif;
   color: #9D7D79;
   border: 2.5px solid #FBBA7E !important;
   border-radius: 20px;
@@ -64,8 +65,9 @@ margin-bottom: calc(1.5rem + 2.5vw);
 }
 
 .therapy-btn:hover{
-  background-color: transparent;
-  border: 2.5px solid orange !important;
+  background-color: #FBBA7E;
+  border: 2.5px solid #FBBA7E !important;
+  color: white;
   border-radius: 20px;
   padding-inline: 14px;
 }
