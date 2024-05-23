@@ -1,0 +1,42 @@
+body {
+  background-color: #FFFAF2;
+}
+
+.blog-section {
+  text-align: center;
+}
+
+.blog-section h1 {
+  font-family: 'Ovo', sans-serif;
+  font-size: 2.5em;
+  font-weight: lighter;
+  color: #5E4B49;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.blog-section h1::after {
+  content: '';
+  display: block;
+  width: 21%;
+  height: 5px;
+  background-color: #FBBA7E;
+  margin: 7px auto 0;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.background-img{
+  position: absolute;
+  z-index: -1;
+  margin-top: -400px;
+  margin-left: 20px;
+  top: 1;
+  left: 1;
+  width: 50%;
+  height: 100%;
+}
