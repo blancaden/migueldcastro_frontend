@@ -1,20 +1,26 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+import React from "react";
+import "./Footer.css";
 
-function TextLinkExample() {
+const Footer = () => {
   return (
-    <Navbar className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
+    <>
+    <div className='footer'>
+    <div class="footer-content">
+        
+        <ul class="footer-links">
+            <li><a href="/">Calle Palas Atenea, 31 Almería</a></li>
+            <li><a href="/about">+34 675 281 352</a></li>
+            <li><a href="/contact">dime@migueldecastro.org</a></li>
+        </ul>
 
-export default TextLinkExample;
+        <div className="footer-right">
+          <img src="public\img\linkedin.svg" alt="" />
+          <img src="public\img\facebook.svg" alt="" />
+          <img src="public\img\instagram.svg" alt="" />
+        </div>
+    </div>
+  </div>
+    </>
+  );
+};
+export default Footer;
