@@ -9,4 +9,4 @@ const WorkshopDetailView = () => {
   )
 }
 
-export default WorkshopDetailView
+export default WorkshopDetailView;

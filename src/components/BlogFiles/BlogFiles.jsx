@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogFiles.css';
 
-const BlogFiles = () => {
-  const [articulos, setArticulos] = useState([]);
+// const BlogFiles = () => {
+//   const [articulos, setArticulos] = useState([]);
 
   useEffect(() => {
     const fetchArticulos = async () => {
@@ -32,4 +32,4 @@ const BlogFiles = () => {
   );
 }
 
-export default BlogFiles;
+// export default BlogFiles;

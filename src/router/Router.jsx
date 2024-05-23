@@ -18,94 +18,83 @@ import WorkshopDetailView from "../views/publicViews/WorkshopDetailView";
 
 
 export const Router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LayoutPublic />,
 
-    {
-        path:'/',
-        element: 
-             <LayoutPublic/>,
+    children: [
+      {
+        index: true,
+        element: <HomeView />,
+      },
+      {
+        path: "/sobremi",
+        element: <AboutMeView />,
+      },
+      {
+        path: "/terapia",
+        element: <TherapyView />,
+      },
+      {
+        path: "/talleres",
+        element: <WorkshopView />,
+      },
+      {
+        path: "/coaching",
+        element: <CoachingView />,
+      },
 
-        children:[
-            {
-                index: true,
-                element:(
-                        <HomeView/>
-                       
-                )
-            }, 
-            {
-                path: '/sobremi',
-                element: <AboutMeView/>
-            },
-            {
-                path: '/terapia',
-                element: <TherapyView/>
-            },
-            {
-                path: '/talleres',
-                element: <WorkshopView/>
-            },
-            {
-                path: '/coaching',
-                element: <CoachingView/>
-            },
-            
-            {
-                path: '/igualdad',
-                element: <EqualityView/>
-            },
-            {
-                path: '/blog',
-                element: <BlogView/>
-            },
-            {
-                path: '/contacto',
-                element: <ContactView/>
-            },
-            {
-                path: '/login',
-                element: <AdminLoginView/>
-            },
-            {
-                path: '/taller',
-                element: <WorkshopDetailView/>
-            },
-            {
-                path: '/taller/:id',
-                element: <WorkshopDetailView /> 
-              },
-            {
-                path: '/articulo',
-                element: <BlogDetailView/>
-            },
+      {
+        path: "/igualdad",
+        element: <EqualityView />,
+      },
+      {
+        path: "/blog",
+        element: <BlogView />,
+      },
+      {
+        path: "/contacto",
+        element: <ContactView />,
+      },
+      {
+        path: "/login",
+        element: <AdminLoginView />,
+      },
+      {
+        path: "/taller",
+        element: <WorkshopDetailView />,
+      },
+      {
+        path: "/taller/:id",
+        element: <WorkshopDetailView />,
+      },
+      {
+        path: "/articulo",
+        element: <BlogDetailView />,
+      },
 
-            {
-                path: '/articulo/:id',
-                element: <BlogDetailView /> 
-              }
-            
-        ]
-    },
-    {
-        
-            path: '/workshop',
-            element: <LayoutPrivate/>,
-            children:[
-                {
-                    index: true,
-                    element: (
-                    <AdminWorkshop/>
-                )          
-                },
-                {
-                    path: '/workshop/adminform',
-                    element: <AdminFormView/>
-                },
-                {
-                    path: '/workshop/adminblog',
-                    element: <AdminBlogView/>
-                },
-
-            ]
-    }
-
-])
+      {
+        path: "/articulo/:id",
+        element: <BlogDetailView />,
+      },
+    ],
+  },
+  {
+    path: "/workshop",
+    element: <LayoutPrivate />,
+    children: [
+      {
+        index: true,
+        element: <AdminWorkshop />,
+      },
+      {
+        path: "/workshop/adminform",
+        element: <AdminFormView />,
+      },
+      {
+        path: "/workshop/adminblog",
+        element: <AdminBlogView />,
+      },
+    ],
+  },
+]);
