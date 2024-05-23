@@ -1,27 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './BlogCardSection.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./BlogCardSection.css";
 
-const BlogCardSection = ({ articulos }) => {
+const BlogCardSection = ({ blogs = [] }) => {
   return (
     <div className="card-container">
-      {articulos.map((articulo, index) => (
+      {blogs.map((blog, index) => (
         <div key={index} className="card-section">
-            <img
-              src={articulo.Imagen}
-              alt={articulo.Titulo}
-              className="product-image"
-            />
+          <img src={blog.Imagen} alt={blog.Titulo} className="product-image" />
           <div className="product-details">
-            <p className="blog-date">{articulo.Fecha}</p>
-            <p className="blog-time">{articulo.Tiempo}</p>
-            <h3 className="blog-product-title">{articulo.Titulo}</h3>
-            <p className="blog-content">{articulo.Contenido}</p>
+            <p className="blog-date">{blog.Fecha}</p>
+            <p className="blog-time">{blog.Tiempo}</p>
+            <h3 className="blog-product-title">{blog.Titulo}</h3>
+            <p className="blog-content">{blog.Contenido}</p>
           </div>
           <div className="button-container">
             <Link
-              to={`/articulos/${articulo.ID_Articulo}`}
-              state={{ articulo }}
+              to={`/articulo/${blog.ID_Articulo}`}
+              state={{ blog }}
               className="custom-button"
             >
               Leer más

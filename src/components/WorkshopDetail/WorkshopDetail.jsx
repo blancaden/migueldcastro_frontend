@@ -13,7 +13,7 @@ const WorkshopDetail = () => {
       const fetchWorkshop = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5001/talleres/${id}`
+            `http://localhost:5000/talleres/${id}`
           );
           const formattedWorkshop = {
             ...response.data,
