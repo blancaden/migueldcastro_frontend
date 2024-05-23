@@ -45,8 +45,8 @@
 .equality-container p{
 font-size: calc(0.7rem + 0.2vw);
 font-family: "Poppins", sans-serif;
-line-height: 40px;
-margin-bottom: 65px;
+line-height: calc(1rem + 1.5vw);
+margin-bottom: calc(1.5rem + 2.5vw);
 }
 
 .equality-content-p{
@@ -72,4 +72,25 @@ content: ""; /* Agrega contenido vacío antes del elemento li */
   background-image: url('../../assets/icon-mariposa.svg'); /* Ruta de la imagen */
   background-size: cover; /* Ajusta el tamaño de la imagen */
   margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+
+@media (min-width: 350px) and (max-width: 800px) {
+  .soyunaimagen {
+    margin: auto;
+  }
+
+  .equality-content{
+    display: flex;
+    flex-direction: column-reverse !important;
+    padding: 0 !important;
+  }
+
+  .equality-content-p{
+    width: 100%;
+  }
+
+  .coaching-list{
+    flex-direction: column !important;
+  }
 }

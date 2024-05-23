@@ -43,8 +43,11 @@ margin-bottom: 30px;
 }
 
 .coaching-container .soyunaimagen{
+   width: calc(8rem + 7vw);
+ height: calc(8rem + 7vw);
  border-radius: 100%;
  background-color: red;
+ padding: 0;
 }
 
 .btn-info{
@@ -70,4 +73,24 @@ font-family: "Poppins", sans-serif;
 
 .btn-info .bi::before{
   vertical-align: 0em !important;
+}
+
+
+@media (min-width: 350px) and (max-width: 800px) {
+  .soyunaimagen {
+    margin: auto;
+  }
+
+  .coaching-content{
+    display: flex;
+    flex-direction: column !important;
+  }
+  .coaching-content h3{
+    display: flex;
+    justify-content: center;
+  }
+
+  .coaching-content div{
+    padding: 0 !important;
+  }
 }

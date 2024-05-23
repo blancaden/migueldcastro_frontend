@@ -1,5 +1,5 @@
 // import React, { useState } from 'react'
-import "./NavBar.css"
+import './Navbar.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { NavDropdown, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
@@ -7,7 +7,7 @@ import { NavDropdown, Container, Nav, Navbar, Offcanvas } from "react-bootstrap"
 function NavBar() {
   return (
     <>
-      <Navbar key="md" expand="md" className="mb-3 py-4">
+      <Navbar key="md" expand="md" className="mb-3 pb-4 pt-5">
         <Container fluid className="navbar-container">
           <Navbar.Brand href="/">
             <img

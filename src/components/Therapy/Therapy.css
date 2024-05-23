@@ -15,7 +15,7 @@
 .therapy-container .therapy-h1{
   position:relative;
   font-family: 'Ovo';
-  font-size: calc(1.6rem + 0.5vw);
+  font-size: calc(1.5rem + 0.4vw);
 }
 
 .therapy-h1::after {
@@ -36,23 +36,38 @@
 
 .therapy-container > p{
   font-family: 'Ovo' !important;
-  font-size: calc(1.6rem + 0.5vw) !important;
-margin-bottom: 40px !important;
-
+  font-size: calc(1.4rem + 0.36vw) !important;
+  margin-bottom: calc(1rem + 3vw) !important;
 }
 
 .therapy-container p{
 font-size: calc(0.7rem + 0.2vw);
 font-family: "Poppins", sans-serif;
-line-height: 40px;
-margin-bottom: 65px;
+line-height: calc(1rem + 1.5vw);
+margin-bottom: calc(1.5rem + 2.5vw);
 }
 
 .therapy-container .soyunaimagen{
- width: calc(9rem + 16vw);
- height: calc(9rem + 16vw);
+ width: calc(11rem + 16vw);
+ height: calc(11rem + 16vw);
  border-radius: 100%;
  background-color: red;
+ padding: 0;
+}
+
+.therapy-btn{
+  background-color: transparent;
+  color: #9D7D79;
+  border: 2.5px solid #FBBA7E !important;
+  border-radius: 20px;
+  padding-inline: 14px;
+}
+
+.therapy-btn:hover{
+  background-color: transparent;
+  border: 2.5px solid orange !important;
+  border-radius: 20px;
+  padding-inline: 14px;
 }
 
 

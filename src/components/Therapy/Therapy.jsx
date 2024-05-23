@@ -49,10 +49,11 @@ function Therapy() {
               eso cada terapia se adapta a tus necesidades.
             </p>
           </Col>
-          <Col xs={1} className="soyunaimagen">
+          <Col className="soyunaimagen">
             <div></div>
           </Col>
         </Row>
+        <button className="therapy-btn">Contacto</button>
       </Container>
     </>
   );
