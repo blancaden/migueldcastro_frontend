@@ -66,7 +66,7 @@ const BlogDetail = () => {
             />
             <p className="blog-date-detail">{blog.Fecha}</p>
           </div>
-          <p>{blog.Contenido}</p>
+          <p className="blog-description-detail">{blog.Contenido}</p>
         </div>
       </div>
     </>
