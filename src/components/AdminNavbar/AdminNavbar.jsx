@@ -2,14 +2,11 @@ import React from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import "./AdminNavbar.css";
 
-
 const AdminNavbar = ({ onLogout }) => {
   const navigate = useNavigate(); 
-
   const handleLogout = () => {
     onLogout();
   };
-
   const handleBackClick = () => {
     navigate('/login'); 
   };
