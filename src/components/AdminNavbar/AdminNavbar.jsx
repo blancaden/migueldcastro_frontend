@@ -13,25 +13,25 @@ const AdminNavbar = ({ onLogout }) => {
 
   return (
     <>
-      <nav className="navbar">
-        <ul className="navbar-list">
+      <nav className="navbar-adminpage">
+        <ul className="navbar-list-adminpage">
           <li>
-            <Link onClick={handleBackClick} className="navbar-link">
+            <Link onClick={handleBackClick} className="navbar-link-adminpage">
               Cerrar Sesión
             </Link>
           </li>
           <li>
-            <Link to="/workshop" className="navbar-link">
+            <Link to="/workshop" className="navbar-link-adminpage">
               Talleres
             </Link>
           </li>
           <li>
-            <Link to="/workshop/adminblog" className="navbar-link">
+            <Link to="/workshop/adminblog" className="navbar-link-adminpage">
               Blog
             </Link>
           </li>
           <li>
-            <Link to="/workshop/adminform" className="navbar-link">
+            <Link to="/workshop/adminform" className="navbar-link-adminpage">
               Formulario
             </Link>
           </li>

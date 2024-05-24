@@ -153,7 +153,7 @@ const CrudWorkshop = () => {
   return (
     <>
       <div className="adminpage-container">
-        <form className="form-container" onSubmit={handleSubmitCreate}>
+        <form className="form-container-adminpage" onSubmit={handleSubmitCreate}>
           <h1>Agrega un nuevo taller</h1>
           <div className="input-container">
             <label htmlFor="ID_Talleres">Taller:</label>
