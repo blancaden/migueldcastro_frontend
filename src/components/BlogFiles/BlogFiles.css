@@ -88,14 +88,12 @@
 }
 .mariposatraicionera {
   background-image: url('https://i.postimg.cc/L4fV3HNg/Mariposa-Logo.png');
-  background-size: 20%; /* Ajusta el tamaño de la imagen al 20% */
-  background-position: bottom right; /* Posiciona la imagen en la esquina inferior derecha */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  position: fixed; /* Fija el elemento para que no afecte otros elementos */
-  top: 0;
-  left: calc(100% - 100px); /* Coloca la imagen 100 píxeles hacia la izquierda desde el borde derecho */
-  width: 100px; /* Ajusta el ancho de la imagen */
-  height: 100px; /* Ajusta el alto de la imagen */
-  pointer-events: none; /* Asegura que la imagen no interfiera con otros elementos */
- /* Coloca el fondo detrás de todos los demás elementos */
+  background-size: 20%; 
+  background-position: bottom right; 
+  background-repeat: no-repeat; 
+  left: calc(100% - 100px); 
+  width: 100px; 
+  height: 100px; 
+  pointer-events: none; 
+ 
 }

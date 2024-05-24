@@ -13,7 +13,9 @@ const BlogView = () => {
         <BlogCatalogue />
       </div>
       <div className="sidebar">
+        <div>
         <BlogFiles />
+        </div>
       </div>
     </div>
   );
