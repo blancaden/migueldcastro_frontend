@@ -93,37 +93,18 @@
   text-decoration: none;
 }
 
-.svg1{
-  width: 125px;
-  height: 30px;
-  margin-top: 10%;
-}
-
-.svg2 {
-  display: none;
-  /* Oculta el segundo SVG inicialmente */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.svg-container:hover .svg1 {
-  display: none;
-  /* Oculta el primer SVG cuando se hace hover */
-}
-
-.svg-container:hover .svg2 {
-  display: block;
-  /* Muestra el segundo SVG cuando se hace hover */
-}
-
-
 .more-info-button {
   border-color: #F4C465;
+  background-color: transparent;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 300;
+  color: #5E4B49;
+  border-radius: 30px;
 }
 
 .more-info-button:hover {
-  background-color: #F4C465;
-  color: white;
-  cursor: pointer;
+  background-color: #FFEAEA;
+  height: 30px;
+  width: 120px
 }
