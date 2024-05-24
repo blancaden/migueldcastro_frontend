@@ -6,7 +6,7 @@
     width: 20px;
 }
 .blog-title-detail{
-
+    font-family: 'Ovo';
     font-size: 48pt;
     font-weight:lighter;
     margin-left: 7%;
@@ -25,7 +25,10 @@
    margin-top: 1%;
    
 }
-
+.calendar-icon-blog-size-detail{
+    width: 20px;
+    margin-top: -19px;
+}
 .blog-date-detail{
     margin-left: 1%;
 }

@@ -1,0 +1,34 @@
+.blog-view-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .main-content {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background-color: #FBF4E9; 
+    padding: 30px;
+    border-radius: 10px; 
+    max-width: 300px; 
+    margin-right:55px;
+    margin-top: 10%;
+  }
+  .mariposatraicionera {
+    background-image: url('https://i.postimg.cc/L4fV3HNg/Mariposa-Logo.png');
+    background-size: 20%; /* Ajusta el tamaño de la imagen al 20% */
+    background-position: bottom right; /* Posiciona la imagen en la esquina inferior derecha */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: fixed; /* Fija el elemento para que no afecte otros elementos */
+    top: 0;
+    left: calc(100% - 100px); /* Coloca la imagen 100 píxeles hacia la izquierda desde el borde derecho */
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: 100px; /* Ajusta el alto de la imagen */
+    pointer-events: none; /* Asegura que la imagen no interfiera con otros elementos */
+   /* Coloca el fondo detrás de todos los demás elementos */
+  }
+  
