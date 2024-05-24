@@ -1,0 +1,50 @@
+footer {
+    font-family: 'Poppins';
+    background-image: url('/img/Footer-background.svg'); 
+    background-size: cover; 
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.contact-info {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: fixed;
+    margin-left: 20%;
+    margin-top: 3%;
+    flex-grow: 1; 
+}
+
+.social-icons img {
+    margin: 0 50px;
+    width: 60px; 
+    cursor: pointer; 
+}
+
+.social-icons img:hover {
+    filter: brightness(0.6); 
+}
