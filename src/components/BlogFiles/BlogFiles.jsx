@@ -1,54 +1,88 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { parse, format } from 'date-fns';
-import './BlogFiles.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./BlogFiles.css";
 
 const BlogFiles = () => {
-  const [articulos, setArticulos] = useState([]);
+  const [files, setFiles] = useState({});
+  const [scroll, setScroll] = useState({});
 
   useEffect(() => {
-    const fetchArticulos = async () => {
+    const fetchAPI = async () => {
       try {
-        const response = await fetch("http://localhost:5000/articulos");
-        const data = await response.json();
-
-        // Convertir y formatear la fecha a un formato legible
-        const formattedData = data.map(articulo => {
-          let formattedDate;
-          try {
-            // Parsear la fecha desde 'yyyy/MM/dd' y formatearla a 'dd/MM/yyyy'
-            const parsedDate = parse(articulo.date, 'yyyy/MM/dd', new Date());
-            formattedDate = format(parsedDate, 'dd/MM/yyyy');
-          } catch (error) {
-            console.error("Error al parsear la fecha:", error);
-            formattedDate = "Fecha no válida"; // Manejo de error en caso de formato incorrecto
-          }
-          return {
-            ...articulo,
-            date: formattedDate,
-          };
-        });
-
-        setArticulos(formattedData);
+        const response = await axios.get("http://localhost:5000/articulos");
+        const formattedData = response.data.map((articulo) => ({
+          ...articulo,
+          Fecha: new Date(articulo.Fecha).toLocaleDateString("es-ES", {
+            year: "numeric",
+            month: "long",
+          }),
+        }));
+        const groupedData = groupByMonthYear(formattedData);
+        setFiles(groupedData);
       } catch (error) {
-        console.error("Error al cargar los artículos de blog:", error);
+        console.error("Error fetching files:", error);
       }
     };
-    fetchArticulos();
+
+    fetchAPI();
   }, []);
 
+  const groupByMonthYear = (data) => {
+    const grouped = {};
+    data.forEach((item) => {
+      if (!grouped[item.Fecha]) {
+        grouped[item.Fecha] = [];
+      }
+      grouped[item.Fecha].push(item);
+    });
+    return grouped;
+  };
+
+  const toggleScrolled = (monthYear) => {
+    setScroll((prevState) => ({
+      ...prevState,
+      [monthYear]: !prevState[monthYear],
+    }));
+  };
+
+  const sortedKeys = Object.keys(files).sort(
+    (a, b) => new Date(b) - new Date(a)
+  );
+
   return (
-    <div className='blogfiles-content'>
-      <h1>Archivos</h1>
-      {articulos.map(articulo => (
-        <div key={articulo.id}>
-          <Link to={`/blogdetail/${articulo.id}`}>
-            <p>{articulo.date}</p>
-          </Link>
-        </div>
-      ))}
+    <div className="blogfiles-content">
+      <form className="search-form">
+        <input
+          type="text"
+          placeholder="Buscar por año"
+          className="search-input"
+          disabled
+        />
+        <button type="submit" className="search-button">
+          🔍
+        </button>
+      </form>
+      <div className="files-list">
+        <h2>Archivos</h2>
+        <ul>
+          {sortedKeys.map((monthYear) => (
+            <li key={monthYear}>
+              <div onClick={() => toggleScrolled(monthYear)}>
+                {">"} {monthYear} ({files[monthYear].length})
+              </div>
+              {scroll[monthYear] && (
+                <ul>
+                  {files[monthYear].map((file) => (
+                    <li key={file.ID_Articulo}>{file.Titulo}</li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-}
+};
 
 export default BlogFiles;
