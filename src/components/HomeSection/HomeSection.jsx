@@ -16,7 +16,7 @@ const HomeSection = () => {
         <img src="/img/Foto-Provisional-de-Miguel.svg" alt="Miguel de Castro" />
       </div>
 
-      <img src="/img/Ondas.svg" alt="Ondas" />
+      <img src="/img/ONDAS.svg" alt="Ondas" />
 
       <div className='HomeSection-Services'>
         <div className='Therapy'>
@@ -61,7 +61,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <img src="/img/Ondas.svg" alt="Ondas" />
+      <img src="/img/ONDAS.svg" alt="Ondas" />
 
       <div className='HomeSection-KnowMe'>
         <h3>Desde mi adolescencia he creído en el potencial que cada uno de nosotros lleva dentro. Como seres humanos somos completos y, por lo tanto, capaces de hacer todo aquello que nos proponemos.</h3>
