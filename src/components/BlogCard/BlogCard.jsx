@@ -11,7 +11,7 @@ const BlogCard = ({ blogs }) => {
     <div className="container-blog">
       <div className="product-container">
         {blogs.map((blog, index) => (
-          <div key={index} className="card">
+          <div key={index} className="card-blog">
             <img
               className="blog-icon-blog"
               src="/img/blogicon.svg"
