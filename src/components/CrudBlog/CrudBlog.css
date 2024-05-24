@@ -1,0 +1,18 @@
+.custom-swal-popup {
+  background-color: #FBF4E9 !important;
+}
+
+.custom-swal-confirm-button {
+  background-color: #F7DFB8 !important;
+  color: black; /* Ajusta el color del texto del botón según sea necesario */
+  border: none !important; /* Quita el borde del botón */
+  box-shadow: none !important; /* Quita cualquier sombra del botón */
+}
+
+.custom-swal-confirm-button:hover {
+  background-color: #f7e2c8 !important; /* Opcional: cambiar el color al pasar el mouse */
+}
+
+.custom-swal-title {
+  color: black; /* Ajusta el color del título si es necesario */
+}
