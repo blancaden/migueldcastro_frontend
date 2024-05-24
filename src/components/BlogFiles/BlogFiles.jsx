@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./BlogFiles.css";
 
 const BlogFiles = () => {
@@ -73,7 +74,16 @@ const BlogFiles = () => {
               {scroll[monthYear] && (
                 <ul>
                   {files[monthYear].map((file) => (
-                    <li key={file.ID_Articulo}>{file.Titulo}</li>
+                    <li key={file.ID_Articulo}>
+                      <Link
+                        to={{
+                          pathname: `/articulo/${file.ID_Articulo}`,
+                          state: { blog: file },
+                        }}
+                      >
+                        {file.Titulo}
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               )}
