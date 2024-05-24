@@ -24,7 +24,7 @@ const WorkshopCard = ({ workshops }) => {
 
                   <div className="workshop-schedule">
                     <img className='icon-workshop' src="/img/watch-icon.svg" alt="Icono de reloj" />
-                    <p>{workshop.Horario}</p>
+                    <p className="workshop-schedule-p" >{workshop.Horario}</p>
 
                   </div>
                 </div>
@@ -39,8 +39,7 @@ const WorkshopCard = ({ workshops }) => {
 
               <Link to={`/taller/${workshop.ID_Talleres}`} state={{ workshop }}>
                 <div className="workshop-button-container">
-                  <img className="svg1" src="/img/plus-button1.svg" alt="SVG 1" />
-                  <img className="svg2" src="/img/plus-button2.svg" alt="SVG 2" />
+                  <button></button>
                 </div>
               </Link>
 
