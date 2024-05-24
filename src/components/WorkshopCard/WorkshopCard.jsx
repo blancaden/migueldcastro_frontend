@@ -39,7 +39,7 @@ const WorkshopCard = ({ workshops }) => {
 
               <Link to={`/taller/${workshop.ID_Talleres}`} state={{ workshop }}>
                 <div className="workshop-button-container">
-                  <button></button>
+                  <button className="more-info-button">+ Información</button>
                 </div>
               </Link>
 
