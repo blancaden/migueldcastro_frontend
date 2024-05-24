@@ -1,10 +1,8 @@
 import React from 'react'
 import AboutMe from '../../components/AboutMe/AboutMe'
 
-const AboutMeView = () => {
-  return (
-    <AboutMe/>
-  )
+function AboutMeView() {
+  return <AboutMe />;
 }
 
 export default AboutMeView
