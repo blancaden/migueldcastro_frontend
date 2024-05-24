@@ -4,7 +4,6 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-
 .coaching-container{
   padding-inline: 15%;
   flex-direction: column;
@@ -23,8 +22,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 45%; /* ajusta el grosor del borde según tus necesidades */
-  background-color: #FBBA7E; /* color del borde */
+  height: 45%;
+  background-color: #FBBA7E;
   transform: translateY(0%);
   z-index: -1;
 }
@@ -42,12 +41,21 @@ line-height: 26px;
 margin-bottom: 30px;
 }
 
-.coaching-container .soyunaimagen{
+.coaching-container .coaching-empresarial-photo,
+.coaching-container .coaching-individual-photo{
    width: calc(8rem + 7vw);
- height: calc(8rem + 7vw);
- border-radius: 100%;
- background-color: red;
- padding: 0;
+   height: calc(8rem + 7vw);
+   border-radius: 100%;
+   padding: 0;
+   background-size: cover;
+}
+
+.coaching-container .coaching-empresarial-photo{
+  background-image: url("../../assets/coaching-empresarial-photo.svg");
+}
+
+.coaching-container .coaching-individual-photo{
+  background-image: url("../../assets/coaching-individual-photo.svg");
 }
 
 .btn-info{
@@ -57,7 +65,8 @@ margin-bottom: 30px;
   background-color: transparent;
   display: flex;
   align-items: center;
-font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 .btn-info .bi{
@@ -68,16 +77,17 @@ font-family: "Poppins", sans-serif;
   background-color: #FFEAEA;
   border: 1px solid;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .btn-info .bi::before{
   vertical-align: 0em !important;
 }
 
-
 @media (min-width: 350px) and (max-width: 800px) {
-  .soyunaimagen {
+  .coaching-empresarial-photo, .coaching-individual-photo {
     margin: auto;
   }
 

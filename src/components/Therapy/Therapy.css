@@ -47,12 +47,13 @@ line-height: calc(1rem + 1.5vw);
 margin-bottom: calc(1.5rem + 2.5vw);
 }
 
-.therapy-container .soyunaimagen{
+.therapy-container .therapy-photo1{
  width: calc(11rem + 16vw);
  height: calc(11rem + 16vw);
  border-radius: 100%;
- background-color: red;
  padding: 0;
+ background-image: url("../../assets/therapy-photo1.svg");
+ background-size: cover;
 }
 
 .therapy-btn{
@@ -62,6 +63,7 @@ font-family: "Poppins", sans-serif;
   border: 2.5px solid #FBBA7E !important;
   border-radius: 20px;
   padding-inline: 14px;
+    text-decoration: none;
 }
 
 .therapy-btn:hover{
