@@ -1,12 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link, useNavigate} from 'react-router-dom';
 import "./AdminNavbar.css";
 
-const AdminNavbar = () => {
+const AdminNavbar = ({ onLogout }) => {
+  const navigate = useNavigate(); 
+  const handleLogout = () => {
+    onLogout();
+  };
+  const handleBackClick = () => {
+    navigate('/login'); 
+  };
+
   return (
     <>
       <nav className="navbar">
         <ul className="navbar-list">
+          <li>
+            <Link onClick={handleBackClick} className="navbar-link">
+              Cerrar Sesión
+            </Link>
+          </li>
           <li>
             <Link to="/workshop" className="navbar-link">
               Talleres
@@ -28,4 +41,4 @@ const AdminNavbar = () => {
   );
 }
 
-export default AdminNavbar
+export default AdminNavbar;

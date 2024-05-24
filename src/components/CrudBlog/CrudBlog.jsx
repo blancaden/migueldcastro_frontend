@@ -105,8 +105,7 @@ const CrudBlog = () => {
     }
   };
   const handleExpandDescription = (blogs) => {
-    alert(blogs.Contenido); // Muestra una alerta con el texto completo
-    // O puedes almacenarlo en un estado y mostrarlo en otro lugar, como un modal
+    alert(blogs.Contenido); 
   };
 
   useEffect(() => {

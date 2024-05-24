@@ -30,6 +30,7 @@ export const AuthProvider = ({ children }) => {
       isAuthenticated: true,
       user: userData,
     });
+    console.log('Login successful, EXITOSO. Auth state:', authState);
   };
 
   // Función para cerrar sesión
@@ -43,6 +44,7 @@ export const AuthProvider = ({ children }) => {
       isAuthenticated: false,
       user: null,
     });
+    console.log('Logout successful, CIERRE SESIÓN. Auth state:', authState);
   };
 
   // Valor del contexto
