@@ -8,12 +8,17 @@ const FormData = () => {
   const handleDelete = async (user) => {
     const id = user.ID_Contacto;
     try {
-      await axios.delete(`http://localhost:5000/contacto/remove`, {
+      const response = await axios.delete("http://localhost:5000/contacto/remove", {
         data: { ID_Contacto: id },
       });
-
-      const response = await axios.get("http://localhost:5000/contacto");
-      setUsers(response.data);
+      if (response.status === 200) {
+        setUsers((prevUsers) => prevUsers.filter((u) => u.ID_Contacto !== id));
+      } else {
+        console.error(
+          "Error en la eliminación del usuario en el servidor:",
+          response.data
+        );
+      }
     } catch (error) {
       console.error(
         "Error al enviar la solicitud de eliminación al servidor:",

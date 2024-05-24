@@ -2,7 +2,7 @@ import React from "react";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import BlogCatalogue from "../../components/BlogCatalogue/BlogCatalogue";
 import BlogFiles from "../../components/BlogFiles/BlogFiles";
-import './BlogView.css';
+import './BlogView.css'; 
 
 const BlogView = () => {
   return (
