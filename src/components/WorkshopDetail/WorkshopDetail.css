@@ -1,5 +1,6 @@
 .workshopdetail-body-detail {
     background-color: #FFFAF2;
+    margin: 10% 5% 20% 5%
 
 }
 
@@ -39,11 +40,11 @@
 
 .workshop-description-detail {
     font-family: 'Poppins';
-    font-size: 13pt;
+    font-size: 14pt;
     font-weight: 300;
-    margin-left: 7%;
     color: #5E4B49;
-    margin-bottom: 7%;
+    margin: 4% 0 7% 7%;
+    line-height: 3;
 }
 
 .watch-icon-detail {
@@ -54,7 +55,7 @@
 
 .img-workshop-detail {
     margin-left: 7%;
-    width: 25%;
+    width: 50%;
 }
 
 .workshop-date-and-schedule-container-detail {

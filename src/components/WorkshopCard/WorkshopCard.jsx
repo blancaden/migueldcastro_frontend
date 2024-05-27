@@ -37,8 +37,8 @@ const WorkshopCard = ({ workshops, wordLimit }) => {
                 </div>
 
                 <div className="workshop-title-and-description">
-                <h3 className="workshop-title">{workshop.Titulo}</h3>
-                <p className="workshop-description">{truncateText(workshop.Descripción, wordLimit)}</p>
+                  <h3 className="workshop-title">{workshop.Titulo}</h3>
+                  <p className="workshop-description">{truncateText(workshop.Descripción, wordLimit)}</p>
                 </div>
 
               </div>
