@@ -3,8 +3,10 @@ import axios from "axios"; // Importa axios
 import WorkshopCard from "../WorkshopCard/WorkshopCard";
 import "./WorkshopCatalogue.css";
 
+
 const WorkshopCatalogue = () => {
   const [workshops, setWorkshops] = useState([]);
+  const wordLimit = 25;
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -24,8 +26,11 @@ const WorkshopCatalogue = () => {
 
   return (
     <div className="catalogue-main-container">
+      <div className="catalogue-title-container">
+      <h1 className="catalogue-title">Talleres</h1>
+      </div>
       <section className="catalogue-body">
-        <WorkshopCard workshops={workshops} />
+        <WorkshopCard workshops={workshops} wordLimit={wordLimit}/>
       </section>
     </div>
   );

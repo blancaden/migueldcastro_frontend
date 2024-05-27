@@ -60,13 +60,13 @@ const BlogDetail = () => {
         <div className="blog-details-container-detail">
           <div className="blog-date-and-schedule-container-detail">
             <img
-              className="calendar-icon-blog-size"
+              className="calendar-icon-blog-size-detail"
               src="/img/calendar-icon.svg"
               alt="calendar-icon"
             />
             <p className="blog-date-detail">{blog.Fecha}</p>
           </div>
-          <p>{blog.Contenido}</p>
+          <p className="blog-description-detail">{blog.Contenido}</p>
         </div>
       </div>
     </>

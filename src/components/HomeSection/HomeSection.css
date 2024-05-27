@@ -7,38 +7,41 @@ body {
     margin: 9%;
 }
 
-img[src='/img/Ondas.svg'] {
+img[src='/img/ONDAS.svg'] {
     width: 124%;
     margin-left: -12%;
 }
 
 .HomeSection-Header {
     margin-bottom: 2%;
-    display: flex;
     align-items: center;
 }
 
-.HomeSection-Header img {
-    grid-column: 2;
+.homesection-header-miguelfoto {
     justify-self: end;
     margin-right: -5%;
-    width: 50%;
+    width: 124%;
+    isolation: isolate;
+    margin-left: -12%;
+    margin-top: -20%;
+    position: relative;
+    z-index: -1;
 }
-
 
 .HomeSection-Header h1 {
     font-family: 'Ovo', sans-serif;
     font-weight: 400;
     font-size: 64px;
     margin-left: 1%;
+    width: 500px;
 }
 
 .HomeSection-Header h2 {
     font-family: 'Poppins';
-    margin-top: 0;
+    margin-top: 20px;
     font-weight: 400;
     font-size: 36px;
-    width: 100%;
+    width: 130%;
 }
 
 .HomeSection-Header button {
@@ -53,6 +56,8 @@ img[src='/img/Ondas.svg'] {
     height: 37px;
     margin-left: 30%;
     margin-top: 3%;
+    z-index: 1;
+    margin-top: 50px;
 }
 
 .HomeSection-Header button:hover {
@@ -62,10 +67,12 @@ img[src='/img/Ondas.svg'] {
 
 .HomeSection-Title {
     display: grid;
+    width: 35%;
+    margin-left: 10%;
 }
 
 .HomeSection-Services {
-    margin-top: 10%;
+    margin-top: 4%;
     margin-bottom: 10%;
     display: flex;
     justify-content: space-between;
@@ -78,6 +85,7 @@ img[src='/img/Ondas.svg'] {
     font-weight: 400;
     margin-left: 25%;
     margin-bottom: 8%;
+    margin-top: 10%;
 }
 
 .HomeSection-Services p {
@@ -162,6 +170,12 @@ img[src='/img/Ondas.svg'] {
     cursor: pointer;
 }
 
+.know-me-description {
+    position: relative;
+    z-index: 1;
+    margin-top: 20%;
+}
+
 .HomeSection-KnowMe h3 {
     font-family: 'Ovo', sans-serif;
     font-size: 32px;
@@ -180,6 +194,7 @@ img[src='/img/Ondas.svg'] {
     width: 62%;
     line-height: 42px;
     z-index: 1;
+    margin-top: 20;
 }
 
 .HomeSection-KnowMe button {
@@ -196,28 +211,24 @@ img[src='/img/Ondas.svg'] {
     margin-top: 3%;
 }
 
+.button-knowme-homesection {
+    margin-top: 10%;
+}
+
 .HomeSection-KnowMe button:hover {
     background-color: #FBBA7E;
     cursor: pointer;
 }
 
-.HomeSection-KnowMe img {
-    position: absolute;
-    z-index: -1;
-    margin-top: -130px;
-    margin-left: 20px;
-    top: 1;
-    left: 1;
-    width: 20%;
-    height: auto;
-}
-
 .knowme-img {
-    position: absolute;
-    top: 1600px;
-    left: 63%;
-    width: 40%;
-    opacity: 60%;
+    justify-self: end;
+    margin-right: -10%;
+    width: 130%;
+    isolation: isolate;
+    margin-left: -18%;
+    margin-top: -50%;
+    position: relative;
+    z-index: -1;
 }
 
 @media (max-width: 1200px) {
@@ -352,13 +363,15 @@ img[src='/img/Ondas.svg'] {
 }
 
 @media (max-width: 480px) {
-
     .HomeSection-Header h1 {
-        font-size: 32px;
+        font-size: 40px;
+        margin-left: -15%;
+        margin-top: 20px;
     }
 
     .HomeSection-Header h2 {
         font-size: 18px;
+        width: 70%;
     }
 
     .HomeSection-Header button {
@@ -366,13 +379,14 @@ img[src='/img/Ondas.svg'] {
         height: 30px;
         font-size: 14px;
         display: inline-block;
-        margin-left: 145px;
+        margin-left: 80px;
+        margin-top: 50px;
         text-decoration: none;
     }
 
     .HomeSection-Header img {
-        width: 300px;
-        margin-left: 50px;
+        margin-top: -60px;
+        width: 480px;
         margin-bottom: 50px;
     }
 
@@ -393,7 +407,6 @@ img[src='/img/Ondas.svg'] {
 
     .HomeSection-Services h4 {
         margin-left: 160px;
-        margin-bottom: -5px;
     }
 
     .HomeSection-Services p {
@@ -401,6 +414,7 @@ img[src='/img/Ondas.svg'] {
         text-align: center;
         width: 70%;
         margin-left: 60px;
+        margin-top: 20px;
     }
 
     .HomeSection-Services button {
@@ -434,6 +448,4 @@ img[src='/img/Ondas.svg'] {
     .knowme-img {
         display: none;
     }
-
-
 }

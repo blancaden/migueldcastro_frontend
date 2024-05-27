@@ -6,7 +6,7 @@
     width: 20px;
 }
 .blog-title-detail{
-
+    font-family: 'Ovo';
     font-size: 48pt;
     font-weight:lighter;
     margin-left: 7%;
@@ -20,12 +20,15 @@
    font-family: 'Poppins';
    font-size: 16pt;
    font-weight: light;
-   /* margin:3%; */
+
    margin-left: 7%;
    margin-top: 1%;
    
 }
-
+.calendar-icon-blog-size-detail{
+    width: 20px;
+    margin-top: -19px;
+}
 .blog-date-detail{
     margin-left: 1%;
 }
@@ -34,11 +37,12 @@
 }
 .blog-description-detail{
     font-family: 'Poppins';
-   font-size: 12pt;
+   font-size: 13pt;
    font-weight: light;
     margin:7%;
     color: #5E4B49;
     margin-bottom: 7%;
+    margin-top: 2%;
 }
 
 .watch-icon-detail{
@@ -47,13 +51,36 @@
 }
 .img-blog-detail{
     margin-left: 7%;
-    width: 50%;
+    width: 25%;
 }
 .blog-date-and-schedule-container-detail {
     font-family: 'Poppins';
     font-size: 12pt;
 }
 
-@media screen {
-    
+@media (max-width: 768px) {
+    .blog-title-detail {
+        font-size: 30pt;
+        font-weight: lighter;
+        margin-left: 7%;
+        margin-bottom: 3%;
+        margin-right: 5%;
+        color: #5E4B49;
+        margin-top: 7%;
+    }
+
+    .img-blog-detail {
+        margin: 0 auto; 
+        display: block; 
+        max-width: 100%; 
+    }
+    .blog-description-detail{
+        font-family: 'Poppins';
+       font-size: 11pt;
+       font-weight: light;
+        margin:7%;
+        color: #5E4B49;
+        margin-bottom: 7%;
+        margin-top: 2%;
+    }
 }

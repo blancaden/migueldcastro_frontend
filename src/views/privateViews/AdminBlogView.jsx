@@ -7,7 +7,6 @@ const AdminBlogView = () => {
   return (
   <>
     <CrudBlog/>
-    <h1>Hola Blog Miguel</h1>
   </>
   )
 }

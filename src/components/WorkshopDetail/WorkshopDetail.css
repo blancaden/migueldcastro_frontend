@@ -1,10 +1,9 @@
 .workshopdetail-body-detail {
     background-color: #FFFAF2;
-
+    margin: 10% 7% 20% 5%
 }
 
 .workshop-title-detail {
-
     font-size: 48pt;
     font-weight: lighter;
     margin-left: 7%;
@@ -12,6 +11,7 @@
     margin-right: 5%;
     color: #5E4B49;
     margin-top: 7%;
+    font-family: 'Ovo';
 }
 
 .workshop-date-and-schedule-container-detail {
@@ -20,7 +20,7 @@
     font-size: 16pt;
     font-weight: light;
     margin-left: 7%;
-    margin-top: 1%;
+    margin-top: 60px;
 
 }
 
@@ -39,17 +39,18 @@
 
 .workshop-description-detail {
     font-family: 'Poppins';
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: 300;
-    margin: 7%;
     color: #5E4B49;
-    margin-bottom: 7%;
+    margin: 4% 0 7% 7%;
+    line-height: 3;
 }
 
 .watch-icon-detail {
     margin-left: 1%;
     size-adjust: 50%;
     width: 20px;
+    margin-top: -25px;
 }
 
 .img-workshop-detail {
@@ -62,4 +63,30 @@
     font-size: 12pt;
 }
 
-@media screen {}
+@media (max-width: 768px) {
+    .workshop-title-detail {
+        font-size: 30pt;
+        font-weight: lighter;
+        margin-left: 7%;
+        margin-bottom: 3%;
+        margin-right: 5%;
+        color: #5E4B49;
+        margin-top: 7%;
+    }
+
+    .img-workshop-detail {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+    }
+
+    .workshop-description-detail {
+        font-family: 'Poppins';
+        font-size: 11pt;
+        font-weight: light;
+        margin: 7%;
+        color: #5E4B49;
+        margin-bottom: 7%;
+        margin-top: 2%;
+    }
+}

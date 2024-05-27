@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 import "./CrudBlog.css";
 
 const CrudBlog = () => {
@@ -104,8 +105,16 @@ const CrudBlog = () => {
       );
     }
   };
-  const handleExpandDescription = (blogs) => {
-    alert(blogs.Contenido); 
+  const handleExpandDescription = (content) => {
+    Swal.fire({
+        html: `<div style="text-align: left;">${content}</div>`,
+        confirmButtonText: "Cerrar",
+        customClass: {
+        popup: "custom-swal-popup",
+        title: "custom-swal-title",
+        confirmButton: "custom-swal-confirm-button",
+      },
+    });
   };
 
   useEffect(() => {
@@ -127,7 +136,10 @@ const CrudBlog = () => {
   return (
     <>
       <div className="adminpage-container">
-        <form className="form-container" onSubmit={handleSubmitCreate}>
+        <form
+          className="form-container-adminpage"
+          onSubmit={handleSubmitCreate}
+        >
           <h1>Agrega un nuevo artículo</h1>
           <div className="input-container">
             <label htmlFor="ID_Usuario">Creador:</label>
@@ -213,66 +225,67 @@ const CrudBlog = () => {
         </form>
 
         <section className="tabla_usuarios">
-  <h1>Artículos registrados</h1>
-  <table id="table_content">
-    <thead>
-      <tr>
-        <th>ID Artículo</th>
-        <th>Imagen</th>
-        <th>Título</th>
-        <th>Contenido</th>
-        <th>Fecha</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      {blog.map((blogs, index) => (
-        <tr key={index}>
-          <td className="user-data">{blogs.ID_Articulo}</td>
-          <td className="user-data">
-            <img
-              src={blogs.Imagen}
-              alt={blogs.Imagen}
-              style={{ width: "50px", height: "auto" }}
-            />
-          </td>
-          <td className="user-data">{blogs.Titulo}</td>
-          <td className="user-data">
-            {blogs.Contenido.length > 50 ? (
-              <span>
-                {`${blogs.Contenido.substring(0, 50)}...`}
-                <button
-                  className="botones_admin_btn"
-                  onClick={() => handleExpandDescription(blogs)}
-                >
-                  Ver más
-                </button>
-              </span>
-            ) : (
-              blogs.Contenido
-            )}
-          </td>
-          <td className="user-data">{blogs.Fecha}</td>
-          <td className="actions">
-            <button
-              className="botones_admin_btn edit"
-              onClick={() => handleEdit(blogs)}
-            >
-              Editar
-            </button>
-            <button
-              className="botones_admin_btn delete"
-              onClick={() => handleDelete(blogs)}
-            >
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</section>
-
+          <h1>Artículos registrados</h1>
+          <table id="table_content">
+            <thead>
+              <tr>
+                <th>ID Artículo</th>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Contenido</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {blog.map((blogs, index) => (
+                <tr key={index}>
+                  <td className="user-data">{blogs.ID_Articulo}</td>
+                  <td className="user-data">
+                    <img
+                      src={blogs.Imagen}
+                      alt={blogs.Imagen}
+                      style={{ width: "50px", height: "auto" }}
+                    />
+                  </td>
+                  <td className="user-data">{blogs.Titulo}</td>
+                  <td className="user-data">
+                    {blogs.Contenido.length > 50 ? (
+                      <span>
+                        {`${blogs.Contenido.substring(0, 50)}...`}
+                        <button
+                          className="botones_admin_btn"
+                          onClick={() =>
+                            handleExpandDescription(blogs.Contenido)
+                          }
+                        >
+                          Ver más
+                        </button>
+                      </span>
+                    ) : (
+                      blogs.Contenido
+                    )}
+                  </td>
+                  <td className="user-data">{blogs.Fecha}</td>
+                  <td className="actions">
+                    <button
+                      className="botones_admin_btn edit"
+                      onClick={() => handleEdit(blogs)}
+                    >
+                      Editar
+                    </button>
+                    <button
+                      className="botones_admin_btn delete"
+                      onClick={() => handleDelete(blogs)}
+                    >
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       </div>
     </>
   );

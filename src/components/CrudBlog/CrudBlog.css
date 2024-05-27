@@ -1,0 +1,18 @@
+.custom-swal-popup {
+  background-color: #FBF4E9 !important;
+}
+
+.custom-swal-confirm-button {
+  background-color: #F7DFB8 !important;
+  color: black;
+  border: none !important; 
+  box-shadow: none !important;
+}
+
+.custom-swal-confirm-button:hover {
+  background-color: #f7e2c8 !important;
+}
+
+.custom-swal-title {
+  color: black;
+}

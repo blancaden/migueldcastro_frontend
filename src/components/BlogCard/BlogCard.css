@@ -1,12 +1,12 @@
-.card {
+.card-blog {
   display: flex;
+  flex-direction: row;
   padding: 20px;
   width: 100%;
-  margin-bottom: 10px;
-  flex-direction: row;
+  margin-bottom: 75px;
   align-items: flex-start;
   box-sizing: border-box;
-  margin-left: -25%;
+  margin-left: 10%;
 }
 
 .blog-img {
@@ -16,9 +16,11 @@
   margin-right: 20px;
   object-position: top;
 }
+
 .card a[href^="/products/"] {
   height: 0;
 }
+
 .blog-icon-blog {
   margin-bottom: 180px;
   margin-right: 20px;
@@ -30,6 +32,7 @@
   height: auto;
   flex: 1;
 }
+
 .calendar-img {
   width: 20px;
 }
@@ -51,10 +54,12 @@
   font-size: 20px;
   font-family: "Poppins";
 }
+
 .product-image-container:hover .overlay {
   opacity: 1;
   cursor: pointer;
 }
+
 .product-details {
   flex: 2;
   display: flex;
@@ -62,6 +67,7 @@
   margin-top: 0;
   margin-left: 3%;
 }
+
 .product-title {
   font-family: 'Ovo';
   font-size: 22px;
@@ -69,43 +75,106 @@
   color: #5C4B51;
   margin-bottom: 5px;
   white-space: nowrap;
-  margin-top:0;
+  margin-top: 0;
 }
+
 .product-description,
 .blog-date,
 .blog-content {
   font-family: 'Poppins', sans-serif;
   color: #5C4B51;
 }
+
 .product-description {
   font-size: 18px;
   font-weight: 200;
   margin-bottom: 10px;
 }
+
 .price-details {
   margin: 5px 0;
 }
+
 .blog-date,
 .blog-content {
   font-size: 1em;
   margin-right: 10px;
+  margin-left: 2px;
 }
+
 .date-calendar-style-blog {
   display: flex;
+  align-items: center; 
+  margin-top: 10px;
 }
+
 .calendar-icon-blog-size {
   width: 20px;
-  padding-right: 10px;
+  margin-right: 10px; 
+  margin-bottom: 29px;
 }
+
 .blog-content {
-  max-width: 600px;
+  max-width: 800px;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
+.blog-title-view {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-blog,
+.workshop-card, 
+.contact-container, 
+.HomeSection-Header {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: 'poppins';
+}
+
+.pagination button {
+  background-color: transparent;
+  color: #5E4B49; 
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px; 
+}
+
+.pagination button:hover {
+  background-color: #FBF4E9; 
+  
+}
+
+.pagination button.active {
+  background-color: #FBBA7E; 
+
+}
 
 @media (max-width: 768px) {
-  .card {
+  .card-blog {
     flex-direction: column;
     align-items: center;
     padding: 10px;
@@ -114,43 +183,41 @@
 
   .blog-img {
     width: 400px;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     margin-right: 20px;
+    object-position: top;
   }
 
   .product-details {
     width: 100%;
     margin-left: 0;
+    text-align: center;
   }
 
   .product-title {
     font-size: 20px;
-    text-align: center;
-    margin-right: 5%;
+    margin-right: 0;
   }
 
   .product-description {
     font-size: 16px;
-    text-align: center;
   }
 
   .blog-content {
     max-width: 100%;
-    text-align: center;
-    
-  }
-  .blog-icon-blog{
-    margin-top: 100px;
-    margin-bottom: 50px;
-  }
   }
 
+  .blog-icon-blog {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 
-
-
-
-
+  .date-calendar-style-blog {
+    justify-content: center;
+  }
+  
+}
 
 
 

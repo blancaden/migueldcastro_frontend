@@ -1,3 +1,7 @@
+.workshop-body{
+  display: flex;
+  flex-flow:wrap
+}
 .workshop-container {
   display: flex;
   justify-content: center;
@@ -5,7 +9,7 @@
   flex-wrap: wrap;
   font-family: 'Poppins';
   color: #5E4B49;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .workshop-card {
@@ -14,10 +18,13 @@
   align-items: center;
   background-color: #FBF4E9;
   border-radius: 30px;
-  width: 22%;
+  width: 90%;
+  max-width: 400px;
   height: 600px;
   padding: 65px 20px 10px 20px;
-  margin-bottom: 10%;
+  margin: 0 auto 5% auto 100px; 
+  box-sizing: border-box; 
+  margin-bottom: 200px
 }
 
 .workshop-image-container img {
@@ -34,13 +41,13 @@
   display: flex;
   align-items: center;
   gap: 15%;
-  margin-left: 3%
+  margin-left: 3%;
+  margin-top: 20px;
 }
 
 .workshop-date {
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 12px;
   font-weight: 100;
   gap: 15%
@@ -48,12 +55,15 @@
 
 .workshop-schedule {
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 12px;
   font-weight: 100;
-  gap: 10%;
+  gap: 5%;
+  width: auto
+}
 
+.workshop-schedule-p {
+  width: 200px;
 }
 .workshop-schedule p {
   width: 50px;
@@ -61,7 +71,8 @@
 
 .workshop-title-and-description{
   width: 300px;
-  height: 220px;
+  height: 160px;
+  margin-bottom: 20px
 }
 
 .workshop-title {
@@ -79,7 +90,8 @@
 
 .icon-workshop {
   width: 20px;
-  height: 20px
+  height: 20px;
+  margin-bottom: 16px
 }
 
 .workshop-button-container {
@@ -92,26 +104,18 @@
   text-decoration: none;
 }
 
-.svg1{
-  width: 125px;
+.more-info-button {
+  border-color: #F4C465;
+  background-color: transparent;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 300;
+  color: #5E4B49;
+  border-radius: 30px;
+}
+
+.more-info-button:hover {
+  background-color: #FFEAEA;
   height: 30px;
-  margin-top: 10%;
-}
-
-.svg2 {
-  display: none;
-  /* Oculta el segundo SVG inicialmente */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.svg-container:hover .svg1 {
-  display: none;
-  /* Oculta el primer SVG cuando se hace hover */
-}
-
-.svg-container:hover .svg2 {
-  display: block;
-  /* Muestra el segundo SVG cuando se hace hover */
+  width: 120px
 }

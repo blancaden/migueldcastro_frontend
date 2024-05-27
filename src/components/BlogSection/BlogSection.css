@@ -4,6 +4,8 @@ body {
 
 .blog-section {
   text-align: center;
+  position: relative;
+  padding-bottom: 200px;
 }
 
 .blog-section h1 {
@@ -30,13 +32,13 @@ body {
   flex-wrap: wrap;
 }
 
-.background-img{
+.background-img {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  height: auto;
   z-index: -1;
-  margin-top: -400px;
-  margin-left: 20px;
-  top: 1;
-  left: 1;
-  width: 50%;
-  height: 100%;
+  opacity: 0.6;
+  margin-left: 50%;
 }

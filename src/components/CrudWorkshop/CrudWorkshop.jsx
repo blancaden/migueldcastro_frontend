@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 import "./CrudWorkshop.css";
 
 const CrudWorkshop = () => {
@@ -121,9 +122,17 @@ const CrudWorkshop = () => {
       );
     }
   };
-  const handleExpandDescription = (workshops) => {
-    alert(workshops.Descripción); 
-  };
+  const handleExpandDescription = (content) => {
+  Swal.fire({
+      html: `<div style="text-align: left;">${content}</div>`,
+      confirmButtonText: "Cerrar",
+      customClass: {
+      popup: 'custom-swal-popup',
+      title: 'custom-swal-title',
+      confirmButton: 'custom-swal-confirm-button'
+    }
+  });
+};
   
   useEffect(() => {
     const fetchAPI = async () => {
@@ -144,7 +153,7 @@ const CrudWorkshop = () => {
   return (
     <>
       <div className="adminpage-container">
-        <form className="form-container" onSubmit={handleSubmitCreate}>
+        <form className="form-container-adminpage" onSubmit={handleSubmitCreate}>
           <h1>Agrega un nuevo taller</h1>
           <div className="input-container">
             <label htmlFor="ID_Talleres">Taller:</label>
@@ -269,70 +278,69 @@ const CrudWorkshop = () => {
         </form>
 
         <section className="tabla_usuarios">
-  <h1>Talleres registrados</h1>
-  <table id="table_content">
-    <thead>
-      <tr>
-        <th>ID Talleres</th>
-        <th>Imagen</th>
-        <th>Título</th>
-        <th>Descripción</th>
-        <th>Fecha</th>
-        <th>Lugar</th>
-        <th>Horario</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      {workshop.map((workshops, index) => (
-        <tr key={index}>
-          <td className="user-data">{workshops.ID_Talleres}</td>
-          <td className="user-data">
-            <img
-              src={workshops.Imagen}
-              alt={workshops.Imagen}
-              style={{ width: "50px", height: "auto" }}
-            />
-          </td>
-          <td className="user-data">{workshops.Titulo}</td>
-          <td className="user-data">
-            {workshops.Descripción.length > 50 ? (
-              <span>
-                {`${workshops.Descripción.substring(0, 50)}...`}
-                <button
-                  className="botones_admin_btn"
-                  onClick={() => handleExpandDescription(workshops)}
-                >
-                  Ver más
-                </button>
-              </span>
-            ) : (
-              workshops.Descripción
-            )}
-          </td>
-          <td className="user-data">{workshops.Fecha}</td>
-          <td className="user-data">{workshops.Lugar}</td>
-          <td className="user-data">{workshops.Horario}</td>
-          <td className="actions">
-            <button
-              className="botones_admin_btn edit"
-              onClick={() => handleEdit(workshops)}
-            >
-              Editar
-            </button>
-            <button
-              className="botones_admin_btn delete"
-              onClick={() => handleDelete(workshops)}
-            >
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</section>
-
+          <h1>Talleres registrados</h1>
+          <table id="table_content">
+            <thead>
+              <tr>
+                <th>ID Talleres</th>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Lugar</th>
+                <th>Horario</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {workshop.map((workshops, index) => (
+                <tr key={index}>
+                  <td className="user-data">{workshops.ID_Talleres}</td>
+                  <td className="user-data">
+                    <img
+                      src={workshops.Imagen}
+                      alt={workshops.Imagen}
+                      style={{ width: "50px", height: "auto" }}
+                    />
+                  </td>
+                  <td className="user-data">{workshops.Titulo}</td>
+                  <td className="user-data">
+                    {workshops.Descripción.length > 50 ? (
+                      <span>
+                        {`${workshops.Descripción.substring(0, 50)}...`}
+                        <button
+                          className="botones_admin_btn"
+                          onClick={() => handleExpandDescription(workshops.Descripción)}
+                        >
+                          Ver más
+                        </button>
+                      </span>
+                    ) : (
+                      workshops.Descripción
+                    )}
+                  </td>
+                  <td className="user-data">{workshops.Fecha}</td>
+                  <td className="user-data">{workshops.Lugar}</td>
+                  <td className="user-data">{workshops.Horario}</td>
+                  <td className="actions">
+                    <button
+                      className="botones_admin_btn edit"
+                      onClick={() => handleEdit(workshops)}
+                    >
+                      Editar
+                    </button>
+                    <button
+                      className="botones_admin_btn delete"
+                      onClick={() => handleDelete(workshops)}
+                    >
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       </div>
     </>
   );

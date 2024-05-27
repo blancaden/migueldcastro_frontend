@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
-.navbar {
+.navbar-adminpage {
   font-family: 'Ovo', Courier, monospace;
   background-color: #FBF4E9;
   text-align: center;
   padding: 10px;
 }
 
-.navbar-list {
+.navbar-list-adminpage {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
 }
 
-.navbar-list li {
+.navbar-list-adminpage li {
   margin-right: 10px;
 }
 
-.navbar-link {
+.navbar-link-adminpage {
   color: black;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-.navbar-link:hover {
+.navbar-link-adminpage:hover {
   background-color: #F7DFB8;
 }
