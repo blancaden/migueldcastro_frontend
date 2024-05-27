@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import "./BlogCardSection.css";
 
 const BlogCardSection = ({ blogs = [] }) => {
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
+  };
+
   return (
     <div className="card-container">
       {blogs.map((blog, index) => (
@@ -12,7 +20,7 @@ const BlogCardSection = ({ blogs = [] }) => {
             <p className="blog-date">{blog.Fecha}</p>
             <p className="blog-time">{blog.Tiempo}</p>
             <h3 className="blog-product-title">{blog.Titulo}</h3>
-            <p className="blog-content">{blog.Contenido}</p>
+            <p className="blog-content">{truncateText(blog.Contenido, 10)}</p>
           </div>
           <div className="button-container">
             <Link
@@ -30,3 +38,4 @@ const BlogCardSection = ({ blogs = [] }) => {
 };
 
 export default BlogCardSection;
+
