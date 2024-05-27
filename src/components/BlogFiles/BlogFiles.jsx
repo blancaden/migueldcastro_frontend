@@ -6,6 +6,7 @@ import "./BlogFiles.css";
 const BlogFiles = () => {
   const [files, setFiles] = useState({});
   const [scroll, setScroll] = useState({});
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -50,30 +51,46 @@ const BlogFiles = () => {
     (a, b) => new Date(b) - new Date(a)
   );
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredFiles = Object.keys(files).reduce((acc, date) => {
+    const filteredArticles = files[date].filter((article) =>
+      article.Titulo.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    if (filteredArticles.length > 0) {
+      acc[date] = filteredArticles;
+    }
+    return acc;
+  }, {});
+
   return (
     <div className="blogfiles-content">
-      <form className="search-form">
+      <form className="search-form" onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
-          placeholder="Buscar por año"
+          placeholder="Buscar por título"
           className="search-input"
-          disabled
+          value={searchTerm}
+          onChange={handleSearchChange}
         />
         <button type="submit" className="search-button">
-          🔍
+          <img src="img/search-blog.svg" alt="" />
         </button>
       </form>
       <div className="files-list">
         <h2>Archivos</h2>
         <ul>
-          {sortedKeys.map((monthYear) => (
+          {Object.keys(filteredFiles).length === 0 && <li>No se encontraron artículos</li>}
+          {Object.keys(filteredFiles).map((monthYear) => (
             <li key={monthYear}>
               <div onClick={() => toggleScrolled(monthYear)}>
-                {">"} {monthYear} ({files[monthYear].length})
+                {">"} {monthYear} ({filteredFiles[monthYear].length})
               </div>
               {scroll[monthYear] && (
                 <ul>
-                  {files[monthYear].map((file) => (
+                  {filteredFiles[monthYear].map((file) => (
                     <li key={file.ID_Articulo}>
                       <Link
                         to={{
