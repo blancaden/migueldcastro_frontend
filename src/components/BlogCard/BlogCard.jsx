@@ -7,6 +7,14 @@ const BlogCard = ({ blogs }) => {
     return <div></div>;
   }
 
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
+  };
+
   return (
     <div className="container-blog">
       <div className="product-container">
@@ -36,7 +44,7 @@ const BlogCard = ({ blogs }) => {
                 />
                 <p className="blog-date">{blog.Fecha}</p>
               </div>
-              <p className="blog-content">{blog.Contenido}</p>
+              <p className="blog-content">{truncateText(blog.Contenido, 25)}</p>
             </div>
           </div>
         ))}

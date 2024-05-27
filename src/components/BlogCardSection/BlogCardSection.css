@@ -33,6 +33,7 @@
   
   .blog-date, .blog-content, .blog-time {
     font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
   }
   
   .blog-date, .blog-time {
@@ -47,7 +48,7 @@
   .blog-product-title {
     color: #5E4B49;
     font-size: 20px;
-    margin: 10px 20px;
+    margin-top: -25px;
     font-family: 'Ovo', sans-serif;
     font-weight: lighter;
     text-align: left;
@@ -78,8 +79,8 @@
     border-radius: 20px;
     transition: background-color 0.3s ease;
     font-size: 14px;
-    height: 15px;
-    width: 80px;
+    height: 35px;
+    width: 110px;
     line-height: 17px;
   }
   
