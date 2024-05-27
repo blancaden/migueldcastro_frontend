@@ -8,11 +8,6 @@ const LayoutPublic = () => {
         return (
           <>
             <Navbar />
-<<<<<<< HEAD
-                
-=======
-
->>>>>>> devcarito
             <Outlet />
 
             <Footer />
