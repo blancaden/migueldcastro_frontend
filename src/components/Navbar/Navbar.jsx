@@ -12,7 +12,7 @@ function NavBar() {
           <Navbar.Brand href="/">
             <img
               alt=""
-              src="src\assets\Logo.svg"
+              src="src\assets\logo-miguelcastro1-sinfondo.png"
               className="d-inline-block align-top"
             />
           </Navbar.Brand>

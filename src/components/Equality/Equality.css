@@ -8,17 +8,13 @@
   padding-inline: 8%;
   flex-direction: column;
   color:#5E4B49;
-
 }
 
 .equality-container .equality-h1{
   position:relative;
   font-family: 'Ovo';
   font-size: calc(1.6rem + 0.5vw);
-  /* border-bottom: 20px solid #FBBA7E; */
-  
 }
-
 
 .equality-h1::after {
   content: '';
@@ -26,8 +22,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 45%; /* ajusta el grosor del borde según tus necesidades */
-  background-color: #FBBA7E; /* color del borde */
+  height: 45%;
+  background-color: #FBBA7E;
   transform: translateY(0%);
   z-index: -1;
 }
@@ -43,21 +39,21 @@
 }
 
 .equality-container p{
-font-size: calc(0.7rem + 0.2vw);
-font-family: "Poppins", sans-serif;
-line-height: calc(1rem + 1.5vw);
-margin-bottom: calc(1.5rem + 2.5vw);
+  font-size: calc(0.7rem + 0.2vw);
+  font-family: "Poppins", sans-serif;
+  line-height: calc(1rem + 1.5vw);
+  margin-bottom: calc(1.5rem + 2.5vw);
 }
 
 .equality-content-p{
   width: 60%;
 }
 
-.equality-container .soyunaimagen{
-width: calc(8rem + 14vw);
- height: calc(8rem + 14vw);
- border-radius: 100%;
- background-color: red;
+.equality-container .equality-photo1{
+  width: calc(8rem + 14vw);
+  height: calc(8rem + 14vw);
+  border-radius: 100%;
+  background-size: cover;
 }
 
 .list-content{
@@ -65,18 +61,42 @@ width: calc(8rem + 14vw);
 }
 
 .list-content li:before{
-content: ""; /* Agrega contenido vacío antes del elemento li */
+  content: "";
   display: inline-block;
-  width: 16px; /* Ajusta el ancho de la imagen */
-  height: 16px; /* Ajusta la altura de la imagen */
-  background-image: url('../../assets/icon-mariposa.svg'); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen */
-  margin-right: 5px; /* Espacio entre la imagen y el texto */
+  width: 16px;
+  height: 16px;
+  background-image: url('../../assets/icon-mariposa.svg');
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.equality-btn{
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  color: #9D7D79;
+  border: 2.5px solid #FBBA7E !important;
+  border-radius: 20px;
+  padding-inline: 14px;
+  text-decoration: none;
+}
+
+.equality-btn:hover{
+  background-color: #FBBA7E;
+  border: 2.5px solid #FBBA7E !important;
+  color: white;
+  border-radius: 20px;
+  padding-inline: 14px;
+}
+
+.equality-list{
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
 @media (min-width: 350px) and (max-width: 800px) {
-  .soyunaimagen {
+  .therapy-photo1 {
     margin: auto;
   }
 
@@ -90,7 +110,7 @@ content: ""; /* Agrega contenido vacío antes del elemento li */
     width: 100%;
   }
 
-  .coaching-list{
+  .equality-list{
     flex-direction: column !important;
   }
 }
