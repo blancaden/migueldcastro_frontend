@@ -49,8 +49,7 @@ margin-bottom: 30px;
    padding: 0;
    background-size: cover;
 }
-
-.btn-info{
+.btn-info {
   font-size: calc(0.7rem + 0.2vw);
   color: #9D7D79;
   border: none;
@@ -59,9 +58,13 @@ margin-bottom: 30px;
   align-items: center;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+  transition: filter 0.3s ease; 
 }
 
-.btn-info .bi{
+.btn-info:hover {
+  filter: brightness(85%);
+}
+.btn-info .bi {
   font-size: 1.2rem;
   height: 1.6rem;
   width: 1.6rem;
@@ -74,9 +77,10 @@ margin-bottom: 30px;
   justify-content: center;
 }
 
-.btn-info .bi::before{
+.btn-info .bi::before {
   vertical-align: 0em !important;
 }
+
 
 @media (min-width: 350px) and (max-width: 800px) {
   .coaching-empresarial-photo, .coaching-individual-photo {

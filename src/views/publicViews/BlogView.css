@@ -32,11 +32,11 @@
   }
   @media (max-width: 768px) {
     .blog-view-container {
-      flex-direction: column; /* Cambia la dirección del flujo a columna en dispositivos pequeños */
-      align-items: center; /* Centra los elementos horizontalmente en dispositivos pequeños */
+      flex-direction: column; 
+      align-items: center; 
     }
     
     .sidebar {
-      margin: 10px; /* Ajusta el margen para centrar el sidebar horizontalmente */
+      margin: 10px; 
     }
   }

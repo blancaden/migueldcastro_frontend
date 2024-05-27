@@ -13,8 +13,8 @@
     margin-left: 150px;
     border-radius: 25px;
     max-width: 1400px;
-    align-content: center;
-}
+    align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+  }
 
 .contact-formUser {
     flex: 1;
@@ -49,19 +49,22 @@
 }
 
 .highlighted-heading {
+    font-family: 'Ovo', sans-serif;
     color: black;
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 .highlighted-heading::after {
     content: '';
     position: absolute;
     width: calc(100% + 20px);
-    height: 10px;
-    bottom: -10px;
+    height: 20px;
+    bottom: -1px;
     left: -10px;
     background-color: #FBBA7E;
+    z-index: -1;
 }
 
 .text-content p {
