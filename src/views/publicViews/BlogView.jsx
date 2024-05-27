@@ -18,7 +18,19 @@ const BlogView = () => {
         <BlogFiles />
         <Up/>
         </div>
-        
+        <img
+  className="mariposa-blog"
+  src="/public/img/mariposa3.svg"
+  alt=""
+  style={{
+    width: "200px",
+    height: "200px",
+    position: "absolute",
+    bottom: "0",
+    left: "68%",
+    filter: "opacity(25%)",
+  }}
+/>
       </div>
     </div>
   );
