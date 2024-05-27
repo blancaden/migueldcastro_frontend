@@ -9,7 +9,7 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchRecentBlogEntries = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/articulos");
+        const response = await axios.get("http://localhost:5000/articulos");
         setRecentBlogEntries(response.data);
       } catch (error) {
         console.error(

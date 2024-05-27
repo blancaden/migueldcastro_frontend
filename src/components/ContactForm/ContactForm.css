@@ -10,6 +10,7 @@
     display: flex;
     background-color: #FBF4E9;
     margin: 80px;
+    margin-left: 150px;
     border-radius: 25px;
     max-width: 1400px;
     align-content: center;
@@ -22,7 +23,7 @@
 
 .social-media {
     background-color: #FBF4E9;
-    flex: 1; /* Hacer que este div ocupe todo el espacio disponible */
+    flex: 1;
     margin-left: 150px;
     margin-right: 30px;
     margin-top: 40px;
@@ -40,7 +41,7 @@
 }
 
 .text-content {
-    font-family: 'Ovo', Courier, monospace;
+    font-family: 'Poppins', Courier, monospace;
     font-size: larger;
     text-align: center;
     text-align: center;
