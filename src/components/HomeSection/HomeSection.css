@@ -238,39 +238,6 @@ img[src='/img/ONDAS.svg'] {
     z-index: -1;
 }
 
-@media (max-width: 1200px) {
-    .HomeSection-Header h1 {
-        font-size: 48px;
-    }
-
-    .HomeSection-Header h2 {
-        font-size: 28px;
-    }
-
-    .HomeSection-Header button {
-        margin-left: 20%;
-    }
-
-    .HomeSection-Services {
-        padding: 20px;
-    }
-
-    .HomeSection-Services h4 {
-        font-size: 20px;
-    }
-
-    .Therapy button {
-        margin-bottom: 50px;
-    }
-
-    .HomeSection-KnowMe h3 {
-        font-size: 28px;
-    }
-
-    .HomeSection-KnowMe p {
-        width: 80%;
-    }
-}
 
 @media (max-width: 768px) {
     .main-container {
@@ -283,25 +250,32 @@ img[src='/img/ONDAS.svg'] {
     }
 
     .HomeSection-Header img {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 20px;
+        width: 140%;
+        margin-left: -50%;
+      margin-top: 5%;
     }
-
+    .HomeSection-Title{
+        margin-left: 5%;
+    }
     .HomeSection-Header h1 {
         font-size: 36px;
-        margin-left: 0;
-        text-align: center;
+        margin-right: -30px;
+        text-align: center; 
+        margin-top: 20px;
+        margin-left: -3%;
     }
 
     .HomeSection-Header h2 {
-        font-size: 24px;
+        font-size: 18px;
         text-align: center;
+        width: 100%;
+
+
     }
 
     .HomeSection-Header button {
-        margin-left: 0;
-        margin-top: 20px;
+       margin-top: 2%;
+      
     }
 
     .HomeSection-Services {
@@ -355,7 +329,7 @@ img[src='/img/ONDAS.svg'] {
     }
 
     .HomeSection-KnowMe img {
-        display: none;
+      margin-top: 0%;
     }
 
     .knowme-img {
@@ -366,93 +340,5 @@ img[src='/img/ONDAS.svg'] {
         margin-top: 20px;
         position: static;
         opacity: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .HomeSection-Header h1 {
-        font-size: 40px;
-        margin-left: -15%;
-        margin-top: 20px;
-    }
-
-    .HomeSection-Header h2 {
-        font-size: 18px;
-        width: 70%;
-    }
-
-    .HomeSection-Header button {
-        width: 100px;
-        height: 30px;
-        font-size: 14px;
-        display: inline-block;
-        margin-left: 80px;
-        margin-top: 50px;
-        text-decoration: none;
-    }
-
-    .HomeSection-Header img {
-        margin-top: -60px;
-        width: 480px;
-        margin-bottom: 50px;
-    }
-
-    .HomeSection-Services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .HomeSection-Services>div {
-        margin: 20px 0;
-    }
-
-    .HomeSection-Services img {
-        width: 200px;
-        display: block;
-        margin-left: 100px;
-    }
-
-    .HomeSection-Services h4 {
-        margin-left: 160px;
-    }
-
-    .HomeSection-Services p {
-        font-size: 12px;
-        text-align: center;
-        width: 70%;
-        margin-left: 60px;
-        margin-top: 20px;
-    }
-
-    .HomeSection-Services button {
-        margin-left: 160px;
-        margin-top: 10px;
-        width: 80px;
-        font-size: 12px;
-        display: inline-block;
-    }
-
-    .HomeSection-KnowMe h3 {
-        font-size: 20px;
-    }
-
-    .HomeSection-KnowMe p {
-        font-size: 14px;
-    }
-
-    .HomeSection-KnowMe button {
-        margin-left: 120px;
-        margin-top: 10px;
-        margin-bottom: 40px;
-        width: 140px;
-        font-size: 14px;
-    }
-
-    .HomeSection-KnowMe img {
-        display: none;
-    }
-
-    .knowme-img {
-        display: none;
     }
 }
