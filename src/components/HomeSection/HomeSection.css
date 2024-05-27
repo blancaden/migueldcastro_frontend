@@ -14,16 +14,22 @@ img[src='/img/ONDAS.svg'] {
 
 .HomeSection-Header {
     margin-bottom: 2%;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
-.HomeSection-Header img {
-    grid-column: 2;
+.homesection-header-miguelfoto {
+    
     justify-self: end;
     margin-right: -5%;
-    width: 50%;
+    width: 124%;
+    isolation: isolate;
+    margin-left: -12%;
+    margin-top:-20%;
+    position: relative;
+    z-index: -1;
 }
+
 
 
 .HomeSection-Header h1 {
@@ -53,6 +59,7 @@ img[src='/img/ONDAS.svg'] {
     height: 37px;
     margin-left: 30%;
     margin-top: 3%;
+    z-index: 1;
 }
 
 .HomeSection-Header button:hover {
@@ -62,6 +69,7 @@ img[src='/img/ONDAS.svg'] {
 
 .HomeSection-Title {
     display: grid;
+    width: 35%;
 }
 
 .HomeSection-Services {

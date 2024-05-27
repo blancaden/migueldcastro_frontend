@@ -13,10 +13,8 @@ const HomeSection = () => {
             <button>Contacto</button>
           </Link>
         </div>
-        <img src="/img/Foto-Provisional-de-Miguel.svg" alt="Miguel de Castro" />
+        <img className='homesection-header-miguelfoto' src="/img/header-foto.png" alt="Miguel de Castro" />
       </div>
-
-      <img src="/img/ONDAS.svg" alt="Ondas" />
 
       <div className='HomeSection-Services'>
         <div className='Therapy'>
