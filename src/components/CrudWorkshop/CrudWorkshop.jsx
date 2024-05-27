@@ -124,9 +124,9 @@ const CrudWorkshop = () => {
   };
   const handleExpandDescription = (content) => {
   Swal.fire({
-    html: `<div style="text-align: left;">${content}</div>`,
-    confirmButtonText: "Cerrar",
-    customClass: {
+      html: `<div style="text-align: left;">${content}</div>`,
+      confirmButtonText: "Cerrar",
+      customClass: {
       popup: 'custom-swal-popup',
       title: 'custom-swal-title',
       confirmButton: 'custom-swal-confirm-button'

@@ -5,7 +5,6 @@ const ContactView = () => {
   return (
   <>
   <ContactForm/>
-  <h1>Hola Contacto</h1>
   </>
   )
 }
