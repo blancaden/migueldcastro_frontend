@@ -70,10 +70,11 @@ img[src='/img/ONDAS.svg'] {
 .HomeSection-Title {
     display: grid;
     width: 35%;
+    margin-left: 10%;
 }
 
 .HomeSection-Services {
-    margin-top: 10%;
+    margin-top: 4%;
     margin-bottom: 10%;
     display: flex;
     justify-content: space-between;
@@ -169,6 +170,11 @@ img[src='/img/ONDAS.svg'] {
     color: white;
     cursor: pointer;
 }
+.know-me-description {
+    position: relative;  
+    z-index: 1; 
+    margin-top: 20%;
+}
 
 .HomeSection-KnowMe h3 {
     font-family: 'Ovo', sans-serif;
@@ -188,6 +194,7 @@ img[src='/img/ONDAS.svg'] {
     width: 62%;
     line-height: 42px;
     z-index: 1;
+    margin-top: 20;
 }
 
 .HomeSection-KnowMe button {
@@ -203,29 +210,26 @@ img[src='/img/ONDAS.svg'] {
     margin-left: 32%;
     margin-top: 3%;
 }
+.button-knowme-homesection{
+    margin-top: 10%;
+}
 
 .HomeSection-KnowMe button:hover {
     background-color: #FBBA7E;
     cursor: pointer;
 }
 
-.HomeSection-KnowMe img {
-    position: absolute;
-    z-index: -1;
-    margin-top: -130px;
-    margin-left: 20px;
-    top: 1;
-    left: 1;
-    width: 20%;
-    height: auto;
-}
 
 .knowme-img {
-    position: absolute;
-    top: 1600px;
-    left: 63%;
-    width: 40%;
-    opacity: 60%;
+    justify-self: end;
+    margin-right: -10%;
+    width: 130%;
+    isolation: isolate;
+    margin-left: -18%;
+    margin-top:-50%;
+    position: relative;
+    z-index: -1;
+    
 }
 
 @media (max-width: 1200px) {
