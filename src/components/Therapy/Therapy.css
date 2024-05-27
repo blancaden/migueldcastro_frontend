@@ -48,12 +48,12 @@ margin-bottom: calc(1.5rem + 2.5vw);
 }
 
 .therapy-container .therapy-photo1{
- width: calc(11rem + 16vw);
+ width: auto;
  height: calc(11rem + 16vw);
  border-radius: 100%;
  padding: 0;
- background-image: url("../../assets/therapy-photo1.svg");
  background-size: cover;
+ justify-content: flex-end;
 }
 
 .therapy-btn{
@@ -74,9 +74,8 @@ font-family: "Poppins", sans-serif;
   padding-inline: 14px;
 }
 
-
-@media (max-width: 800px) { /* Esto corresponde al tamaño de pantalla xs */
-  .soyunaimagen {
+/* @media (max-width: 800px) {
+  .therapy-photo1 {
     margin: auto;
   }
-}
+} */

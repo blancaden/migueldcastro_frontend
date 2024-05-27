@@ -53,7 +53,6 @@
   width: calc(8rem + 14vw);
   height: calc(8rem + 14vw);
   border-radius: 100%;
-  background-image: url("../../assets/therapy-photo1.svg");
   background-size: cover;
 }
 
@@ -67,7 +66,7 @@
   width: 16px;
   height: 16px;
   background-image: url('../../assets/icon-mariposa.svg');
-  background-size: cover; /* Ajusta el tamaño de la imagen */
+  background-size: cover;
   margin-right: 5px;
 }
 
@@ -87,6 +86,12 @@
   color: white;
   border-radius: 20px;
   padding-inline: 14px;
+}
+
+.equality-list{
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 

@@ -29,10 +29,10 @@
   z-index: -1;
 }
 
-.aboutme-content-p p:first-child{
+.aboutme-content-p h2{
   font-family: 'Ovo' !important;
   font-size: calc(1.4rem + 0.2vw) !important;
-margin-bottom: 35px !important;
+  margin-bottom: 35px !important;
 }
 
 .aboutme-container p{
@@ -42,9 +42,10 @@ line-height: 26px;
 margin-bottom: 30px;
 }
 
-.aboutme-container .soyunaimagen{
- border-radius: 100%;
- background-color: red;
+.aboutme-container .aboutme-photo1{
+  width: calc(8rem + 14vw);
+  height: calc(8rem + 14vw);
+  border-radius: 100%;
 }
 
 .btn-info{
@@ -76,8 +77,48 @@ font-family: "Poppins", sans-serif;
  padding: 0;
 }
 
-@media (min-width:200px) and (max-width: 576px) {
+.aboutme-container .p-studies, .aboutme-container .p-courses{
+  width: calc(4.5rem + 1.2vw);
+  position:relative;
+  font-family: 'Ovo';
+  font-size: calc(1.2rem + 0.4vw);
+}
+
+.aboutme-container .p-studies::after, .aboutme-container .p-courses::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background-color: #FBBA7E;
+  transform: translateY(0%);
+  z-index: -1;
+}
+
+.aboutme-btn{
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  color: #9D7D79;
+  border: 2.5px solid #FBBA7E !important;
+  border-radius: 20px;
+  padding-inline: 14px;
+  text-decoration: none;
+}
+
+.aboutme-btn:hover{
+  background-color: #FBBA7E;
+  border: 2.5px solid #FBBA7E !important;
+  color: white;
+  border-radius: 20px;
+  padding-inline: 14px;
+}
+
+@media (min-width:200px) and (max-width: 776px) {
     .flex-sm-column {
         flex-direction: column !important;
+    }
+    .aboutme-list-container{
+    justify-content: flex-start !important;
     }
 }

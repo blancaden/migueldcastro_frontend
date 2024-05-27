@@ -7,13 +7,17 @@ function Coaching() {
   return (
     <>
       <Container fluid>
-        <div className="coaching-container d-flex align-items-center py-5">
+        <div className="coaching-container d-flex align-items-center">
           <div>
             <h1 className="m-5 coaching-h1">Coaching</h1>
           </div>
           <div>
             <div className="coaching-content d-flex align-items-center">
-              <img src="" alt="" className="coaching-individual-photo" />
+              <img
+                src="src\assets\coaching-individual-photo.svg"
+                alt=""
+                className="coaching-individual-photo"
+              />
               <div className="w-75 ps-5">
                 <h3>Individual</h3>
                 <p>
@@ -34,7 +38,7 @@ function Coaching() {
         <div className="coaching-container d-flex align-items-center py-5">
           <div className="coaching-content d-flex align-items-center">
             <img
-              src="../../assets/coaching-empresarial-photo.svg"
+              src="src\assets\coaching-empresarial-photo.svg"
               alt=""
               className="coaching-empresarial-photo"
             />

@@ -43,19 +43,11 @@ margin-bottom: 30px;
 
 .coaching-container .coaching-empresarial-photo,
 .coaching-container .coaching-individual-photo{
-   width: calc(8rem + 7vw);
+   width: auto;
    height: calc(8rem + 7vw);
    border-radius: 100%;
    padding: 0;
    background-size: cover;
-}
-
-.coaching-container .coaching-empresarial-photo{
-  background-image: url("../../assets/coaching-empresarial-photo.svg");
-}
-
-.coaching-container .coaching-individual-photo{
-  background-image: url("../../assets/coaching-individual-photo.svg");
 }
 
 .btn-info{
@@ -89,6 +81,7 @@ margin-bottom: 30px;
 @media (min-width: 350px) and (max-width: 800px) {
   .coaching-empresarial-photo, .coaching-individual-photo {
     margin: auto;
+    margin-bottom: 20px;
   }
 
   .coaching-content{
