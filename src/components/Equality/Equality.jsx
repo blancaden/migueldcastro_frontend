@@ -32,13 +32,21 @@ function Equality() {
               formándome a través de cursos.
             </p>
           </div>
-          <div className="soyunaimagen mb-5"></div>
+          <div>
+            <img
+              src="src\assets\equality-photo1.svg"
+              alt=""
+              className="equality-photo1 mb-5"
+            />
+          </div>
         </div>
-        <div className="mt-5">
-          <h2>Charlas, Talleres y Cursos impartidos:</h2>
+        <div className="mt-5 w-100 px-4">
+          <h2 className="left-aligned">
+            Charlas, Talleres y Cursos impartidos:
+          </h2>
         </div>
-        <div className="coaching-list d-flex flex-row">
-          <ul className="list-content">
+        <div className="equality-list d-flex flex-row w-100">
+          <ul lg={5} className="list-content m-0 p-0">
             <li>Un viaje por la Igualdad</li>
             <li>Masculinidad vs Feminidad. ¿El género nos divide?</li>
             <li>Hackathon Igualdad</li>
@@ -47,7 +55,7 @@ function Equality() {
               Escuela de familia: Qué hacer para que tus hijos te escuchen
             </li>
           </ul>
-          <ul className="list-content">
+          <ul lg={5} className="list-content m-0 p-0">
             <li>Corresponsabilidad</li>
             <li>La implicación del hombre en los procesos igualitarios.</li>
             <li>Nueva masculinidad</li>
@@ -55,6 +63,9 @@ function Equality() {
             <li>Emprendimiento e igualdad</li>
           </ul>
         </div>
+        <a href="/contacto" className="equality-btn my-5">
+          Contacto
+        </a>
       </Container>
     </>
   );

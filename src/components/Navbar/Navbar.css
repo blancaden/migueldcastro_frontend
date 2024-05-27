@@ -8,19 +8,19 @@
 }
 
 .navbar-container img{
-  width: calc(9rem + 8vw);
+  width: calc(12rem + 5vw);
 }
 
 .navbar, .dropbtn{
   color:#5E4B49;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: calc(0.6rem + 0.65vw);
+  font-size: calc(0.6rem + 0.6vw);
   text-decoration: none;
 }
 
 .navbar .btn-contact{
-  border: 5px solid #F06D7D;
+  border: 4px solid #F06D7D;
   border-radius: 20px;
 }
 
@@ -44,10 +44,8 @@
 }
 
 a.nav-link{
- /* margin-left: 3em; */
- padding: 0;
+  padding: 0;
 }
-
 
 .offcanvas{
   background-color: #FEEBE1 !important;
@@ -55,13 +53,13 @@ a.nav-link{
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-    border: none;
+  cursor: pointer;
+  border: none;
 }
 
 
 @media only screen and (min-width: 930px) {
   a.nav-link {
- margin-left: 8%;
+    margin-left: 8%;
   }
 }

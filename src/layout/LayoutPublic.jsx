@@ -8,7 +8,6 @@ const LayoutPublic = () => {
         return (
           <>
             <Navbar />
-                
             <Outlet />
 
             <Footer />

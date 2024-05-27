@@ -1,7 +1,7 @@
 // import React from 'react'
 import "./Therapy.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Container,Row, Col} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 
 
 function Therapy() {
@@ -49,11 +49,17 @@ function Therapy() {
               eso cada terapia se adapta a tus necesidades.
             </p>
           </Col>
-          <Col className="soyunaimagen">
-            <div></div>
+          <Col md={5} lg={5} className="d-flex p-0">
+            <img
+              src="src\assets\therapy-photo1.svg"
+              alt=""
+              className="therapy-photo1"
+            />
           </Col>
         </Row>
-        <button className="therapy-btn">Contacto</button>
+        <a href="/contacto" className="therapy-btn m-5">
+          Contacto
+        </a>
       </Container>
     </>
   );
