@@ -14,37 +14,34 @@ img[src='/img/ONDAS.svg'] {
 
 .HomeSection-Header {
     margin-bottom: 2%;
-    /* display: flex; */
     align-items: center;
 }
 
 .homesection-header-miguelfoto {
-    
     justify-self: end;
     margin-right: -5%;
     width: 124%;
     isolation: isolate;
     margin-left: -12%;
-    margin-top:-20%;
+    margin-top: -30%;
     position: relative;
     z-index: -1;
 }
-
-
 
 .HomeSection-Header h1 {
     font-family: 'Ovo', sans-serif;
     font-weight: 400;
     font-size: 64px;
     margin-left: 1%;
+    width: 500px;
 }
 
 .HomeSection-Header h2 {
     font-family: 'Poppins';
-    margin-top: 0;
+    margin-top: 20px;
     font-weight: 400;
     font-size: 36px;
-    width: 100%;
+    width: 130%;
 }
 
 .HomeSection-Header button {
@@ -60,6 +57,7 @@ img[src='/img/ONDAS.svg'] {
     margin-left: 30%;
     margin-top: 3%;
     z-index: 1;
+    margin-top: 50px;
 }
 
 .HomeSection-Header button:hover {
@@ -87,6 +85,7 @@ img[src='/img/ONDAS.svg'] {
     font-weight: 400;
     margin-left: 25%;
     margin-bottom: 8%;
+    margin-top: 10%;
 }
 
 .HomeSection-Services p {
@@ -170,9 +169,10 @@ img[src='/img/ONDAS.svg'] {
     color: white;
     cursor: pointer;
 }
+
 .know-me-description {
-    position: relative;  
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
     margin-top: 20%;
 }
 
@@ -210,7 +210,8 @@ img[src='/img/ONDAS.svg'] {
     margin-left: 32%;
     margin-top: 3%;
 }
-.button-knowme-homesection{
+
+.button-knowme-homesection {
     margin-top: 10%;
 }
 
@@ -219,17 +220,15 @@ img[src='/img/ONDAS.svg'] {
     cursor: pointer;
 }
 
-
 .knowme-img {
     justify-self: end;
     margin-right: -10%;
     width: 130%;
     isolation: isolate;
     margin-left: -18%;
-    margin-top:-50%;
+    margin-top: -50%;
     position: relative;
     z-index: -1;
-    
 }
 
 @media (max-width: 1200px) {
@@ -364,13 +363,15 @@ img[src='/img/ONDAS.svg'] {
 }
 
 @media (max-width: 480px) {
-
     .HomeSection-Header h1 {
-        font-size: 32px;
+        font-size: 40px;
+        margin-left: -15%;
+        margin-top: 20px;
     }
 
     .HomeSection-Header h2 {
         font-size: 18px;
+        width: 70%;
     }
 
     .HomeSection-Header button {
@@ -378,13 +379,14 @@ img[src='/img/ONDAS.svg'] {
         height: 30px;
         font-size: 14px;
         display: inline-block;
-        margin-left: 145px;
+        margin-left: 80px;
+        margin-top: 50px;
         text-decoration: none;
     }
 
     .HomeSection-Header img {
-        width: 300px;
-        margin-left: 50px;
+        margin-top: -60px;
+        width: 480px;
         margin-bottom: 50px;
     }
 
@@ -405,7 +407,6 @@ img[src='/img/ONDAS.svg'] {
 
     .HomeSection-Services h4 {
         margin-left: 160px;
-        margin-bottom: -5px;
     }
 
     .HomeSection-Services p {
@@ -413,6 +414,7 @@ img[src='/img/ONDAS.svg'] {
         text-align: center;
         width: 70%;
         margin-left: 60px;
+        margin-top: 20px;
     }
 
     .HomeSection-Services button {
@@ -446,6 +448,4 @@ img[src='/img/ONDAS.svg'] {
     .knowme-img {
         display: none;
     }
-
-
 }
