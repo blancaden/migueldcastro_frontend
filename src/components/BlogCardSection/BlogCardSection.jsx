@@ -36,4 +36,3 @@ const BlogCardSection = ({ blogs = [] }) => {
 };
 
 export default BlogCardSection;
-
