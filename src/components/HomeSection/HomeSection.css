@@ -64,7 +64,7 @@ img[src='/img/ONDAS.svg'] {
 .HomeSection-Header button:hover {
     background-color: #FBBA7E;
     cursor: pointer;
-    
+
 }
 
 .HomeSection-Title {
@@ -113,7 +113,7 @@ img[src='/img/ONDAS.svg'] {
 
 .Coaching img {
     width: 85%;
-    
+
 }
 
 .Workshop img {
@@ -124,7 +124,7 @@ img[src='/img/ONDAS.svg'] {
     filter: brightness(80%);
     cursor: pointer;
     transition: filter 0.5s ease;
-    
+
 }
 
 .HomeSection-Services .Therapy,
@@ -182,12 +182,12 @@ img[src='/img/ONDAS.svg'] {
 
 .know-me-description {
     position: absolute;
-    top: 8%; 
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     isolation: isolate;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .HomeSection-KnowMe h3 {
@@ -208,7 +208,7 @@ img[src='/img/ONDAS.svg'] {
     width: 68%;
     line-height: 42px;
     z-index: 1;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .HomeSection-KnowMe button {
@@ -223,8 +223,8 @@ img[src='/img/ONDAS.svg'] {
     height: 37px;
     transition: background-color 0.5s ease;
     position: relative;
-    z-index: 2; 
-    margin-top: 520px; 
+    z-index: 2;
+    margin-top: 520px;
 }
 
 .HomeSection-KnowMe button:hover {
@@ -232,7 +232,7 @@ img[src='/img/ONDAS.svg'] {
     cursor: pointer;
 }
 
-.background-butterfly{
+.background-butterfly {
     margin-bottom: 7%;
 }
 
@@ -262,15 +262,17 @@ img[src='/img/ONDAS.svg'] {
     .HomeSection-Header img {
         width: 140%;
         margin-left: -50%;
-      margin-top: 5%;
+        margin-top: 5%;
     }
-    .HomeSection-Title{
+
+    .HomeSection-Title {
         margin-left: 5%;
     }
+
     .HomeSection-Header h1 {
         font-size: 36px;
         margin-right: -30px;
-        text-align: center; 
+        text-align: center;
         margin-top: 20px;
         margin-left: -3%;
     }
@@ -284,8 +286,8 @@ img[src='/img/ONDAS.svg'] {
     }
 
     .HomeSection-Header button {
-       margin-top: 2%;
-      
+        margin-top: 2%;
+
     }
 
     .HomeSection-Services {
@@ -339,7 +341,7 @@ img[src='/img/ONDAS.svg'] {
     }
 
     .HomeSection-KnowMe img {
-      margin-top: 0%;
+        margin-top: 0%;
     }
 
     .knowme-img {
@@ -356,113 +358,127 @@ img[src='/img/ONDAS.svg'] {
 
         .HomeSection-Header h1 {
             font-size: 40px;
+            margin-left: 10px;
         }
-    
+
         .HomeSection-Header h2 {
             font-size: 24px;
+            width: 400px;
+            margin-left: 60px;
         }
-    
+
         .HomeSection-Header button {
             width: 140px;
             height: 35px;
             font-size: 18px;
             display: inline-block;
             margin-top: 25px;
-            margin-left: 120px;
+            margin-left: 170px;
             text-decoration: none;
         }
-    
+
         .HomeSection-Header img {
-            width: 520px;
-            margin-left: -15px;
+            width: 580px;
+            margin-left: -18px;
             margin-top: -10px;
             margin-bottom: 50px;
         }
-    
+
         .HomeSection-Services {
+            margin-left: 50px;
             flex-direction: column;
             align-items: center;
         }
-    
+
         .HomeSection-Services>div {
             margin: 20px 0;
         }
-    
+
         .HomeSection-Services img {
-            width: 200px;
+            width: 250px;
             display: block;
             margin-left: 100px;
         }
-    
+
         .HomeSection-Services h4 {
+            font-size: 36px;
             margin-left: 160px;
-            margin-bottom: -5px;
+            margin-bottom: 5px;
         }
-    
+
         .HomeSection-Services p {
-            font-size: 12px;
+            font-size: 18px;
             text-align: center;
-            width: 70%;
-            margin-left: 60px;
+            width: 400px;
+            margin-top: 10px;
+            margin-left: 20px;
         }
-    
+
+        .Coaching p {
+            margin-left: 40px;
+        }
+
+        .Coaching h4 {
+            margin-left: 150px;
+        }
+
         .HomeSection-Services button {
             margin-left: 160px;
             margin-top: 10px;
-            width: 80px;
-            font-size: 12px;
+            margin-bottom: 20px;
+            width: 140px;
+            height: 35px;
+            font-size: 18px;
             display: inline-block;
+            z-index: 2;
         }
-    
+
         .HomeSection-KnowMe {
             position: relative;
+            width: 500px;
+            margin-left: 60px;
+            margin-top: -40px;
         }
-        
+
         .know-me-description {
             position: absolute;
-            top: 8%; 
+            top: 8%;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
             isolation: isolate;
-            z-index: -1; 
+            z-index: -1;
         }
-        
+
         .HomeSection-KnowMe h3 {
-            font-family: 'Ovo', sans-serif;
             font-size: 32px;
             font-weight: 400;
             width: 74%;
-            letter-spacing: 1px;
-            line-height: 44px;
             margin-top: 80px;
-            position: relative;
-            z-index: 1;
         }
-        
+
         .HomeSection-KnowMe p {
-            font-family: 'Poppins';
             font-size: 16px;
             width: 68%;
             line-height: 42px;
-            z-index: 1;
-            margin-top: 30px; 
+            margin-top: 30px;
         }
-        
+
         .HomeSection-KnowMe button {
-            font-size: 16px;
-            font-family: 'Poppins';
-            font-weight: 500;
-            color: white;
-            background-color: #F06D7D;
-            border: none;
-            border-radius: 20px;
-            width: 177px;
-            height: 37px;
-            transition: background-color 0.5s ease;
             position: relative;
             z-index: 2; 
-            margin-top: 520px; 
+            width: 177px;
+            height: 37px;
+            margin-top: 600px;
         }
+        
+        .knowme-img {
+            position: absolute; 
+            top: 870px; 
+            left: 35%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 600px; 
         }
     }
+}
