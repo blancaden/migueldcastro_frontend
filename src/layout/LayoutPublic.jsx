@@ -12,7 +12,7 @@ const LayoutPublic = () => {
             
             <Outlet />
 
-            {/* <Footer /> */}
+         
             {!hideFooter && <Footer />}
           </>
         );
