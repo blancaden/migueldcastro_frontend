@@ -16,9 +16,9 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Llama a la función onLogin pasando los datos de inicio de sesión
+ 
     onLogin({ Nombre, Contraseña });
-    // También puedes restablecer los campos del formulario después de enviarlos
+  
     setNombre('');
     setContraseña('');
   }
@@ -27,6 +27,7 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
 
 
   return (
+    <>
     <div className="container-gralformLogin">
       {!isAuthenticated ? (
         <div className='container-formlgn'>
@@ -63,6 +64,7 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
             <img src="public/img/Logomariposa 1.png " alt="Imagen" className="login-image" />
        </div>
     </div>
+    </>
   );
 };
 
