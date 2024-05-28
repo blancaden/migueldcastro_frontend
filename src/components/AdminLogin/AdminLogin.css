@@ -70,10 +70,12 @@
 .image-container .login-image{
 
     display: flex;
-    margin-top: 160%;
+    margin-top: 150%;
     width: 255.1px;
     height: 313.97px;
     margin-left: 30%;
+    
+    
 
 }
 
