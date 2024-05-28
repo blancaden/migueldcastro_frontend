@@ -5,15 +5,12 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
   const [Nombre, setNombre] = useState('');
   const [Contraseña, setContraseña] = useState('');
  
-
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
   };
-
   const handleContraseñaChange = (event) => {
     setContraseña(event.target.value);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
  
@@ -22,9 +19,6 @@ const AdminLogin = ({ onLogin, onLogout, isAuthenticated }) => {
     setNombre('');
     setContraseña('');
   }
-  
-
-
 
   return (
     <>

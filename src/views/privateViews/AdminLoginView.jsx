@@ -9,12 +9,8 @@ const AdminLoginView = () => {
   const [error, setError] = useState('');
 
   const handleLogin = async (userData) => {
-   
     try {
-     
       const response = await axios.post('http://127.0.0.1:5000/api/login', userData);
-  
-      
       if (response.data.token) {
         
         setIsLoggedIn(true);
@@ -22,11 +18,9 @@ const AdminLoginView = () => {
         localStorage.setItem('token', response.data.token);
         setError('');
       } else {
-        
         setError('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
       }
     } catch (error) {
-      
       setError('Usuario o contraseña incorrectos. Inténtalo de nuevo.');
     }
   };
@@ -38,9 +32,7 @@ const AdminLoginView = () => {
         Authorization: localStorage.getItem('token')
       }
     }).then(() => {
-      
       localStorage.removeItem('token');
-      
       setIsLoggedIn(false);
       
     }).catch(error => {
@@ -48,7 +40,6 @@ const AdminLoginView = () => {
       
     });
   };
-
 
   if (isLoggedIn) {
     return <Navigate to="/workshop" />;

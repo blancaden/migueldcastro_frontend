@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // Importa axios
+import axios from "axios";
 import WorkshopCard from "../WorkshopCard/WorkshopCard";
 import "./WorkshopCatalogue.css";
 
@@ -22,7 +22,7 @@ const WorkshopCatalogue = () => {
       }
     };
     fetchAPI();
-  }, []); // Cambia la dependencia a []
+  }, []);
 
   return (
     <div className="catalogue-main-container">

@@ -7,7 +7,7 @@ const BlogCard = ({ blogs }) => {
   const blogsPerPage = 5;
 
   if (!blogs || blogs.length === 0) {
-    return null; // Retorna null si no hay blogs
+    return null;
   }
 
   const indexOfLastBlog = currentPage * blogsPerPage;

@@ -3,9 +3,7 @@ import FormData from '../../components/FormData/FormData'
 
 const AdminFormView = () => {
   return (
-    
     <FormData/>
-    
   )
 }
 

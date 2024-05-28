@@ -54,11 +54,8 @@ footer {
 }
 
 .social-icons img:hover {
-    filter: brightness(0.6);
-    
+    filter: brightness(0.6);   
 }
-
-
 
 @media screen and (max-width: 768px) {
     .footer-container {

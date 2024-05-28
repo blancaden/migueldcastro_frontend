@@ -9,8 +9,7 @@ const WorkshopView = () => {
         <WorkshopCard/>
         <WorkshopCatalogue/>
         <Up/>
-    </>
-    
+    </>  
   )
 }
 

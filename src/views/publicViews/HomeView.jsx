@@ -6,12 +6,10 @@ import Up from "/src/components/Up/Up";
 const HomeView = () => {
   return (
     <>
-
     <HomeSection/>
     <BlogSection/>
     <Up/>
-    </>
-    
+    </> 
   )
 }
 

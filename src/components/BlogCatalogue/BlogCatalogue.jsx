@@ -18,7 +18,6 @@ const BlogCatalogue = () => {
         console.error("Error al obtener los datos del servidor:", error);
       }
     };
-
     if (blogs.length === 0) {
       fetchAPI();
     }

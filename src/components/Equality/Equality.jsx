@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import "./Equality.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";

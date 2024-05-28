@@ -17,8 +17,6 @@ const BlogCardSection = ({ blogs = [] }) => {
         <div key={index} className="card-section">
           <img src={blog.Imagen} alt={blog.Titulo} className="product-image" />
           <div className="product-details">
-            {/* <p className="blog-date">{blog.Fecha}</p>
-            <p className="blog-time">{blog.Tiempo}</p> */}
             <h3 className="blog-product-title">{blog.Titulo}</h3>
             <p className="blog-content">{truncateText(blog.Contenido, 10)}</p>
           </div>

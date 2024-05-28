@@ -9,28 +9,28 @@ const BlogView = () => {
   return (
     <div className="blog-view-container">
       <div className="mariposatraicionera"></div>
-      <div className="main-content">
-        <BlogCard />
-        <BlogCatalogue />
-      </div>
+        <div className="main-content">
+          <BlogCard />
+          <BlogCatalogue />
+        </div>
       <div className="sidebar">
         <div>
-        <BlogFiles />
-        <Up/>
+          <BlogFiles />
+          <Up/>
         </div>
         <img
-  className="mariposa-blog"
-  src="/public/img/mariposa3.svg"
-  alt=""
-  style={{
-    width: "200px",
-    height: "200px",
-    position: "absolute",
-    bottom: "0",
-    left: "68%",
-    filter: "opacity(25%)",
-  }}
-/>
+          className="mariposa-blog"
+          src="/public/img/mariposa3.svg"
+          alt=""
+          style={{
+            width: "200px",
+            height: "200px",
+            position: "absolute",
+            bottom: "0",
+            left: "68%",
+            filter: "opacity(25%)",
+          }}
+        />
       </div>
     </div>
   );
