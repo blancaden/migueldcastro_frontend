@@ -1,31 +1,32 @@
-import { shallow, describe, it } from "vitest";
+import { shallow, describe, it, beforeEach, expect } from "vitest";
 import { BrowserRouter as Router } from "react-router-dom";
 import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
+import { render, screen } from "@testing-library/react";
 
-describe("AdminNavbar Component", () => {
-  it("renders without crashing", () => {
-    const adminNavbar = (
-      <Router>
-        <AdminNavbar />
-      </Router>
-    );
-  });
+describe("<AdminNavbar/>", () => {
+  describe("WHEN the component was render", () => {
+    it("SHOULD exist form text", () => {
+      render(
+        <Router>
+          <AdminNavbar />
+        </Router>
+      );
+      const { getByText } = screen;
+      const formText = getByText("Formulario");
 
-  it('redirects to login page when "Cerrar Sesión" is clicked', () => {
-    const { history } = (
-      <Router>
-        <AdminNavbar />
-      </Router>
-    );
-  });
+      expect(formText).toBeDefined;
+    });
 
-  it('calls onLogout when "Cerrar Sesión" is clicked', () => {
-    const mockOnLogout = () => {}; // Función simulada
+    it("SHOULD exist four links", async () => {
+      render(
+        <Router>
+          <AdminNavbar />
+        </Router>
+      );
+      const { findAllByRole } = screen;
+      const elements = await findAllByRole("listitem");
 
-    const adminNavbar = (
-      <Router>
-        <AdminNavbar onLogout={mockOnLogout} />
-      </Router>
-    );
+      expect(elements.length).equals(4);
+    });
   });
 });
