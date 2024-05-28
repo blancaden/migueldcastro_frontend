@@ -355,7 +355,9 @@ img[src='/img/ONDAS.svg'] {
     }
 
     @media (max-width: 480px) {
-
+.HomeSection-Header{
+    margin-left: -20%;
+}
         .HomeSection-Header h1 {
             font-size: 40px;
             margin-left: 10px;
@@ -373,7 +375,7 @@ img[src='/img/ONDAS.svg'] {
             font-size: 18px;
             display: inline-block;
             margin-top: 25px;
-            margin-left: 170px;
+            margin-left: 183px;
             text-decoration: none;
         }
 
@@ -385,7 +387,7 @@ img[src='/img/ONDAS.svg'] {
         }
 
         .HomeSection-Services {
-            margin-left: 50px;
+            margin-left: -15%;
             flex-direction: column;
             align-items: center;
         }
@@ -407,7 +409,7 @@ img[src='/img/ONDAS.svg'] {
         }
 
         .HomeSection-Services p {
-            font-size: 18px;
+            font-size: 13px;
             text-align: center;
             width: 400px;
             margin-top: 10px;
@@ -436,25 +438,27 @@ img[src='/img/ONDAS.svg'] {
         .HomeSection-KnowMe {
             position: relative;
             width: 500px;
-            margin-left: 60px;
+            margin-left: 30px;
             margin-top: -40px;
         }
 
         .know-me-description {
             position: absolute;
-            top: 8%;
+            top: 5%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
+            transform: translateX(-60%);
+            width: 75%;
             isolation: isolate;
             z-index: -1;
+            margin-left: -10%;
+            
         }
 
         .HomeSection-KnowMe h3 {
             font-family: 'Ovo', sans-serif;
-            font-size: 32px;
+            font-size: 20px;
             font-weight: 400;
-            width: 74%;
+            width: 100%;
             letter-spacing: 1px;
             line-height: 44px;
             margin-top: 80px;
@@ -464,11 +468,12 @@ img[src='/img/ONDAS.svg'] {
 
         .HomeSection-KnowMe p {
             font-family: 'Poppins';
-            font-size: 16px;
-            width: 68%;
-            line-height: 42px;
+            font-size: 12px;
+            width: 100%;
+            line-height: 30px;
             z-index: 1;
             margin-top: 30px; 
+            margin-right: %;
         }
 
         .HomeSection-KnowMe button {
@@ -484,7 +489,11 @@ img[src='/img/ONDAS.svg'] {
             transition: background-color 0.5s ease;
             position: relative;
             z-index: 2; 
-            margin-top: 520px; 
+            margin-top: 250px; 
+            margin-left: 15%;
+        }
+        .knowme-img{
+            width: 150%;
         }
         }
     }
