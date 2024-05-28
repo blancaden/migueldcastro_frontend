@@ -351,4 +351,10 @@ img[src='/img/ONDAS.svg'] {
         position: static;
         opacity: 1;
     }
+
+    @media (max-width: 420px){
+        
+
+    }
+
 }
