@@ -352,9 +352,117 @@ img[src='/img/ONDAS.svg'] {
         opacity: 1;
     }
 
-    @media (max-width: 420px){
+    @media (max-width: 480px) {
+
+        .HomeSection-Header h1 {
+            font-size: 40px;
+        }
+    
+        .HomeSection-Header h2 {
+            font-size: 24px;
+        }
+    
+        .HomeSection-Header button {
+            width: 140px;
+            height: 35px;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 120px;
+            text-decoration: none;
+        }
+    
+        .HomeSection-Header img {
+            width: 520px;
+            margin-left: -15px;
+            margin-top: -10px;
+            margin-bottom: 50px;
+        }
+    
+        .HomeSection-Services {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .HomeSection-Services>div {
+            margin: 20px 0;
+        }
+    
+        .HomeSection-Services img {
+            width: 200px;
+            display: block;
+            margin-left: 100px;
+        }
+    
+        .HomeSection-Services h4 {
+            margin-left: 160px;
+            margin-bottom: -5px;
+        }
+    
+        .HomeSection-Services p {
+            font-size: 12px;
+            text-align: center;
+            width: 70%;
+            margin-left: 60px;
+        }
+    
+        .HomeSection-Services button {
+            margin-left: 160px;
+            margin-top: 10px;
+            width: 80px;
+            font-size: 12px;
+            display: inline-block;
+        }
+    
+        .HomeSection-KnowMe {
+            position: relative;
+        }
         
-
+        .know-me-description {
+            position: absolute;
+            top: 8%; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            isolation: isolate;
+            z-index: -1; 
+        }
+        
+        .HomeSection-KnowMe h3 {
+            font-family: 'Ovo', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            width: 74%;
+            letter-spacing: 1px;
+            line-height: 44px;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .HomeSection-KnowMe p {
+            font-family: 'Poppins';
+            font-size: 16px;
+            width: 68%;
+            line-height: 42px;
+            z-index: 1;
+            margin-top: 30px; 
+        }
+        
+        .HomeSection-KnowMe button {
+            font-size: 16px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            color: white;
+            background-color: #F06D7D;
+            border: none;
+            border-radius: 20px;
+            width: 177px;
+            height: 37px;
+            transition: background-color 0.5s ease;
+            position: relative;
+            z-index: 2; 
+            margin-top: 520px; 
+        }
+        }
     }
-
-}
