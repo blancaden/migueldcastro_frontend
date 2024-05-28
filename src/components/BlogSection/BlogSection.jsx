@@ -5,22 +5,32 @@ import "./BlogSection.css";
 
 const BlogSection = () => {
   const [recentBlogEntries, setRecentBlogEntries] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchRecentBlogEntries = async () => {
       try {
         const response = await axios.get("http://localhost:5000/articulos");
-        setRecentBlogEntries(response.data);
+        if (response.data && Array.isArray(response.data)) {
+          setRecentBlogEntries(response.data);
+        } else {
+          throw new Error("La respuesta del servidor no es válida");
+        }
       } catch (error) {
         console.error(
           "Error al cargar las entradas de blog más recientes:",
           error
         );
+        setError(error.message);
       }
     };
 
     fetchRecentBlogEntries();
   }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   const displayedBlogEntries = recentBlogEntries.slice(0, 3);
 

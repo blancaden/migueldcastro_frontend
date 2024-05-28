@@ -151,6 +151,7 @@
   justify-content: center;
   margin: 20px 0;
   font-family: 'poppins';
+  margin-left: 35%;
 }
 
 .pagination button {
@@ -216,7 +217,10 @@
   .date-calendar-style-blog {
     justify-content: center;
   }
-  
+  .pagination{
+    margin-right: 35%;
+    margin-bottom: 20%;
+  }
 }
 
 

@@ -18,25 +18,13 @@
     margin-right:200px;
     margin-top: 10%;
   }
-  .mariposatraicionera {
-    background-image: url('https://i.postimg.cc/L4fV3HNg/Mariposa-Logo.png');
-    background-size: 20%; 
-    background-position: bottom right; 
-    background-repeat: no-repeat;
-    position: fixed; 
-    top: 0;
-    left: calc(100% - 100px); 
-    width: 100px; 
-    height: 100px; 
-    pointer-events: none; 
-  }
   @media (max-width: 768px) {
     .blog-view-container {
-      flex-direction: column; /* Cambia la dirección del flujo a columna en dispositivos pequeños */
-      align-items: center; /* Centra los elementos horizontalmente en dispositivos pequeños */
+      flex-direction: column; 
+      align-items: center; 
     }
     
     .sidebar {
-      margin: 10px; /* Ajusta el margen para centrar el sidebar horizontalmente */
+      margin: 10px; 
     }
   }
