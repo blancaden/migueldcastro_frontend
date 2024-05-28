@@ -58,24 +58,21 @@ const HomeSection = () => {
           </Link>
         </div>
       </div>
-{/* 
-      <img src="/img/ONDAS.svg" alt="Ondas" /> */}
 
       <div className='HomeSection-KnowMe'>
         <div className='know-me-description'>
-        <h3>Desde mi adolescencia he creído en el potencial que cada uno de nosotros lleva dentro. Como seres humanos somos completos y, por lo tanto, capaces de hacer todo aquello que nos proponemos.</h3>
-        <p>Desde 2019 soy cofundador del Centro Vive, un centro dedicado al Desarrollo Personal, pensado en generar un espacio donde poder acompañarte. Toda experiencia vivida hasta hoy me ha llevado a este presente, a este momento que me gustaría compartir contigo.</p>
+          <h3>Desde mi adolescencia he creído en el potencial que cada uno de nosotros lleva dentro. Como seres humanos somos completos y, por lo tanto, capaces de hacer todo aquello que nos proponemos.</h3>
+          <p>Desde 2019 soy cofundador del Centro Vive, un centro dedicado al Desarrollo Personal, pensado en generar un espacio donde poder acompañarte. Toda experiencia vivida hasta hoy me ha llevado a este presente, a este momento que me gustaría compartir contigo.</p>
         </div>
         <img src="/img/Mariposa-naranja.svg" alt="Mariposa" />  
       
         <Link to="/sobremi">
           <button id='button-knowme-homesection'>Conóceme más</button>
-        </Link>  <img className='knowme-img' src="/img/know-me-2.png" alt="Miguel de Castro" />
+        </Link>
+        <img className='knowme-img' src="/img/know-me-2.png" alt="Miguel de Castro" />
       </div>
-
-    
     </div>
-  )
+  );
 }
 
 export default HomeSection;
