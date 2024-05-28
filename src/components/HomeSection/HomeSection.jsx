@@ -18,7 +18,7 @@ const HomeSection = () => {
 
       <div className='HomeSection-Services'>
         <div className='Therapy'>
-          <Link to="/therapy">
+          <Link to="/terapia">
             <img src="/img/Terapia-Icono.svg" alt="Terapia" />
           </Link>
           <h4>Terapia</h4>
@@ -38,7 +38,7 @@ const HomeSection = () => {
           </Link>
         </div>
         <div className='Workshop'>
-          <Link to="/workshop">
+          <Link to="/talleres">
             <img src="/img/Talleres-Icono.svg" alt="Talleres" />
           </Link>
           <h4>Talleres</h4>
@@ -48,7 +48,7 @@ const HomeSection = () => {
           </Link>
         </div>
         <div className='Equality'>
-          <Link to="/equality">
+          <Link to="/igualdad">
             <img src="/img/Igualdad-Icono.svg" alt="Igualdad" />
           </Link>
           <h4>Igualdad</h4>
