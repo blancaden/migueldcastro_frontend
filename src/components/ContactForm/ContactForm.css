@@ -10,7 +10,7 @@
     display: flex;
     background-color: #FBF4E9;
     border-radius: 25px;
-    max-width: 50%;
+    max-width: 75%;
     align-items: center;
     margin: 80px auto; 
 }
@@ -68,7 +68,7 @@
 }
 @media (max-width: 768px) {
     .social-media {
-        display: none; /* Oculta las redes sociales en dispositivos móviles */
+        display: none; 
     }
     
 .contact-container {
