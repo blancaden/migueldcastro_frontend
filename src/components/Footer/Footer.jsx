@@ -6,7 +6,12 @@ const Footer = () => {
     <footer>
       <div className="footer-container">
         <div className="contact-info">
-          <p><img src="/img/location.svg" alt="Location" /><span>Calle Palas Atenea, 31, Almería</span></p>
+          <p>
+            <a href="/login" className="location-link">
+              <img src="/img/location.svg" alt="Location" />
+            </a>
+            <span>Calle Palas Atenea, 31, Almería</span>
+          </p>
           <p><img src="/img/whatsapp.svg" alt="Whatsapp" /><span>+34 675 281 352</span></p>
           <p><img src="/img/email.svg" alt="Email" /><span>dime@migueldecastro.org</span></p>
         </div>
