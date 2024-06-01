@@ -1,4 +1,4 @@
-![Logo](http://localhost:5173/src/assets/logo-miguelcastro1-sinfondo.png)
+![Logo](https://i.postimg.cc/pTkfPKX1/logo-miguelcastro1-sinfondo.png)
 
 
 Miguel de Castro
